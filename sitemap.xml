@@ -1,8 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://costanzoacquisizioni.it/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+	<loc>https://costanzoacquisizioni.it/</loc>
+	<changefreq>monthly</changefreq>
+	<priority>1.0</priority>
+  </url>
+  <url>
+	<loc>https://costanzoacquisizioni.it/gestione-case-palermo.html</loc>
+	<changefreq>monthly</changefreq>
+	<priority>0.8</priority>
+  </url>
+  <url>
+	<loc>https://costanzoacquisizioni.it/gestione-bnb-palermo.html</loc>
+	<changefreq>monthly</changefreq>
+	<priority>0.8</priority>
+  </url>
+  <url>
+	<loc>https://costanzoacquisizioni.it/cohost-palermo.html</loc>
+	<changefreq>monthly</changefreq>
+	<priority>0.8</priority>
+  </url>
+  <url>
+	<loc>https://costanzoacquisizioni.it/per-agenzie.html</loc>
+	<changefreq>monthly</changefreq>
+	<priority>0.8</priority>
+  </url>
+  <url>
+	<loc>https://costanzoacquisizioni.it/ristrutturazioni-bnb.html</loc>
+	<changefreq>monthly</changefreq>
+	<priority>0.8</priority>
+  </url>
+  <url>
+	<loc>https://costanzoacquisizioni.it/come-affittare-un-bnb-a-palermo.html</loc>
+	<changefreq>monthly</changefreq>
+	<priority>0.8</priority>
+  </url>
+  <url>
+	<loc>https://costanzoacquisizioni.it/aumentare-guadagni-airbnb-palermo.html</loc>
+	<changefreq>monthly</changefreq>
+	<priority>0.8</priority>
   </url>
 </urlset>
