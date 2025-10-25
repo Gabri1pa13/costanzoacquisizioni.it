@@ -1,662 +1,646 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <!-- SEO Costanzo Acquisizioni -->
-    <meta content="Noi di Costanzo Acquisizioni gestiamo immobili a Palermo: affitti brevi, B&amp;B, ville e appartamenti turistici. Siamo property manager esperti in cohosting e affitti turistici." name="description"/>
-    <meta content="gestione immobili, affitti brevi, affitti turistici, B&amp;B Palermo, cohost Palermo, gestione immobili Palermo, affitti brevi Palermo, affitti turistici Palermo, property manager Palermo, case vacanza Palermo" name="keywords"/>
-    <meta content="Costanzo Acquisizioni" name="author"/>
-    <meta content="Gestione Affitti Brevi a Palermo - Costanzo Acquisizioni" property="og:title"/>
-    <meta content="Siamo property manager specializzati nella gestione di affitti brevi a Palermo. Scopri come valorizziamo ville e appartamenti turistici." property="og:description"/>
-    <meta content="https://costanzoacquisizioni.it/palazzo_moncada.jpg" property="og:image"/>
-    <meta content="https://costanzoacquisizioni.it" property="og:url"/>
-    <meta content="summary_large_image" name="twitter:card"/>
-    <title>
-        Costanzo Acquisizioni - Property Management a Palermo
-    </title>
-    <link href="https://fonts.googleapis.com" rel="preconnect"/>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
-    <style>
-        /* Reset di base e font */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+        <meta content="Noi di Costanzo Acquisizioni gestiamo immobili a Palermo: affitti brevi, B&amp;B, ville e appartamenti turistici. Siamo property manager esperti in cohosting e affitti turistici." name="description"/>
+    <meta content="gestione immobili, affitti brevi, affitti turistici, B&amp;B Palermo, cohost Palermo, gestione immobili Palermo, affitti brevi Palermo, affitti turistici Palermo, property manager Palermo, case vacanza Palermo" name="keywords"/>
+    <meta content="Costanzo Acquisizioni" name="author"/>
+    <meta content="Gestione Affitti Brevi a Palermo - Costanzo Acquisizioni" property="og:title"/>
+    <meta content="Siamo property manager specializzati nella gestione di affitti brevi a Palermo. Scopri come valorizziamo ville e appartamenti turistici." property="og:description"/>
+    <meta content="https://costanzoacquisizioni.it/palazzo_moncada.jpg" property="og:image"/>
+    <meta content="https://costanzoacquisizioni.it" property="og:url"/>
+    <meta content="summary_large_image" name="twitter:card"/>
+    <title>
+        Costanzo Acquisizioni - Property Management a Palermo
+    </title>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+    <style>
+        /* Reset di base e font */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-        html {
-            scroll-behavior: smooth;
-        }
+        html {
+            scroll-behavior: smooth;
+        }
 
-        body {
-            font-family: 'Outfit', sans-serif;
-            color: #222;
-            background-color: #fffdfd;
-        }
+        body {
+            font-family: 'Outfit', sans-serif;
+            color: #222;
+            background-color: #fffdfd;
+        }
 
-        /* Stili Header - Reingegnerizzato con Flexbox e Animazione */
-        header {
-            background: linear-gradient(to right, #8b0000, #b22222);
-            color: white;
-            padding: 80px 20px; /* Padding generoso */
-            display: flex; /* Attiva Flexbox */
-            flex-direction: column; /* Impila gli elementi verticalmente */
-            align-items: center; /* Centra orizzontalmente gli elementi figli */
-            justify-content: center; /* Centra verticalmente gli elementi figli */
-            text-align: center; /* Allinea il testo all'interno degli elementi figli */
-            overflow: hidden; /* Nasconde ciò che esce, importante per animazioni iniziali */
-            position: relative; /* Per contesto di posizionamento delle animazioni */
-        }
+        /* Stili Header - Reingegnerizzato con Flexbox e Animazione */
+        header {
+            background: linear-gradient(to right, #8b0000, #b22222);
+            color: white;
+            padding: 80px 20px; /* Padding generoso */
+            display: flex; /* Attiva Flexbox */
+            flex-direction: column; /* Impila gli elementi verticalmente */
+            align-items: center; /* Centra orizzontalmente gli elementi figli */
+            justify-content: center; /* Centra verticalmente gli elementi figli */
+            text-align: center; /* Allinea il testo all'interno degli elementi figli */
+            overflow: hidden; /* Nasconde ciò che esce, importante per animazioni iniziali */
+            position: relative; /* Per contesto di posizionamento delle animazioni */
+        }
 
-        /* Contenitore per l'animazione di tutto il contenuto dell'header */
-        .header-content {
-            animation: slideInDown 1s ease-out forwards; /* Applica l'animazione */
-            opacity: 0; /* Inizia invisibile */
-        }
+        /* Contenitore per l'animazione di tutto il contenuto dell'header */
+        .header-content {
+            animation: slideInDown 1s ease-out forwards; /* Applica l'animazione */
+            opacity: 0; /* Inizia invisibile */
+        }
 
-        /* Stili Logo SVG */
-        .site-logo {
-            width: 180px; /* Larghezza del logo più d'impatto */
-            height: auto;
-            display: block;
-            margin: 0 auto 20px auto; /* Centra e aggiunge spazio sotto */
-            transition: transform 0.3s ease; /* Transizione per effetto hover */
-        }
+        /* Stili Logo SVG */
+        .site-logo {
+            width: 180px; /* Larghezza del logo più d'impatto */
+            height: auto;
+            display: block;
+            margin: 0 auto 20px auto; /* Centra e aggiunge spazio sotto */
+            transition: transform 0.3s ease; /* Transizione per effetto hover */
+        }
 
-        .site-logo:hover {
-            transform: scale(1.05); /* Piccolo ingrandimento all'hover */
-        }
+        .site-logo:hover {
+            transform: scale(1.05); /* Piccolo ingrandimento all'hover */
+        }
 
-        /* Stili Titolo e Sottotitolo Header */
-        header h1 {
-            font-size: 3.5em;
-            margin-bottom: 10px;
-            line-height: 1.2; /* Migliora la leggibilità su più righe */
-            padding: 0 10px; /* Previene che il testo si attacchi ai bordi su schermi stretti */
-            word-break: break-word; /* Permette la rottura di parole lunghe */
-        }
+        /* Stili Titolo e Sottotitolo Header */
+        header h1 {
+            font-size: 3.5em;
+            margin-bottom: 10px;
+            line-height: 1.2; /* Migliora la leggibilità su più righe */
+            padding: 0 10px; /* Previene che il testo si attacchi ai bordi su schermi stretti */
+            word-break: break-word; /* Permette la rottura di parole lunghe */
+        }
 
-        header p {
-            font-size: 1.4em;
-            opacity: 0.9;
-            padding: 0 10px; /* Come per h1 */
-            word-break: break-word; /* Come per h1 */
-        }
+        header p {
+            font-size: 1.4em;
+            opacity: 0.9;
+            padding: 0 10px; /* Come per h1 */
+            word-break: break-word; /* Come per h1 */
+        }
 
-        /* Stili Sezioni Generali */
-        section {
-            padding: 60px 20px;
-            max-width: 1100px;
-            margin: auto;
-            /* Stili per Scroll Reveal Animation */
-            opacity: 0; /* Inizialmente invisibile */
-            transform: translateY(50px); /* Inizia più in basso */
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Transizione fluida */
-        }
+        /* Stili Sezioni Generali */
+        section {
+            padding: 60px 20px;
+            max-width: 1100px;
+            margin: auto;
+            /* Stili per Scroll Reveal Animation */
+            opacity: 0; /* Inizialmente invisibile */
+            transform: translateY(50px); /* Inizia più in basso */
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Transizione fluida */
+        }
 
-        /* Classe aggiunta da JS per attivare l'animazione allo scroll */
-        section.animate-in {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        /* Classe aggiunta da JS per attivare l'animazione allo scroll */
+        section.animate-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
-        h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            color: #8b0000;
-        }
+        h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #8b0000;
+        }
 
-        .grid {
-            display: grid;
-            gap: 40px;
-        }
+        .grid {
+            display: grid;
+            gap: 40px;
+        }
 
-        .services, .properties {
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        }
+        .services, .properties {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
 
-        /* Stili Card */
-        .card {
-            background: white;
-            border-radius: 16px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
+        /* Stili Card */
+        .card {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-        .card:hover {
-            transform: scale(1.03);
-            box-shadow: 0 14px 30px rgba(0,0,0,0.2);
-        }
+        .card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 14px 30px rgba(0,0,0,0.2);
+        }
 
-        .card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
 
-        .card-content {
-            padding: 20px;
-        }
+        .card-content {
+            padding: 20px;
+        }
 
-        /* Stili CTA (Call To Action) */
-        .cta {
-            text-align: center;
-            margin-top: 40px;
-        }
+        /* Stili CTA (Call To Action) */
+        .cta {
+            text-align: center;
+            margin-top: 40px;
+        }
 
-        .cta a {
-            background: #8b0000;
-            color: white;
-            padding: 16px 32px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1em;
-            border-radius: 10px;
-            transition: background 0.3s ease, transform 0.2s ease;
-        }
+        .cta a {
+            background: #8b0000;
+            color: white;
+            padding: 16px 32px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            border-radius: 10px;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
 
-        .cta a:hover {
-            background: #a52a2a;
-            transform: translateY(-3px); /* Piccolo effetto "lift" */
-        }
+        .cta a:hover {
+            background: #a52a2a;
+            transform: translateY(-3px); /* Piccolo effetto "lift" */
+        }
 
-        /* Stili Footer */
-        footer {
-            text-align: center;
-            padding: 50px 20px;
-            font-size: 0.95em;
-            color: #555;
-            background-color: #f4f4f4;
-        }
+        /* Stili Footer */
+        footer {
+            text-align: center;
+            padding: 50px 20px;
+            font-size: 0.95em;
+            color: #555;
+            background-color: #f4f4f4;
+        }
 
-        footer nav a {
-            color: #8b0000;
-            text-decoration: none;
-            margin: 0 10px;
-            transition: color 0.3s ease;
-        }
+        footer nav a {
+            color: #8b0000;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
 
-        footer nav a:hover {
-            color: #a52a2a;
-        }
+        footer nav a:hover {
+            color: #a52a2a;
+        }
 
-        /* Sticky WhatsApp Button */
-        .sticky-whatsapp {
-            background:#25D366;
-            color:white;
-            padding:14px 28px;
-            border-radius:50px;
-            text-decoration:none;
-            font-weight:bold;
-            font-size:1em;
-            position: fixed;
-            bottom: 20px;
-            right: 20px; /* Posizionato a destra */
-            z-index: 999;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            transition: transform 0.2s ease;
-        }
+        /* Sticky WhatsApp Button */
+        .sticky-whatsapp {
+            background:#25D366;
+            color:white;
+            padding:14px 28px;
+            border-radius:50px;
+            text-decoration:none;
+            font-weight:bold;
+            font-size:1em;
+            position: fixed;
+            bottom: 20px;
+            right: 20px; /* Posizionato a destra */
+            z-index: 999;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.2s ease;
+        }
 
-        .sticky-whatsapp:hover {
-            transform: scale(1.05);
-        }
+        .sticky-whatsapp:hover {
+            transform: scale(1.05);
+        }
 
-        /* Keyframes per le animazioni */
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+        /* Keyframes per le animazioni */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
 
-        @keyframes slideInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+        @keyframes slideInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-        /* Stili Menu Mobile (Hamburger) */
-        .mobile-nav {
-            display: none; /* Nascosto di default */
-            position: fixed;
-            top: 10px;
-            right: 10px;
-            z-index: 1000;
-        }
+        /* Stili Menu Mobile (Hamburger) */
+        .mobile-nav {
+            display: none; /* Nascosto di default */
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            z-index: 1000;
+        }
 
-        /* Media Queries per responsività */
-        @media (max-width: 768px) {
-            /* Attiva menu mobile */
-            .mobile-nav {
-                display: block;
-            }
+        /* Media Queries per responsività */
+        @media (max-width: 768px) {
+            /* Attiva menu mobile */
+            .mobile-nav {
+                display: block;
+            }
 
-            .menu-icon {
-                font-size: 2em;
-                color: white;
-                cursor: pointer;
-                padding: 10px;
-                background: #8b0000;
-                border-radius: 8px;
-                display: block;
-                position: relative;
-                z-index: 1001; /* Sopra il menu stesso */
-                box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-            }
+            .menu-icon {
+                font-size: 2em;
+                color: white;
+                cursor: pointer;
+                padding: 10px;
+                background: #8b0000;
+                border-radius: 8px;
+                display: block;
+                position: relative;
+                z-index: 1001; /* Sopra il menu stesso */
+                box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            }
 
-            #menu-toggle {
-                display: none; /* Nasconde la checkbox */
-            }
+            #menu-toggle {
+                display: none; /* Nasconde la checkbox */
+            }
 
-            .menu {
-                background: #fff;
-                padding: 20px;
-                border-radius: 8px;
-                position: fixed; /* Posizione fissa per lo slide-in */
-                top: 0;
-                right: -280px; /* Inizia fuori dallo schermo a destra */
-                height: 100%; /* Altezza piena dello schermo */
-                width: 280px; /* Larghezza del menu a scomparsa */
-                box-shadow: -5px 0 15px rgba(0,0,0,0.2);
-                transition: right 0.4s ease-out; /* Transizione fluida */
-                overflow-y: auto; /* Abilita lo scroll se il menu è troppo lungo */
-                box-sizing: border-box; /* Include padding nella larghezza */
-                z-index: 1000;
-            }
+            .menu {
+                background: #fff;
+                padding: 20px;
+                border-radius: 8px;
+                position: fixed; /* Posizione fissa per lo slide-in */
+                top: 0;
+                right: -280px; /* Inizia fuori dallo schermo a destra */
+                height: 100%; /* Altezza piena dello schermo */
+                width: 280px; /* Larghezza del menu a scomparsa */
+                box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+                transition: right 0.4s ease-out; /* Transizione fluida */
+                overflow-y: auto; /* Abilita lo scroll se il menu è troppo lungo */
+                box-sizing: border-box; /* Include padding nella larghezza */
+                z-index: 1000;
+            }
 
-            /* Quando la checkbox è "checked", sposta il menu a vista */
-            #menu-toggle:checked + .menu-icon + .menu {
-                right: 0; /* Scorri a vista */
-            }
+            /* Quando la checkbox è "checked", sposta il menu a vista */
+            #menu-toggle:checked + .menu-icon + .menu {
+                right: 0; /* Scorri a vista */
+            }
 
-            .menu li {
-                list-style: none;
-                margin: 15px 0;
-                padding: 0;
-            }
+            .menu li {
+                list-style: none;
+                margin: 15px 0;
+                padding: 0;
+            }
 
-            .menu li a {
-                text-decoration: none;
-                color: #8b0000;
-                font-weight: bold;
-                display: block; /* Rende i link a piena larghezza per un tocco facile */
-                padding: 5px 0;
-                transition: color 0.3s ease;
-            }
+            .menu li a {
+                text-decoration: none;
+                color: #8b0000;
+                font-weight: bold;
+                display: block; /* Rende i link a piena larghezza per un tocco facile */
+                padding: 5px 0;
+                transition: color 0.3s ease;
+            }
 
-            .menu li a:hover {
-                color: #a52a2a;
-            }
+            .menu li a:hover {
+                color: #a52a2a;
+            }
 
-            /* Stili per Sottomenu (Servizi, Guide) */
-            .menu li.has-submenu > a {
-                position: relative;
-            }
+            /* Stili per Sottomenu (Servizi, Guide) */
+            .menu li.has-submenu > a {
+                position: relative;
+            }
 
-            .menu li.has-submenu > a::after {
-                content: ' \25BE'; /* Freccia giù */
-                font-size: 0.8em;
-                vertical-align: middle;
-                margin-left: 5px;
-                transition: transform 0.3s ease;
-                float: right; /* Mette la freccia a destra */
-            }
+            .menu li.has-submenu > a::after {
+                content: ' \25BE'; /* Freccia giù */
+                font-size: 0.8em;
+                vertical-align: middle;
+                margin-left: 5px;
+                transition: transform 0.3s ease;
+                float: right; /* Mette la freccia a destra */
+            }
 
-            .menu li.has-submenu.active > a::after {
-                transform: rotate(180deg); /* Ruota la freccia quando il sottomenu è aperto */
-            }
+            .menu li.has-submenu.active > a::after {
+                transform: rotate(180deg); /* Ruota la freccia quando il sottomenu è aperto */
+            }
 
-            .submenu {
-                display: none; /* Nasconde i sottomenu di default */
-                list-style: none;
-                padding-left: 20px; /* Indenta gli elementi del sottomenu */
-                margin-top: 5px;
-            }
+            .submenu {
+                display: none; /* Nasconde i sottomenu di default */
+                list-style: none;
+                padding-left: 20px; /* Indenta gli elementi del sottomenu */
+                margin-top: 5px;
+            }
 
-            .submenu li {
-                margin: 8px 0;
-            }
+            .submenu li {
+                margin: 8px 0;
+            }
 
-            .submenu li a {
-                font-weight: normal;
-                font-size: 0.9em;
-                color: #555;
-            }
+            .submenu li a {
+                font-weight: normal;
+                font-size: 0.9em;
+                color: #555;
+            }
 
-            /* Regolazioni per schermi più piccoli (sotto 600px) */
-            @media (max-width: 600px) {
-                header {
-                    padding: 60px 15px; /* Padding ridotto per l'header su mobile */
-                }
-                .site-logo {
-                    width: 140px; /* Logo leggermente più piccolo su mobile */
-                    margin-bottom: 15px;
-                }
-                header h1 {
-                    font-size: 2.5em; /* Dimensione titolo adattata */
-                }
-                header p {
-                    font-size: 1.2em; /* Dimensione descrizione adattata */
-                }
-                section {
-                    padding: 40px 15px; /* Padding sezioni ridotto */
-                }
-                h2 {
-                    font-size: 2em; /* Dimensione titoli sezione adattata */
-                }
-                .card img {
-                    height: 140px;
-                }
-                .cta a,
-                #contatti a {
-                    display: block;
-                    width: 90%;
-                    margin: 10px auto;
-                    font-size: 1em;
-                }
-                .sticky-whatsapp {
-                    left: 50%;
-                    right: auto; /* Rimuove right per centrare */
-                    transform: translateX(-50%);
-                    padding: 12px 24px;
-                    font-size: 0.9em;
-                }
-            }
-        }
-    </style>
+            /* Regolazioni per schermi più piccoli (sotto 600px) */
+            @media (max-width: 600px) {
+                header {
+                    padding: 60px 15px; /* Padding ridotto per l'header su mobile */
+                }
+                .site-logo {
+                    width: 140px; /* Logo leggermente più piccolo su mobile */
+                    margin-bottom: 15px;
+                }
+                header h1 {
+                    font-size: 2.5em; /* Dimensione titolo adattata */
+                }
+                header p {
+                    font-size: 1.2em; /* Dimensione descrizione adattata */
+                }
+                section {
+                    padding: 40px 15px; /* Padding sezioni ridotto */
+                }
+                h2 {
+                    font-size: 2em; /* Dimensione titoli sezione adattata */
+                }
+                .card img {
+                    height: 140px;
+                }
+                .cta a,
+                #contatti a {
+                    display: block;
+                    width: 90%;
+                    margin: 10px auto;
+                    font-size: 1em;
+                }
+                .sticky-whatsapp {
+                    left: 50%;
+                    right: auto; /* Rimuove right per centrare */
+                    transform: translateX(-50%);
+                    padding: 12px 24px;
+                    font-size: 0.9em;
+                }
+            }
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Menu Mobile (Hamburger) -->
-    <nav class="mobile-nav">
-        <input id="menu-toggle" type="checkbox"/>
-        <label class="menu-icon" for="menu-toggle">
-            ☰
-        </label>
-        <ul class="menu">
-            <li><a href="#chi-siamo">Chi Siamo</a></li>
-            <li class="has-submenu">
-                <a href="#">Servizi ▾</a>
-                <ul class="submenu">
-                    <li><a href="/gestione-bnb-palermo.html">Gestione B&amp;B</a></li>
-                    <li><a href="/gestione-case-palermo.html">Gestione Case</a></li>
-                    <li><a href="/cohost-palermo.html">Cohost</a></li>
-                    <li><a href="/ristrutturazioni-bnb.html">Ristrutturazioni B&amp;B</a></li>
-                </ul>
-            </li>
-            <li class="has-submenu">
-                <a href="#">Guide ▾</a>
-                <ul class="submenu">
-                    <li><a href="/come-affittare-un-bnb-a-palermo.html">Come Affittare un B&amp;B</a></li>
-                    <li><a href="/aumentare-guadagni-airbnb-palermo.html">Aumentare i Guadagni su Airbnb</a></li>
-                </ul>
-            </li>
-            <li><a href="/per-agenzie.html">Lavora con Noi</a></li>
-            <li><a href="#contatti">Contatti</a></li>
-        </ul>
-    </nav>
+        <nav class="mobile-nav">
+        <input id="menu-toggle" type="checkbox"/>
+        <label class="menu-icon" for="menu-toggle">
+            ☰
+        </label>
+        <ul class="menu">
+            <li><a href="#chi-siamo">Chi Siamo</a></li>
+            <li class="has-submenu">
+                <a href="#">Servizi ▾</a>
+                <ul class="submenu">
+                    <li><a href="/gestione-bnb-palermo.html">Gestione B&amp;B</a></li>
+                    <li><a href="/gestione-case-palermo.html">Gestione Case</a></li>
+                    <li><a href="/cohost-palermo.html">Cohost</a></li>
+                    <li><a href="/ristrutturazioni-bnb.html">Ristrutturazioni B&amp;B</a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <a href="#">Guide ▾</a>
+                <ul class="submenu">
+                    <li><a href="/come-affittare-un-bnb-a-palermo.html">Come Affittare un B&amp;B</a></li>
+                    <li><a href="/aumentare-guadagni-airbnb-palermo.html">Aumentare i Guadagni su Airbnb</a></li>
+                </ul>
+            </li>
+            <li><a href="/per-agenzie.html">Lavora con Noi</a></li>
+            <li><a href="#contatti">Contatti</a></li>
+        </ul>
+    </nav>
 
-    <main>
-        <header>
-            <div class="header-content">
-                <a href="index.html" class="logo-link">
-                    <img src="logo.svg" alt="Costanzo Acquisizioni Logo" class="site-logo">
-                </a>
-                <h1>
-                    Costanzo Acquisizioni
-                </h1>
-                <p>
-                    Il partner ideale per la gestione dei tuoi affitti brevi           
-                </p>
-            </div>
-        </header>
+    <main>
+        <header>
+            <div class="header-content">
+                <a href="index.html" class="logo-link">
+                    <img src="logo.svg" alt="Costanzo Acquisizioni Logo" class="site-logo">
+                </a>
+                <h1>
+                    Costanzo Acquisizioni
+                </h1>
+                <p>
+                    Il partner ideale per la gestione dei tuoi affitti brevi           
+                </p>
+            </div>
+        </header>
 
-        <section id="chi-siamo">
-            <h2>
-                Chi Siamo
-            </h2>
-            <p>
-                Noi di Costanzo Acquisizioni siamo un team specializzato nella gestione completa di affitti brevi. Offriamo un servizio professionale, su misura, che valorizza ogni immobile e garantisce il massimo ritorno per i proprietari. Dalla comunicazione con gli ospiti alla pulizia, dal marketing al check-out, ci occupiamo di tutto con cura e precisione.
-            </p>
-        </section>
+        <section id="chi-siamo">
+            <h2>
+                Chi Siamo
+            </h2>
+            <p>
+                Noi di Costanzo Acquisizioni siamo un team specializzato nella gestione completa di affitti brevi. Offriamo un servizio professionale, su misura, che valorizza ogni immobile e garantisce il massimo ritorno per i proprietari. Dalla comunicazione con gli ospiti alla pulizia, dal marketing al check-out, ci occupiamo di tutto con cura e precisione.
+            </p>
+        </section>
 
-        <section id="servizi">
-            <h2>
-                Servizi Offerti
-            </h2>
-            <div class="grid services">
-                <article class="card">
-                    <div class="card-content">
-                        <h3>
-                            Gestione Totale
-                        </h3>
-                        <p>
-                            Supervisione completa di check-in, pulizie, assistenza e logistica.
-                        </p>
-                    </div>
-                </article>
-                <article class="card">
-                    <div class="card-content">
-                        <h3>
-                            Ottimizzazione Prezzi
-                        </h3>
-                        <p>
-                            Utilizziamo algoritmi dinamici per massimizzare il rendimento delle notti vendute.
-                        </p>
-                    </div>
-                </article>
-                <article class="card">
-                    <div class="card-content">
-                        <h3>
-                            Comunicazione AI
-                        </h3>
-                        <p>
-                            Risposte rapide, multilingua e personalizzate grazie a un sistema intelligente.
-                        </p>
-                    </div>
-                </article>
-                <article class="card">
-                    <div class="card-content">
-                        <h3>
-                            Marketing Avanzato
-                        </h3>
-                        <p>
-                            Promozione strategica su Airbnb, Booking, Vrbo e social media.
-                        </p>
-                    </div>
-                </article>
-            </div>
-        </section>
+        <section id="servizi">
+            <h2>
+                Servizi Offerti
+            </h2>
+            <div class="grid services">
+                <article class="card">
+                    <div class="card-content">
+                        <h3>
+                            Gestione Totale
+                        </h3>
+                        <p>
+                            Supervisione completa di check-in, pulizie, assistenza e logistica.
+                        </p>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-content">
+                        <h3>
+                            Ottimizzazione Prezzi
+                        </h3>
+                        <p>
+                            Utilizziamo algoritmi dinamici per massimizzare il rendimento delle notti vendute.
+                        </p>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-content">
+                        <h3>
+                            Comunicazione AI
+                        </h3>
+                        <p>
+                            Risposte rapide, multilingua e personalizzate grazie a un sistema intelligente.
+                        </p>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-content">
+                        <h3>
+                            Marketing Avanzato
+                        </h3>
+                        <p>
+                            Promozione strategica su Airbnb, Booking, Vrbo e social media.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
 
-        <section id="immobili">
-            <h2>
-                I Nostri Immobili
-            </h2>
-            <div class="grid properties">
-                <a href="https://www.vrbo.com/it-it/affitto-vacanze/p11738322" target="_blank">
-                    <article class="card">
-                        <img alt="Villa Valery con piscina privata a Mondello" loading="lazy" src="villa_valery.jpg"/>
-                        <div class="card-content">
-                            <h3>
-                                Villa Valery – Mondello
-                            </h3>
-                            <p>
-                                Esclusiva villa con piscina privata e giardino mediterraneo. Comfort, privacy e design a pochi passi dal mare.
-                            </p>
-                        </div>
-                    </article>
-                </a>
-                <a href="https://moncadadeluna.com/it/appartamento-in-palazzo-nobiliare" target="_blank">
-                    <article class="card">
-                        <img alt="Facciata storica del Palazzo Moncada in centro a Palermo" loading="lazy" src="palazzo_moncada.jpg"/>
-                        <div class="card-content">
-                            <h3>
-                                Palazzo Moncada – Palermo Centro
-                            </h3>
-                            <p>
-                                Appartamento nobiliare in palazzo storico, con Jacuzzi e finiture di pregio. Il cuore autentico di Palermo.
-                            </p>
-                        </div>
-                    </article>
-                </a>
-                <article class="card">
-                    <img alt="Piscina panoramica del Da Vinci Resort con vista mare" loading="lazy" src="davinci_resort.jpg"/>
-                    <div class="card-content">
-                        <h3>
-                            Da Vinci Resort – Vista Mare
-                        </h3>
-                        <p>
-                            Resort esclusivo con piscina panoramica e vista sul porto. Un’esperienza indimenticabile per i tuoi ospiti.
-                        </p>
-                    </div>
-                </article>
-                <a href="https://t.vrbo.io/t4WHyR0bFTb" target="_blank">
-                    <article class="card">
-                        <img alt="Giardino esterno di Villa Harmony, relax e privacy a Mondello" loading="lazy" src="villa_harmony.jpg"/>
-                        <div class="card-content">
-                            <h3>
-                                Villa Harmony – Relax a Mondello
-                            </h3>
-                            <p>
-                                Oasi privata con giardino, zona colazione e verde mediterraneo. Il luogo perfetto per rilassarsi a due passi dal mare.
-                            </p>
-                        </div>
-                    </article>
-                </a>
-            </div>
-            <div class="cta">
-                <a href="#contatti">
-                    Contattaci Ora
-                </a>
-            </div>
-        </section>
+        <section id="immobili">
+            <h2>
+                I Nostri Immobili
+            </h2>
+            <div class="grid properties">
+                
+                <a href="https://moncadadeluna.com/it/appartamento-in-palazzo-nobiliare" target="_blank">
+                    <article class="card">
+                        <img alt="Facciata storica del Palazzo Moncada in centro a Palermo" loading="lazy" src="palazzo_moncada.jpg"/>
+                        <div class="card-content">
+                            <h3>
+                                Palazzo Moncada – Palermo Centro
+                            </h3>
+                            <p>
+                                Appartamento nobiliare in palazzo storico, con Jacuzzi e finiture di pregio. Il cuore autentico di Palermo.
+                            </p>
+                        </div>
+                    </article>
+                </a>
+                <article class="card">
+                    <img alt="Piscina panoramica del Da Vinci Resort con vista mare" loading="lazy" src="davinci_resort.jpg"/>
+                    <div class="card-content">
+                        <h3>
+                            Da Vinci Resort – Vista Mare
+                        </h3>
+                        <p>
+                            Resort esclusivo con piscina panoramica e vista sul porto. Un’esperienza indimenticabile per i tuoi ospiti.
+                        </p>
+                    </div>
+                </article>
+                <a href="https://t.vrbo.io/t4WHyR0bFTb" target="_blank">
+                    <article class="card">
+                        <img alt="Giardino esterno di Villa Harmony, relax e privacy a Mondello" loading="lazy" src="villa_harmony.jpg"/>
+                        <div class="card-content">
+                            <h3>
+                                Villa Harmony – Relax a Mondello
+                            </h3>
+                            <p>
+                                Oasi privata con giardino, zona colazione e verde mediterraneo. Il luogo perfetto per rilassarsi a due passi dal mare.
+                            </p>
+                        </div>
+                    </article>
+                </a>
+            </div>
+            <div class="cta">
+                <a href="#contatti">
+                    Contattaci Ora
+                </a>
+            </div>
+        </section>
 
-        <section id="riconoscimenti">
-            <h2>
-                Riconoscimenti
-            </h2>
-            <div class="grid properties" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); justify-items: center;">
-                <article class="card">
-                    <img alt="Premio Booking Guest Review Award 2018 ricevuto da Costanzo Acquisizioni" loading="lazy" src="booking_award.jpg" style="height: auto;"/>
-                </article>
-                <article class="card">
-                    <img alt="Badge Superhost Airbnb ottenuto da Costanzo Acquisizioni" loading="lazy" src="superhost_badge.png" style="height: auto;"/>
-                </article>
-            </div>
-        </section>
+        <section id="riconoscimenti">
+            <h2>
+                Riconoscimenti
+            </h2>
+            <div class="grid properties" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); justify-items: center;">
+                <article class="card">
+                    <img alt="Premio Booking Guest Review Award 2018 ricevuto da Costanzo Acquisizioni" loading="lazy" src="booking_award.jpg" style="height: auto;"/>
+                </article>
+                <article class="card">
+                    <img alt="Badge Superhost Airbnb ottenuto da Costanzo Acquisizioni" loading="lazy" src="superhost_badge.png" style="height: auto;"/>
+                </article>
+            </div>
+        </section>
 
-        <section id="contatti" style="text-align: center; margin: 60px auto;">
-            <h2>
-                Contattaci Ora
-            </h2>
-            <a href="#contatti" class="cta-button">
-                Contattaci Ora
-            </a>
-            <div style="margin-top: 20px;">
-                <a aria-label="Chiama Costanzo Acquisizioni" href="tel:+393888005083" class="contact-button call">
-                    📞 Chiama Ora
-                </a>
-                <a aria-label="Scrivici su WhatsApp" href="https://wa.me/393888005083?text=Ciao%2C%20sono%20interessato%20ai%20vostri%20servizi%20di%20cohost%20su%20Palermo%2C%20puoi%20dirmi%20di%20più%3F" class="contact-button whatsapp">
-                    💬 Scrivici su WhatsApp
-                </a>
-                <a aria-label="Invia una email a Costanzo Acquisizioni" href="mailto:info@costanzoacquisizioni.it" class="contact-button email">
-                    📧 Invia una Email
-                </a>
-            </div>
-        </section>
-    </main>
+        <section id="contatti" style="text-align: center; margin: 60px auto;">
+            <h2>
+                Contattaci Ora
+            </h2>
+            <a href="#contatti" class="cta-button">
+                Contattaci Ora
+            </a>
+            <div style="margin-top: 20px;">
+                <a aria-label="Chiama Costanzo Acquisizioni" href="tel:+393888005083" class="contact-button call">
+                    📞 Chiama Ora
+                </a>
+                <a aria-label="Scrivici su WhatsApp" href="https://wa.me/393888005083?text=Ciao%2C%20sono%20interessato%20ai%20vostri%20servizi%20di%20cohost%20su%20Palermo%2C%20puoi%20dirmi%20di%20più%3F" class="contact-button whatsapp">
+                    💬 Scrivici su WhatsApp
+                </a>
+                <a aria-label="Invia una email a Costanzo Acquisizioni" href="mailto:info@costanzoacquisizioni.it" class="contact-button email">
+                    📧 Invia una Email
+                </a>
+            </div>
+        </section>
+    </main>
 
-    <footer>
-        © 2025 Costanzo Acquisizioni - Tutti i diritti riservati
-        <br/>
-        Email:
-        <a aria-label="Invia una email a Costanzo Acquisizioni" href="mailto:info@costanzoacquisizioni.it">
-            info@costanzoacquisizioni.it
-        </a>
-        <br/>
-        Tel:
-        <a aria-label="Chiama Costanzo Acquisizioni" href="tel:+393888005083">
-            +39 388 8005083
-        </a>
-        <br/><br/>
-        <nav style="margin-top:20px;">
-            <a href="/gestione-case-palermo.html">Gestione Case</a> |
-            <a href="/gestione-bnb-palermo.html">Gestione B&amp;B</a> |
-            <a href="/cohost-palermo.html">Cohost</a> |
-            <a href="/per-agenzie.html">Agenzie</a> |
-            <a href="/ristrutturazioni-bnb.html">Ristrutturazioni</a>
-        </nav>
-    </footer>
+    <footer>
+        © 2025 Costanzo Acquisizioni - Tutti i diritti riservati
+        <br/>
+        Email:
+        <a aria-label="Invia una email a Costanzo Acquisizioni" href="mailto:info@costanzoacquisizioni.it">
+            info@costanzoacquisizioni.it
+        </a>
+        <br/>
+        Tel:
+        <a aria-label="Chiama Costanzo Acquisizioni" href="tel:+393888005083">
+            +39 388 8005083
+        </a>
+        <br/><br/>
+        <nav style="margin-top:20px;">
+            <a href="/gestione-case-palermo.html">Gestione Case</a> |
+            <a href="/gestione-bnb-palermo.html">Gestione B&amp;B</a> |
+            <a href="/cohost-palermo.html">Cohost</a> |
+            <a href="/per-agenzie.html">Agenzie</a> |
+            <a href="/ristrutturazioni-bnb.html">Ristrutturazioni</a>
+        </nav>
+    </footer>
 
-    <!-- Sticky WhatsApp Button -->
-    <a class="sticky-whatsapp" href="https://wa.me/393888005083?text=Ciao%2C%20sono%20interessato%20ai%20vostri%20servizi%20di%20cohost%20su%20Palermo%2C%20puoi%20dirmi%20di%20più%3F" target="_blank">
-        💬 Scrivici su WhatsApp
-    </a>
+        <a class="sticky-whatsapp" href="https://wa.me/393888005083?text=Ciao%2C%20sono%20interessato%20ai%20vostri%20servizi%20di%20cohost%20su%20Palermo%2C%20puoi%20dirmi%20di%20più%3F" target="_blank">
+        💬 Scrivici su WhatsApp
+    </a>
 
-    <!-- JavaScript per interattività e animazioni (menu mobile e scroll reveal) -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Logica per Scroll Reveal Animations
-            const sections = document.querySelectorAll('section');
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Logica per Scroll Reveal Animations
+            const sections = document.querySelectorAll('section');
 
-            const observerOptions = {
-                root: null, // Osserva rispetto al viewport
-                rootMargin: '0px',
-                threshold: 0.1 // L'animazione si attiva quando almeno il 10% dell'elemento è visibile
-            };
+            const observerOptions = {
+                root: null, // Osserva rispetto al viewport
+                rootMargin: '0px',
+                threshold: 0.1 // L'animazione si attiva quando almeno il 10% dell'elemento è visibile
+            };
 
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('animate-in'); // Aggiunge la classe per l'animazione
-                        observer.unobserve(entry.target); // Smette di osservare dopo l'animazione
-                    }
-                });
-            }, observerOptions);
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-in'); // Aggiunge la classe per l'animazione
+                        observer.unobserve(entry.target); // Smette di osservare dopo l'animazione
+                    }
+                });
+            }, observerOptions);
 
-            sections.forEach(section => {
-                observer.observe(section);
-            });
+            sections.forEach(section => {
+                observer.observe(section);
+            });
 
-            // Logica per il Menu Mobile (Submenu Toggle e chiusura al click)
-            const hasSubmenus = document.querySelectorAll('.mobile-nav .has-submenu > a');
-            hasSubmenus.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    // Controlla se siamo su mobile (breakpoint 768px come nel CSS)
-                    if (window.innerWidth <= 768) {
-                        const submenu = this.nextElementSibling; // Il sottomenu è l'elemento successivo
-                        if (submenu && submenu.classList.contains('submenu')) {
-                            e.preventDefault(); // Impedisce la navigazione diretta al link "#"
-                            this.parentNode.classList.toggle('active'); // Attiva/disattiva la classe sul genitore (li)
-                            // Mostra/nasconde il sottomenu
-                            submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
-                            // Ruota la freccia del submenu
-                            this.parentNode.classList.toggle('active-submenu');
-                        }
-                    }
-                });
-            });
+            // Logica per il Menu Mobile (Submenu Toggle e chiusura al click)
+            const hasSubmenus = document.querySelectorAll('.mobile-nav .has-submenu > a');
+            hasSubmenus.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    // Controlla se siamo su mobile (breakpoint 768px come nel CSS)
+                    if (window.innerWidth <= 768) {
+                        const submenu = this.nextElementSibling; // Il sottomenu è l'elemento successivo
+                        if (submenu && submenu.classList.contains('submenu')) {
+                            e.preventDefault(); // Impedisce la navigazione diretta al link "#"
+                            this.parentNode.classList.toggle('active'); // Attiva/disattiva la classe sul genitore (li)
+                            // Mostra/nasconde il sottomenu
+                            submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+                            // Ruota la freccia del submenu
+                            this.parentNode.classList.toggle('active-submenu');
+                        }
+                    }
+                });
+            });
 
-            // Chiudi il menu mobile quando un link viene cliccato
-            const menuLinks = document.querySelectorAll('.mobile-nav .menu a:not(.has-submenu > a)'); // Escludi i link dei sottomenu
-            const menuToggle = document.getElementById('menu-toggle');
-            menuLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    // Se il menu è aperto (checkbox checked), chiudilo
-                    if (menuToggle.checked) {
-                        menuToggle.checked = false;
-                        // Chiudi anche tutti i sottomenu aperti
-                        document.querySelectorAll('.mobile-nav .submenu').forEach(sm => sm.style.display = 'none');
-                        document.querySelectorAll('.mobile-nav .has-submenu').forEach(sm => sm.classList.remove('active', 'active-submenu'));
-                    }
-                });
-            });
-        });
-    </script>
+            // Chiudi il menu mobile quando un link viene cliccato
+            const menuLinks = document.querySelectorAll('.mobile-nav .menu a:not(.has-submenu > a)'); // Escludi i link dei sottomenu
+            const menuToggle = document.getElementById('menu-toggle');
+            menuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    // Se il menu è aperto (checkbox checked), chiudilo
+                    if (menuToggle.checked) {
+                        menuToggle.checked = false;
+                        // Chiudi anche tutti i sottomenu aperti
+                        document.querySelectorAll('.mobile-nav .submenu').forEach(sm => sm.style.display = 'none');
+                        document.querySelectorAll('.mobile-nav .has-submenu').forEach(sm => sm.classList.remove('active', 'active-submenu'));
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
