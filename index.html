@@ -3,7 +3,6 @@
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <!-- SEO Costanzo Acquisizioni -->
     <meta content="Noi di Costanzo Acquisizioni gestiamo immobili a Palermo: affitti brevi, B&amp;B, ville e appartamenti turistici. Siamo property manager esperti in cohosting e affitti turistici." name="description"/>
     <meta content="gestione immobili, affitti brevi, affitti turistici, B&amp;B Palermo, cohost Palermo, gestione immobili Palermo, affitti brevi Palermo, affitti turistici Palermo, property manager Palermo, case vacanza Palermo" name="keywords"/>
     <meta content="Costanzo Acquisizioni" name="author"/>
@@ -128,6 +127,18 @@
         .card:hover {
             transform: scale(1.03);
             box-shadow: 0 14px 30px rgba(0,0,0,0.2);
+        }
+
+        /* NUOVO: Stili specifici per l'embed di Airbnb per renderlo responsive */
+        .properties .card .airbnb-embed-frame {
+            /* Imposta larghezza e altezza per essere responsive all'interno del grid item */
+            width: 100% !important; 
+            height: 300px !important; 
+            margin: 0 !important; /* Rimuove il margin: auto del codice embed standard */
+            /* Aggiunge il box-shadow e il border-radius come le card normali */
+            box-shadow: none !important; 
+            border-radius: 16px; 
+            overflow: hidden; 
         }
 
         .card img {
@@ -372,7 +383,6 @@
 </head>
 <body>
 
-    <!-- Menu Mobile (Hamburger) -->
     <nav class="mobile-nav">
         <input id="menu-toggle" type="checkbox"/>
         <label class="menu-icon" for="menu-toggle">
@@ -478,6 +488,21 @@
                 I Nostri Immobili
             </h2>
             <div class="grid properties">
+                
+                <div class="card">
+                    <div class="airbnb-embed-frame" data-id="1561174286170716326" data-view="home" data-hide-price="true" style="width: 100%; height: 300px;">
+                        <a href="https://www.airbnb.it/rooms/1561174286170716326?guests=1&amp;adults=1&amp;s=66&amp;source=embed_widget">Visto su Airbnb</a>
+                        <a href="https://www.airbnb.it/rooms/1561174286170716326?guests=1&amp;adults=1&amp;s=66&amp;source=embed_widget" rel="nofollow">Alloggio in affitto · Palermo · ★Novità · 2 camere da letto · 3 letti · 1 bagno</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="airbnb-embed-frame" data-id="1558992620863362120" data-view="home" data-hide-price="true" style="width: 100%; height: 300px;">
+                        <a href="https://www.airbnb.it/rooms/1558992620863362120?guests=1&amp;adults=1&amp;s=66&amp;source=embed_widget">Visto su Airbnb</a>
+                        <a href="https://www.airbnb.it/rooms/1558992620863362120?guests=1&amp;adults=1&amp;s=66&amp;source=embed_widget" rel="nofollow">Casa · Carini · ★Novità · 3 camere da letto · 6 letti · 3 bagni</a>
+                    </div>
+                </div>
+
                 <a href="https://moncadadeluna.com/it/appartamento-in-palazzo-nobiliare" target="_blank">
                     <article class="card">
                         <img alt="Facciata storica del Palazzo Moncada in centro a Palermo" loading="lazy" src="palazzo_moncada.jpg"/>
@@ -580,12 +605,10 @@
         </nav>
     </footer>
 
-    <!-- Sticky WhatsApp Button -->
     <a class="sticky-whatsapp" href="https://wa.me/393888005083?text=Ciao%2C%20sono%20interessato%20ai%20vostri%20servizi%20di%20cohost%20su%20Palermo%2C%20puoi%20dirmi%20di%20più%3F" target="_blank">
         💬 Scrivici su WhatsApp
     </a>
 
-    <!-- JavaScript per interattività e animazioni (menu mobile e scroll reveal) -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Logica per Scroll Reveal Animations
@@ -645,5 +668,7 @@
             });
         });
     </script>
+
+    <script async="" src="https://www.airbnb.it/embeddable/airbnb_jssdk"></script>
 </body>
 </html>
