@@ -1,94 +1,334 @@
-
 <!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Come affittare legalmente un B&B a Palermo – Guida completa 2025</title>
-  <meta name="description" content="Scopri tutti i passaggi per aprire e affittare un B&B a Palermo nel rispetto delle leggi: CIR, tassa di soggiorno, registrazioni e obblighi."/>
-  <meta name="keywords" content="come affittare b&b Palermo, aprire B&B, affitti turistici regole Sicilia, CIR, portale alloggiati"/>
+  <meta name="description" content="Guida completa per aprire e affittare legalmente un B&B a Palermo: CIR, Alloggiati Web, tassa di soggiorno, sicurezza e fisco. Tutto quello che devi sapere."/>
+  <meta name="keywords" content="come affittare bnb palermo, aprire bnb palermo legalmente, CIR sicilia, alloggiati web palermo, tassa soggiorno palermo, affitti brevi normativa sicilia"/>
   <meta name="author" content="Costanzo Acquisizioni"/>
+  <meta property="og:title" content="Come affittare legalmente un B&B a Palermo – Guida 2025"/>
+  <meta property="og:description" content="Tutto quello che devi fare per aprire un B&B a Palermo in regola: CIR, portale Alloggiati, tassa di soggiorno, sicurezza e regime fiscale."/>
+  <meta property="og:image" content="https://costanzoacquisizioni.it/palazzo_moncada.jpg"/>
+  <meta property="og:url" content="https://costanzoacquisizioni.it/come-affittare-un-bnb-a-palermo.html"/>
+  <meta property="og:type" content="article"/>
+  <meta name="twitter:card" content="summary_large_image"/>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet"/>
   <style>
-    body {
-      font-family: 'Outfit', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #fff;
-      color: #222;
-      line-height: 1.6;
-    }
-    header {
-      background: linear-gradient(to right, #8b0000, #b22222);
-      color: white;
-      padding: 60px 20px;
-      text-align: center;
-    }
-    header h1 {
-      font-size: 2em;
-    }
-    section {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-    h2 {
-      color: #8b0000;
-      font-size: 1.5em;
-      margin-top: 40px;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    a.cta {
-      display: inline-block;
-      background: #8b0000;
-      color: white;
-      padding: 14px 28px;
-      border-radius: 10px;
-      text-decoration: none;
-      margin-top: 20px;
-    }
-    footer {
-      text-align: center;
-      padding: 40px 20px;
-      font-size: 0.9em;
-      background: #f4f4f4;
-      margin-top: 40px;
+    *, *::before, *::after { box-sizing: border-box; }
+    body { font-family: 'Outfit', sans-serif; margin: 0; padding: 0; background: #fff; color: #222; line-height: 1.7; }
+    .top-nav { background: #8b0000; padding: 12px 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+    .top-nav .logo { color: white; font-weight: 700; font-size: 1em; text-decoration: none; }
+    .top-nav .links { display: flex; gap: 4px; flex-wrap: wrap; }
+    .top-nav .links a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.85em; padding: 5px 10px; border-radius: 5px; transition: background 0.2s; }
+    .top-nav .links a:hover { background: rgba(255,255,255,0.2); color: white; }
+    .breadcrumb { max-width: 900px; margin: 14px auto 0; padding: 0 20px; font-size: 0.82em; color: #888; }
+    .breadcrumb a { color: #8b0000; text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    header { background: linear-gradient(135deg, #8b0000, #b22222); color: white; padding: 60px 20px 50px; text-align: center; }
+    header h1 { font-size: 2em; margin: 0 0 12px; line-height: 1.3; }
+    header .meta { font-size: 0.9em; opacity: 0.85; }
+    section { padding: 40px 20px; max-width: 900px; margin: auto; }
+    h2 { color: #8b0000; font-size: 1.55em; margin-top: 50px; margin-bottom: 12px; }
+    h3 { color: #444; font-size: 1.15em; margin-top: 24px; margin-bottom: 8px; font-weight: 600; }
+    p { margin-bottom: 14px; }
+    ul, ol { padding-left: 22px; margin-bottom: 14px; }
+    li { margin-bottom: 8px; }
+    a { color: #8b0000; }
+    a.cta-btn { display: inline-block; background: #8b0000; color: white; padding: 14px 30px; border-radius: 10px; text-decoration: none; margin-top: 16px; font-weight: 600; transition: background 0.2s, transform 0.2s; }
+    a.cta-btn:hover { background: #a52a2a; transform: translateY(-2px); }
+    a.cta-btn.green { background: #25D366; }
+    a.cta-btn.green:hover { background: #1da851; }
+    .cta-box { background: #fff5f5; border: 2px solid #8b0000; border-radius: 12px; padding: 28px; margin: 40px 0; text-align: center; }
+    .cta-box h3 { color: #8b0000; font-size: 1.25em; margin-top: 0; }
+    .cta-box .btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 12px; }
+    .step-box { background: #f9f9f9; border-radius: 12px; padding: 20px 24px; margin: 20px 0; border-left: 4px solid #8b0000; }
+    .step-box .step-num { font-size: 0.8em; font-weight: 700; color: #8b0000; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+    .step-box h3 { margin-top: 0; color: #222; }
+    .warning-box { background: #fffbea; border-left: 4px solid #e6a817; padding: 18px 22px; border-radius: 0 10px 10px 0; margin: 24px 0; }
+    .warning-box strong { color: #b87e00; }
+    .faq-list { margin-top: 10px; }
+    details.faq-item { border-bottom: 1px solid #eee; padding: 18px 0; }
+    details.faq-item summary { font-weight: 600; cursor: pointer; color: #8b0000; font-size: 1.02em; list-style: none; padding-right: 20px; position: relative; }
+    details.faq-item summary::after { content: '+'; position: absolute; right: 0; top: 0; font-size: 1.2em; }
+    details.faq-item[open] summary::after { content: '−'; }
+    details.faq-item p { margin-top: 10px; color: #444; }
+    .internal-links { background: #f4f4f4; border-radius: 12px; padding: 24px; margin-top: 40px; }
+    .internal-links h3 { color: #8b0000; margin-top: 0; }
+    .internal-links ul { list-style: none; padding: 0; }
+    .internal-links ul li { margin-bottom: 10px; }
+    .internal-links ul li a { color: #8b0000; text-decoration: none; font-weight: 600; }
+    .internal-links ul li a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 40px 20px; font-size: 0.9em; background: #f4f4f4; margin-top: 40px; color: #555; }
+    footer a { color: #8b0000; text-decoration: none; }
+    footer nav { margin-top: 16px; }
+    footer nav a { margin: 0 8px; }
+    .sticky-whatsapp { background: #25D366; color: white; padding: 13px 22px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 0.95em; position: fixed; bottom: 20px; right: 20px; z-index: 999; box-shadow: 0 4px 12px rgba(0,0,0,0.25); transition: transform 0.2s; }
+    .sticky-whatsapp:hover { transform: scale(1.05); }
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.55em; }
+      .top-nav .links { display: none; }
     }
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "Come affittare legalmente un B&B a Palermo – Guida completa 2025",
+        "description": "Tutto quello che devi fare per aprire un B&B a Palermo in regola: CIR, portale Alloggiati, tassa di soggiorno, sicurezza e regime fiscale.",
+        "author": { "@type": "Organization", "name": "Costanzo Acquisizioni", "url": "https://costanzoacquisizioni.it" },
+        "publisher": { "@type": "Organization", "name": "Costanzo Acquisizioni", "url": "https://costanzoacquisizioni.it" },
+        "datePublished": "2025-01-01",
+        "dateModified": "2025-03-09",
+        "url": "https://costanzoacquisizioni.it/come-affittare-un-bnb-a-palermo.html"
+      },
+      {
+        "@type": "LocalBusiness",
+        "name": "Costanzo Acquisizioni",
+        "url": "https://costanzoacquisizioni.it",
+        "telephone": "+393888005083",
+        "email": "info@costanzoacquisizioni.it",
+        "address": { "@type": "PostalAddress", "addressLocality": "Palermo", "addressRegion": "Sicilia", "addressCountry": "IT" }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "È obbligatorio il CIR per affittare su Airbnb a Palermo?", "acceptedAnswer": { "@type": "Answer", "text": "Sì. Il Codice Identificativo Regionale (CIR) è obbligatorio in Sicilia per pubblicare qualsiasi annuncio di affitto turistico su piattaforme come Airbnb e Booking. Senza CIR rischi sanzioni da 500 a 5.000 euro e la rimozione dell'annuncio." } },
+          { "@type": "Question", "name": "Quanto ci vuole per ottenere il CIR in Sicilia?", "acceptedAnswer": { "@type": "Answer", "text": "I tempi variano, ma generalmente occorrono 1-3 settimane lavorative dal momento della presentazione della domanda completa sul portale Turist@t Sicilia. È fondamentale avere tutti i documenti in ordine prima di iniziare." } },
+          { "@type": "Question", "name": "Cosa si paga con la cedolare secca per gli affitti brevi?", "acceptedAnswer": { "@type": "Answer", "text": "La cedolare secca per affitti brevi è al 21% sul reddito lordo generato (26% dal secondo immobile in poi, a partire dal 2024). Sostituisce IRPEF e addizionali e si applica a contratti inferiori a 30 giorni." } },
+          { "@type": "Question", "name": "Cosa succede se non si invia l'alloggiato entro 24 ore?", "acceptedAnswer": { "@type": "Answer", "text": "La mancata trasmissione dei dati degli ospiti al portale Alloggiati Web della Polizia di Stato entro 24 ore dall'arrivo (o prima della partenza se il soggiorno è inferiore) è un reato penale, oltre che amministrativo. Le sanzioni possono essere molto elevate." } },
+          { "@type": "Question", "name": "Chi deve riscuotere la tassa di soggiorno a Palermo?", "acceptedAnswer": { "@type": "Answer", "text": "La tassa di soggiorno deve essere riscossa dal gestore della struttura (o dal proprietario nel caso di gestione diretta) e versata trimestralmente al Comune di Palermo tramite il portale IDSPortale." } },
+          { "@type": "Question", "name": "Posso affidare la gestione burocratica a un professionista?", "acceptedAnswer": { "@type": "Answer", "text": "Sì. Costanzo Acquisizioni si occupa di tutta la parte burocratica per i proprietari che affidano la gestione del loro immobile: CIR, alloggiati, tassa di soggiorno, report fiscali. Contattaci per saperne di più." } }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
+
+  <nav class="top-nav">
+    <a href="/index.html" class="logo">Costanzo Acquisizioni</a>
+    <div class="links">
+      <a href="/gestione-bnb-palermo.html">Gestione B&amp;B</a>
+      <a href="/gestione-case-palermo.html">Gestione Case</a>
+      <a href="/cohost-palermo.html">Cohost</a>
+      <a href="/ristrutturazioni-bnb.html">Ristrutturazioni</a>
+      <a href="/aumentare-guadagni-airbnb-palermo.html">Guide</a>
+    </div>
+  </nav>
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/index.html">Home</a> › <a href="/come-affittare-un-bnb-a-palermo.html">Come affittare un B&amp;B a Palermo</a>
+  </nav>
+
   <header>
-    <h1>Come affittare legalmente un B&B a Palermo – Guida completa 2025</h1>
+    <h1>Come affittare legalmente un B&amp;B a Palermo – Guida completa 2025</h1>
+    <p class="meta">Aggiornato: marzo 2025 · Tempo di lettura: 9 minuti · A cura di Costanzo Acquisizioni</p>
   </header>
 
   <section>
-    <p>Aprire e gestire un B&B a Palermo può essere molto redditizio, ma è fondamentale conoscere le normative e adempiere a tutti gli obblighi legali per evitare problemi e sanzioni. In questa guida ti spieghiamo passo dopo passo cosa serve.</p>
+    <p>Vuoi trasformare il tuo appartamento o la tua casa a Palermo in un B&amp;B o in un affitto turistico? È un'idea ottima: Palermo è una delle città siciliane con la domanda turistica più costante, grazie al turismo culturale, gastronomico e balneare. Ma prima di pubblicare il primo annuncio su Airbnb o Booking, devi essere in regola con una serie di adempimenti burocratici, fiscali e di sicurezza. Saltarli non conviene: le sanzioni possono essere pesantissime.</p>
 
-    <h2>1. Richiedere il CIR</h2>
-    <p>Il Codice Identificativo Regionale (CIR) è obbligatorio per pubblicare un annuncio. Puoi ottenerlo attraverso il portale <a href="https://turistat.regione.sicilia.it" target="_blank">Turist@t Sicilia</a>.</p>
+    <p>In questa guida ti spieghiamo tutto quello che devi fare, passo per passo, per aprire e gestire un B&amp;B a Palermo nel pieno rispetto della legge. Siamo Costanzo Acquisizioni, property manager attivi a Palermo da anni: seguiamo ogni giorno questi adempimenti per i proprietari che ci affidano la gestione dei loro immobili.</p>
 
-    <h2>2. Registrazione al portale Alloggiati Web</h2>
-    <p>È necessario registrarsi alla Questura per accedere al <a href="https://alloggiatiweb.poliziadistato.it" target="_blank">Portale Alloggiati</a> e inviare ogni ospite entro 24 ore dal check-in.</p>
+    <div class="warning-box">
+      <strong>Attenzione:</strong> La normativa sugli affitti brevi in Italia è in continua evoluzione. Questa guida è aggiornata a marzo 2025. Ti consigliamo di verificare sempre le disposizioni più recenti o di affidarti a un professionista del settore.
+    </div>
 
-    <h2>3. Tassa di soggiorno</h2>
-    <p>Nel Comune di Palermo, la tassa di soggiorno va riscossa dagli ospiti e versata trimestralmente tramite il portale <a href="https://idsportale.comune.palermo.it" target="_blank">IDSPortale</a>.</p>
+    <h2>Il quadro normativo di riferimento</h2>
+    <p>Gli affitti brevi in Sicilia sono regolati da tre livelli normativi che si sovrappongono:</p>
+    <ul>
+      <li><strong>Legge nazionale</strong> – D.L. 50/2017 e successive modifiche (cedolare secca, obbligo di registrazione su piattaforme, trattenuta d'acconto intermediari).</li>
+      <li><strong>Legge regionale siciliana</strong> – disciplina le strutture ricettive, il CIR e i requisiti per i B&amp;B e le case vacanza.</li>
+      <li><strong>Ordinanze comunali</strong> – il Comune di Palermo ha proprie regole sulla tassa di soggiorno e sui requisiti minimi degli alloggi.</li>
+    </ul>
+    <p>Affrontarle una per volta è il modo migliore per non perdere nulla. Seguimi.</p>
 
-    
-    <h2>4. Requisiti di sicurezza</h2>
-    <p>È obbligatorio dotarsi di estintori, rilevatori di monossido di carbonio, rilevatori di metano.</p>
+    <h2>Step 1 – Richiedere il Codice Identificativo Regionale (CIR)</h2>
 
-    <h2>Conclusione</h2>
-    <p>Aprire un B&B richiede impegno, ma con i giusti partner può essere semplice e sicuro.</p>
+    <div class="step-box">
+      <div class="step-num">Primo adempimento obbligatorio</div>
+      <h3>Cos'è il CIR e perché è fondamentale</h3>
+      <p>Il Codice Identificativo Regionale (CIR) è un codice alfanumerico che identifica univocamente la tua struttura ricettiva nel registro della Regione Siciliana. È <strong>obbligatorio</strong> per pubblicare un annuncio di affitto turistico su qualsiasi piattaforma — Airbnb, Booking, Vrbo — e deve essere esposto visibilmente su ogni annuncio. Senza CIR, la piattaforma può rimuovere l'annuncio e rischi sanzioni amministrative da 500 a 5.000 euro.</p>
+    </div>
 
-    <a class="cta" href="https://wa.me/393888005083?text=Ciao%21%20Ho%20letto%20la%20vostra%20guida%20su%20come%20affittare%20un%20B%26B%20a%20Palermo.%20Possiamo%20parlarne%3F" target="_blank">
-      💬 Scrivici su WhatsApp
-    </a>
+    <h3>Come richiedere il CIR in Sicilia – passo per passo</h3>
+    <ol>
+      <li>Accedi al portale <a href="https://turistat.regione.sicilia.it" target="_blank" rel="noopener">Turist@t Sicilia</a> con SPID o CIE.</li>
+      <li>Scegli la tipologia della struttura: B&amp;B, casa vacanza, appartamento turistico, o altra categoria.</li>
+      <li>Inserisci i dati catastali dell'immobile (visura catastale aggiornata).</li>
+      <li>Carica la planimetria e i documenti richiesti (titolo di proprietà o contratto di affitto se sei sub-locatore, planimetria, attestazione requisiti minimi).</li>
+      <li>Invia la domanda e attendi la conferma: di solito arriva entro 1-3 settimane lavorative.</li>
+    </ol>
+
+    <h3>Cosa fare mentre aspetti il CIR</h3>
+    <p>Non puoi pubblicare l'annuncio prima di ricevere il CIR. Usa questo tempo per preparare l'immobile, fare le foto, scrivere la descrizione e impostare il calendario. Appena arriva il codice, sei pronto a partire immediatamente.</p>
+
+    <h2>Step 2 – Registrarsi al Portale Alloggiati Web</h2>
+
+    <div class="step-box">
+      <div class="step-num">Secondo adempimento obbligatorio</div>
+      <h3>Cos'è il portale Alloggiati Web</h3>
+      <p>Il portale <a href="https://alloggiatiweb.poliziadistato.it" target="_blank" rel="noopener">Alloggiati Web</a> della Polizia di Stato è il sistema obbligatorio per la trasmissione dei dati degli ospiti alle autorità di pubblica sicurezza. Ogni persona che soggiorna nella tua struttura deve essere registrata entro 24 ore dall'arrivo (o prima della partenza, se il soggiorno dura meno di 24 ore).</p>
+    </div>
+
+    <h3>Come registrarsi e cosa fare</h3>
+    <ol>
+      <li>Recati personalmente alla Questura di Palermo (Ufficio Alloggiati) con documento d'identità e CIR per richiedere le credenziali di accesso.</li>
+      <li>Ricevute le credenziali, accedi al portale e inserisci i dati di ogni ospite al momento del check-in: nome, cognome, data di nascita, nazionalità, numero di documento.</li>
+      <li>Tieni un registro degli ospiti anche in forma cartacea come backup.</li>
+    </ol>
+
+    <h3>Cosa rischi se non lo fai</h3>
+    <p>La mancata trasmissione dei dati degli ospiti è una violazione di pubblica sicurezza e comporta sia sanzioni amministrative che penali. Non è un adempimento da trascurare.</p>
+
+    <h2>Step 3 – La tassa di soggiorno a Palermo</h2>
+
+    <div class="step-box">
+      <div class="step-num">Terzo adempimento obbligatorio</div>
+      <h3>Importi della tassa di soggiorno a Palermo (2025)</h3>
+      <p>Il Comune di Palermo applica la tassa di soggiorno a tutte le strutture ricettive. Gli importi variano in base alla categoria della struttura. Per gli affitti brevi e B&amp;B la tassa è generalmente di <strong>1,50-3,00 euro per persona a notte</strong>, esclusi i bambini sotto una certa età (verificare le esenzioni aggiornate sul sito del Comune).</p>
+    </div>
+
+    <h3>Come si versa la tassa di soggiorno</h3>
+    <ol>
+      <li>Registrati sul portale <a href="https://idsportale.comune.palermo.it" target="_blank" rel="noopener">IDSPortale del Comune di Palermo</a>.</li>
+      <li>A ogni soggiorno, riscuoti la tassa dagli ospiti (inclusa nella cifra totale o comunicata a parte).</li>
+      <li>Ogni trimestre, accedi al portale e versa quanto riscosso, compilando il rendiconto.</li>
+    </ol>
+
+    <h3>Piattaforme che gestiscono la tassa automaticamente</h3>
+    <p>Airbnb trattiene e versa automaticamente la tassa di soggiorno in alcuni Comuni italiani (accordo diretto con i Comuni). Verifica se Palermo rientra tra questi prima di gestirla in autonomia, per evitare di versarla due volte.</p>
+
+    <h2>Step 4 – Requisiti di sicurezza obbligatori</h2>
+    <p>Ogni struttura ricettiva deve essere dotata di specifici dispositivi di sicurezza. Non sono accessori opzionali: sono obbligatori per legge e la loro assenza può causare problemi in caso di ispezione o, peggio, in caso di incidente.</p>
+
+    <h3>Dispositivi obbligatori</h3>
+    <ul>
+      <li><strong>Estintore a polvere o CO₂</strong> – almeno uno per piano, facilmente accessibile e verificato ogni anno.</li>
+      <li><strong>Rilevatore di monossido di carbonio</strong> – obbligatorio se ci sono impianti a gas o combustione (caldaia, cucina a gas).</li>
+      <li><strong>Rilevatore di fumo</strong> – raccomandato e obbligatorio in alcune categorie di strutture.</li>
+      <li><strong>Rilevatore di metano/GPL</strong> – se la struttura ha impianti a gas.</li>
+      <li><strong>Cassetta di pronto soccorso</strong> – con i contenuti minimi di legge.</li>
+      <li><strong>Piano di evacuazione</strong> – affisso in modo visibile nelle camere.</li>
+    </ul>
+
+    <h3>Sicurezza dati e GDPR</h3>
+    <p>Raccogliere i dati degli ospiti per il portale Alloggiati implica trattamento di dati personali. Devi avere una privacy policy adeguata e, se utilizzi sistemi digitali di archiviazione, rispettare il GDPR. Molti gestori si affidano a software che gestiscono questo aspetto automaticamente.</p>
+
+    <h2>Step 5 – Regime fiscale per gli affitti brevi</h2>
+    <p>Questa è forse la parte più complessa, ma anche quella che impatta di più sui guadagni netti. Scegliere il regime fiscale giusto può fare la differenza di migliaia di euro l'anno.</p>
+
+    <h3>Cedolare secca al 21% (o 26% dal secondo immobile)</h3>
+    <p>La cedolare secca è il regime fiscale più usato per gli affitti brevi in Italia. Sostituisce IRPEF e addizionali e si applica ai contratti di locazione inferiori a 30 giorni. L'aliquota è:</p>
+    <ul>
+      <li><strong>21%</strong> sul reddito lordo per il primo immobile destinato ad affitti brevi.</li>
+      <li><strong>26%</strong> dal secondo immobile in poi (modifica introdotta dalla Legge di Bilancio 2024).</li>
+    </ul>
+
+    <h3>Ritenuta d'acconto delle piattaforme</h3>
+    <p>Se utilizzi piattaforme come Airbnb o Booking, queste trattengono automaticamente il <strong>21% di ritenuta d'acconto</strong> sulle prenotazioni gestite tramite i loro sistemi di pagamento. Questa ritenuta è poi scalabile in dichiarazione dei redditi. Tieni traccia di tutti i CU (Certificazione Unica) che le piattaforme rilasciano ogni anno.</p>
+
+    <h3>Partita IVA: quando è necessaria?</h3>
+    <p>Per chi gestisce uno o pochi immobili in modo non professionale, la partita IVA generalmente non è necessaria. Diventa obbligatoria quando l'attività assume carattere d'impresa (gestione di molti immobili, dipendenti, struttura organizzata). Rivolgiti a un commercialista per valutare la tua situazione specifica.</p>
+
+    <h2>Step 6 – Pubblicare l'annuncio nel rispetto delle regole</h2>
+    <p>Una volta ottenuto il CIR e completati gli adempimenti, puoi finalmente pubblicare il tuo annuncio. Ricorda:</p>
+    <ul>
+      <li><strong>Esponi il CIR</strong> nell'annuncio – è obbligatorio inserirlo visibilmente nelle prime righe della descrizione.</li>
+      <li><strong>Indica la capienza massima</strong> – non puoi ospitare più persone di quelle dichiarate nella domanda di CIR.</li>
+      <li><strong>Specifica il regolamento della casa</strong> – orari di check-in/out, regole su fumo, animali, feste.</li>
+      <li><strong>Non pubblicizzare prezzi diversi da piattaforma a piattaforma</strong> – alcune piattaforme hanno clausole di parità tariffaria.</li>
+    </ul>
+
+    <div class="cta-box">
+      <h3>Ti sembra complicato? Ci pensiamo noi.</h3>
+      <p>Costanzo Acquisizioni gestisce ogni adempimento burocratico per i proprietari che ci affidano il loro immobile: CIR, Alloggiati, tassa di soggiorno, sicurezza e fiscalità. Contattaci per una consulenza gratuita.</p>
+      <div class="btns">
+        <a class="cta-btn green" href="https://wa.me/393888005083?text=Ciao%21%20Ho%20letto%20la%20guida%20su%20come%20affittare%20un%20B%26B%20a%20Palermo.%20Vorrei%20una%20consulenza%20gratuita." target="_blank">💬 Scrivici su WhatsApp</a>
+        <a class="cta-btn" href="mailto:info@costanzoacquisizioni.it">📧 Invia una email</a>
+      </div>
+    </div>
+
+    <h2>Gestire da soli o affidarsi a un professionista?</h2>
+    <p>La domanda che ci pongono quasi tutti i proprietari che ci contattano. La risposta dipende da quanto tempo hai, dalla tua dimestichezza con la burocrazia e da quanto vuoi guadagnare.</p>
+
+    <p>Gestire in autonomia è possibile, ma richiede:</p>
+    <ul>
+      <li>Tempo per la comunicazione con gli ospiti (h24).</li>
+      <li>Conoscenza delle normative e aggiornamento continuo.</li>
+      <li>Accesso e utilizzo di software per alloggiati, pricing, booking management.</li>
+      <li>Gestione delle pulizie, biancheria, check-in e check-out.</li>
+      <li>Competenze di marketing per ottimizzare l'annuncio.</li>
+    </ul>
+
+    <p>Affidarsi a un property manager come Costanzo Acquisizioni significa non pensare a nulla di tutto questo, ricevere un report mensile con i guadagni e avere un immobile che rende mediamente il 25-35% in più rispetto alla gestione autonoma.</p>
+
+    <h2>Domande frequenti sull'apertura di un B&amp;B a Palermo</h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>È obbligatorio il CIR per affittare su Airbnb a Palermo?</summary>
+        <p>Sì. Il CIR è obbligatorio in Sicilia per pubblicare qualsiasi annuncio di affitto turistico su Airbnb, Booking o altre piattaforme. Senza CIR rischi sanzioni da 500 a 5.000 euro e la rimozione dell'annuncio.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Quanto ci vuole per ottenere il CIR in Sicilia?</summary>
+        <p>Generalmente occorrono 1-3 settimane lavorative dal momento della presentazione della domanda completa sul portale Turist@t Sicilia. È fondamentale avere tutti i documenti in ordine prima di iniziare.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Cosa si paga con la cedolare secca per gli affitti brevi?</summary>
+        <p>La cedolare secca è al 21% sul reddito lordo per il primo immobile (26% dal secondo in poi, a partire dal 2024). Sostituisce IRPEF e addizionali e si applica a contratti inferiori a 30 giorni.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Cosa succede se non invio l'alloggiato entro 24 ore?</summary>
+        <p>La mancata trasmissione dei dati degli ospiti al portale Alloggiati Web entro 24 ore dall'arrivo è un reato penale oltre che amministrativo. Le sanzioni possono essere molto elevate.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Chi deve riscuotere la tassa di soggiorno a Palermo?</summary>
+        <p>La tassa di soggiorno deve essere riscossa dal gestore della struttura e versata trimestralmente al Comune di Palermo tramite il portale IDSPortale. Airbnb la gestisce autonomamente per alcune città: verifica se Palermo è tra queste.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Posso affidare la gestione burocratica a un professionista?</summary>
+        <p>Sì. Costanzo Acquisizioni si occupa di tutta la parte burocratica per i proprietari: CIR, alloggiati, tassa di soggiorno e report fiscali. Contattaci per saperne di più.</p>
+      </details>
+    </div>
+
+    <div class="cta-box">
+      <h3>Vuoi aprire un B&amp;B a Palermo senza pensieri?</h3>
+      <p>Affidaci la gestione completa: ci occupiamo di tutta la burocrazia e massimizziamo i tuoi guadagni. <strong>Consulenza gratuita e senza impegno.</strong></p>
+      <div class="btns">
+        <a class="cta-btn green" href="https://wa.me/393888005083?text=Ciao%21%20Voglio%20aprire%20un%20B%26B%20a%20Palermo.%20Posso%20avere%20una%20consulenza%20gratuita%3F" target="_blank">💬 Scrivici su WhatsApp</a>
+        <a class="cta-btn" href="tel:+393888005083">📞 Chiamaci ora</a>
+      </div>
+    </div>
+
+    <div class="internal-links">
+      <h3>Approfondisci</h3>
+      <ul>
+        <li><a href="/gestione-bnb-palermo.html">→ Gestione B&amp;B a Palermo: il servizio completo</a></li>
+        <li><a href="/cohost-palermo.html">→ Cohost Palermo: come funziona e cosa include</a></li>
+        <li><a href="/aumentare-guadagni-airbnb-palermo.html">→ Come aumentare i guadagni su Airbnb a Palermo</a></li>
+        <li><a href="/gestione-case-palermo.html">→ Gestione case a Palermo per gli affitti brevi</a></li>
+      </ul>
+    </div>
   </section>
 
   <footer>
-    © 2025 Costanzo Acquisizioni · <a href="mailto:info@costanzoacquisizioni.it">info@costanzoacquisizioni.it</a> · <a href="tel:+393888005083">+39 388 8005083</a>
+    © 2025 Costanzo Acquisizioni – Property Management a Palermo<br/>
+    <a href="mailto:info@costanzoacquisizioni.it">info@costanzoacquisizioni.it</a> · <a href="tel:+393888005083">+39 388 8005083</a>
+    <nav>
+      <a href="/index.html">Home</a> |
+      <a href="/gestione-bnb-palermo.html">Gestione B&amp;B</a> |
+      <a href="/gestione-case-palermo.html">Gestione Case</a> |
+      <a href="/cohost-palermo.html">Cohost</a> |
+      <a href="/ristrutturazioni-bnb.html">Ristrutturazioni</a> |
+      <a href="/per-agenzie.html">Agenzie</a>
+    </nav>
   </footer>
+
+  <a class="sticky-whatsapp" href="https://wa.me/393888005083?text=Ciao%21%20Ho%20letto%20la%20guida%20su%20come%20affittare%20un%20B%26B%20a%20Palermo%20e%20vorrei%20saperne%20di%20pi%C3%B9." target="_blank">💬 WhatsApp</a>
+
 </body>
 </html>
