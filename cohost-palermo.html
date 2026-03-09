@@ -1,96 +1,329 @@
-
 <!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Servizio Cohost Palermo - Costanzo Acquisizioni</title>
-  <meta name="description" content="Hai già pubblicato il tuo immobile su Airbnb o Booking? Scopri come migliorare le prestazioni affidandoti al nostro servizio Cohost a Palermo."/>
-  <meta name="keywords" content="Cohost Palermo, Airbnb cohost Palermo, gestione affitti brevi Palermo, ottimizzazione Airbnb, property manager Palermo"/>
+  <title>Cohost Palermo – Servizio Cohosting Airbnb | Costanzo Acquisizioni</title>
+  <meta name="description" content="Servizio cohost a Palermo: ottimizziamo il tuo annuncio Airbnb esistente e gestiamo ospiti, prezzi, recensioni e pulizie. Superhost Airbnb. Consulenza gratuita."/>
+  <meta name="keywords" content="cohost palermo, airbnb cohost palermo, cohosting palermo, gestione airbnb palermo, ottimizzazione airbnb palermo"/>
   <meta name="author" content="Costanzo Acquisizioni"/>
+  <meta property="og:title" content="Cohost Palermo – Servizio Cohosting Airbnb | Costanzo Acquisizioni"/>
+  <meta property="og:description" content="Hai già un annuncio Airbnb a Palermo? Siamo il cohost professionista che ti serve per guadagnare di più senza fare niente. Superhost Airbnb."/>
+  <meta property="og:image" content="https://costanzoacquisizioni.it/palazzo_moncada.jpg"/>
+  <meta property="og:url" content="https://costanzoacquisizioni.it/cohost-palermo.html"/>
+  <meta property="og:type" content="website"/>
+  <meta name="twitter:card" content="summary_large_image"/>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet"/>
   <style>
-    body {
-      font-family: 'Outfit', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #fff;
-      color: #222;
-      line-height: 1.6;
-    }
-    header {
-      background: linear-gradient(to right, #8b0000, #b22222);
-      color: white;
-      padding: 60px 20px;
-      text-align: center;
-    }
-    header h1 {
-      font-size: 2.5em;
-    }
-    section {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-    h2 {
-      color: #8b0000;
-      font-size: 1.8em;
-      margin-top: 40px;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    a.cta {
-      display: inline-block;
-      background: #8b0000;
-      color: white;
-      padding: 14px 28px;
-      border-radius: 10px;
-      text-decoration: none;
-      margin-top: 20px;
-    }
-    footer {
-      text-align: center;
-      padding: 40px 20px;
-      font-size: 0.9em;
-      background: #f4f4f4;
-      margin-top: 40px;
+    *, *::before, *::after { box-sizing: border-box; }
+    body { font-family: 'Outfit', sans-serif; margin: 0; padding: 0; background: #fff; color: #222; line-height: 1.7; }
+    .top-nav { background: #8b0000; padding: 12px 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+    .top-nav .logo { color: white; font-weight: 700; font-size: 1em; text-decoration: none; }
+    .top-nav .links { display: flex; gap: 4px; flex-wrap: wrap; }
+    .top-nav .links a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.85em; padding: 5px 10px; border-radius: 5px; transition: background 0.2s; }
+    .top-nav .links a:hover { background: rgba(255,255,255,0.2); color: white; }
+    .breadcrumb { max-width: 900px; margin: 14px auto 0; padding: 0 20px; font-size: 0.82em; color: #888; }
+    .breadcrumb a { color: #8b0000; text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    header { background: linear-gradient(135deg, #8b0000, #b22222); color: white; padding: 60px 20px 50px; text-align: center; }
+    header h1 { font-size: 2.2em; margin: 0 0 12px; line-height: 1.3; }
+    header p { font-size: 1.1em; opacity: 0.9; margin: 0; }
+    section { padding: 40px 20px; max-width: 900px; margin: auto; }
+    h2 { color: #8b0000; font-size: 1.55em; margin-top: 50px; margin-bottom: 12px; }
+    h3 { color: #444; font-size: 1.15em; margin-top: 24px; margin-bottom: 8px; font-weight: 600; }
+    p { margin-bottom: 14px; }
+    ul, ol { padding-left: 22px; margin-bottom: 14px; }
+    li { margin-bottom: 8px; }
+    a { color: #8b0000; }
+    a.cta-btn { display: inline-block; background: #8b0000; color: white; padding: 14px 30px; border-radius: 10px; text-decoration: none; margin-top: 16px; font-weight: 600; transition: background 0.2s, transform 0.2s; }
+    a.cta-btn:hover { background: #a52a2a; transform: translateY(-2px); }
+    a.cta-btn.green { background: #25D366; }
+    a.cta-btn.green:hover { background: #1da851; }
+    .cta-box { background: #fff5f5; border: 2px solid #8b0000; border-radius: 12px; padding: 28px; margin: 40px 0; text-align: center; }
+    .cta-box h3 { color: #8b0000; font-size: 1.25em; margin-top: 0; }
+    .cta-box .btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 12px; }
+    .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin: 24px 0; }
+    .service-card { background: #f9f9f9; border-radius: 12px; padding: 20px; border-top: 3px solid #8b0000; }
+    .service-card h3 { margin-top: 0; color: #8b0000; font-size: 1.05em; }
+    .service-card p { margin: 0; font-size: 0.95em; color: #555; }
+    .problem-box { background: #fff8f8; border-radius: 12px; padding: 24px; margin: 24px 0; }
+    .problem-box h3 { color: #8b0000; margin-top: 0; }
+    .process-step { display: flex; gap: 18px; margin-bottom: 20px; align-items: flex-start; }
+    .process-step .num { background: #8b0000; color: white; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0; }
+    .process-step .content h3 { margin-top: 0; }
+    .testimonial { background: #fff8f8; border-left: 4px solid #8b0000; padding: 20px 24px; margin: 24px 0; border-radius: 0 10px 10px 0; font-style: italic; }
+    .testimonial cite { display: block; margin-top: 10px; font-style: normal; font-weight: 600; color: #8b0000; font-size: 0.9em; }
+    .badge-row { display: flex; gap: 20px; flex-wrap: wrap; align-items: center; margin: 20px 0; }
+    .badge { background: #8b0000; color: white; padding: 10px 18px; border-radius: 8px; font-size: 0.9em; font-weight: 600; }
+    .faq-list { margin-top: 10px; }
+    details.faq-item { border-bottom: 1px solid #eee; padding: 18px 0; }
+    details.faq-item summary { font-weight: 600; cursor: pointer; color: #8b0000; font-size: 1.02em; list-style: none; padding-right: 20px; position: relative; }
+    details.faq-item summary::after { content: '+'; position: absolute; right: 0; top: 0; font-size: 1.2em; }
+    details.faq-item[open] summary::after { content: '−'; }
+    details.faq-item p { margin-top: 10px; color: #444; }
+    .internal-links { background: #f4f4f4; border-radius: 12px; padding: 24px; margin-top: 40px; }
+    .internal-links h3 { color: #8b0000; margin-top: 0; }
+    .internal-links ul { list-style: none; padding: 0; }
+    .internal-links ul li { margin-bottom: 10px; }
+    .internal-links ul li a { color: #8b0000; text-decoration: none; font-weight: 600; }
+    .internal-links ul li a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 40px 20px; font-size: 0.9em; background: #f4f4f4; margin-top: 40px; color: #555; }
+    footer a { color: #8b0000; text-decoration: none; }
+    footer nav { margin-top: 16px; }
+    footer nav a { margin: 0 8px; }
+    .sticky-whatsapp { background: #25D366; color: white; padding: 13px 22px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 0.95em; position: fixed; bottom: 20px; right: 20px; z-index: 999; box-shadow: 0 4px 12px rgba(0,0,0,0.25); transition: transform 0.2s; }
+    .sticky-whatsapp:hover { transform: scale(1.05); }
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.6em; }
+      .top-nav .links { display: none; }
     }
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "name": "Servizio Cohost Airbnb a Palermo",
+        "description": "Cohosting professionale a Palermo: ottimizziamo il tuo annuncio Airbnb esistente e gestiamo ospiti, prezzi, recensioni e pulizie per massimizzare i guadagni.",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "Costanzo Acquisizioni",
+          "url": "https://costanzoacquisizioni.it",
+          "telephone": "+393888005083",
+          "email": "info@costanzoacquisizioni.it",
+          "address": { "@type": "PostalAddress", "addressLocality": "Palermo", "addressRegion": "Sicilia", "addressCountry": "IT" }
+        },
+        "areaServed": "Palermo",
+        "url": "https://costanzoacquisizioni.it/cohost-palermo.html"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "Cosa fa esattamente un cohost su Airbnb?", "acceptedAnswer": { "@type": "Answer", "text": "Un cohost gestisce per conto del proprietario tutte le attività operative legate all'annuncio Airbnb: risponde agli ospiti, gestisce check-in e check-out, coordina le pulizie, ottimizza le tariffe, gestisce le recensioni e si occupa della burocrazia. Il proprietario mantiene la titolarità dell'annuncio e riceve i pagamenti direttamente da Airbnb." } },
+          { "@type": "Question", "name": "Come funziona il cohosting su Airbnb tecnicamente?", "acceptedAnswer": { "@type": "Answer", "text": "Su Airbnb puoi aggiungere un cohost al tuo annuncio dalla sezione 'Co-host' nelle impostazioni. Il cohost riceve accesso all'annuncio con i permessi che tu decidi (risposta messaggi, modifica calendario, etc.). In alternativa, possiamo creare un nuovo annuncio ottimizzato da zero." } },
+          { "@type": "Question", "name": "Mantengo la proprietà dell'annuncio Airbnb con il cohosting?", "acceptedAnswer": { "@type": "Answer", "text": "Sì, assolutamente. L'annuncio rimane a nome tuo e i pagamenti vengono accreditati sul tuo conto bancario. Noi gestiamo l'operatività e tratteniamo la nostra commissione sulle entrate." } },
+          { "@type": "Question", "name": "Quanto costa un cohost professionista a Palermo?", "acceptedAnswer": { "@type": "Answer", "text": "Il cohost professionista viene compensato con una percentuale sulle entrate lorde generate dall'annuncio. La percentuale varia in base ai servizi inclusi e al tipo di immobile. Contattaci per un preventivo personalizzato." } },
+          { "@type": "Question", "name": "Il mio annuncio esiste già: potete ottimizzarlo senza ricominciare da zero?", "acceptedAnswer": { "@type": "Answer", "text": "Sì. Lavoriamo sia su annunci esistenti (li ottimizziamo mantenendo la storicità e le recensioni) sia creando nuovi annunci. Se il tuo annuncio ha già delle recensioni, è meglio conservarle: la storicità è un valore importante nell'algoritmo Airbnb." } },
+          { "@type": "Question", "name": "In quanto tempo si vedono i miglioramenti dopo l'ottimizzazione?", "acceptedAnswer": { "@type": "Answer", "text": "Dipende dalla situazione di partenza. I miglioramenti nell'annuncio (foto, titolo, descrizione, pricing) producono effetti nelle prime 2-4 settimane. L'algoritmo risponde positivamente alla maggiore attività sull'annuncio: più risposte rapide, più prenotazioni, più recensioni." } }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
+
+  <nav class="top-nav">
+    <a href="/index.html" class="logo">Costanzo Acquisizioni</a>
+    <div class="links">
+      <a href="/gestione-bnb-palermo.html">Gestione B&amp;B</a>
+      <a href="/gestione-case-palermo.html">Gestione Case</a>
+      <a href="/ristrutturazioni-bnb.html">Ristrutturazioni</a>
+      <a href="/per-agenzie.html">Agenzie</a>
+      <a href="/come-affittare-un-bnb-a-palermo.html">Guide</a>
+    </div>
+  </nav>
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/index.html">Home</a> › <a href="/cohost-palermo.html">Cohost Palermo</a>
+  </nav>
+
   <header>
     <h1>Servizio Cohost a Palermo</h1>
-    <p>Hai già il tuo annuncio su Airbnb o Booking? Possiamo migliorarlo e farlo rendere di più</p>
+    <p>Hai già un annuncio su Airbnb o Booking? Possiamo gestirlo e farlo rendere molto di più.</p>
   </header>
 
   <section>
-    <p>Molti proprietari pubblicano un immobile su Airbnb o Booking e si aspettano risultati straordinari. Ma spesso ottengono poche prenotazioni, recensioni basse e scarsi guadagni. Qui entriamo in gioco noi.</p>
+    <p>Hai pubblicato il tuo immobile su Airbnb o Booking ma i risultati non sono quelli che speravi? O sei stanco di rispondere ai messaggi alle 23, coordinare le pulizie e gestire i check-in? Il cohosting professionale è la soluzione: mantieni la proprietà del tuo annuncio, ma deleghi tutta l'operatività a chi lo fa di mestiere.</p>
 
-    <h2>Cosa fa un Cohost professionista?</h2>
+    <p>Noi di Costanzo Acquisizioni siamo Superhost Airbnb e Booking Award winner. Gestiamo immobili a Palermo da anni e sappiamo esattamente cosa serve per portare un annuncio dal mediocre all'eccellente — e mantenerlo lì.</p>
+
+    <div class="badge-row">
+      <span class="badge">⭐ Superhost Airbnb</span>
+      <span class="badge">🏅 Booking Guest Review Award</span>
+      <span class="badge">📍 Attivi a Palermo</span>
+    </div>
+
+    <h2>I problemi più comuni degli host autonomi a Palermo</h2>
+
+    <div class="problem-box">
+      <h3>Ti riconosci in qualcuna di queste situazioni?</h3>
+      <ul>
+        <li>Poche prenotazioni nonostante la buona posizione dell'immobile.</li>
+        <li>Recensioni che non superano le 4,5 stelle, senza capire perché.</li>
+        <li>Prezzi fissi tutto l'anno: non sai quanto chiedere.</li>
+        <li>Messaggi degli ospiti a qualsiasi ora, anche di notte e nei weekend.</li>
+        <li>Difficoltà a trovare pulizie affidabili tra un ospite e l'altro.</li>
+        <li>Burocrazia degli alloggiati e della tassa di soggiorno confusa.</li>
+        <li>Annuncio creato una volta sola e mai più aggiornato.</li>
+      </ul>
+    </div>
+
+    <p>Questi non sono segnali di un immobile brutto o mal posizionato. Sono i sintomi di una gestione non ottimizzata. È esattamente qui che interveniamo.</p>
+
+    <h2>Cosa fa un cohost professionista</h2>
+
+    <div class="service-grid">
+      <div class="service-card">
+        <h3>📸 Ottimizzazione annuncio</h3>
+        <p>Foto professionali, titolo e descrizione riscritti, sezione house rules e amenities completata per massimizzare il ranking nell'algoritmo.</p>
+      </div>
+      <div class="service-card">
+        <h3>💰 Pricing dinamico</h3>
+        <p>Tariffe aggiornate ogni giorno in base a domanda, eventi locali, festività e competitor. Ogni notte venduta al prezzo ottimale.</p>
+      </div>
+      <div class="service-card">
+        <h3>💬 Messaggi e prenotazioni</h3>
+        <p>Risposta immediata a tutte le richieste H24. Gestione delle prenotazioni, delle modifiche e delle cancellazioni.</p>
+      </div>
+      <div class="service-card">
+        <h3>🔑 Check-in e check-out</h3>
+        <p>Accoglienza degli ospiti in presenza o tramite keybox. Istruzioni personalizzate, guida di casa e supporto durante il soggiorno.</p>
+      </div>
+      <div class="service-card">
+        <h3>🧹 Coordinamento pulizie</h3>
+        <p>Gestione del team di pulizie tra ogni rotazione. Biancheria fresca, kit cortesia, controllo qualità prima di ogni arrivo.</p>
+      </div>
+      <div class="service-card">
+        <h3>⭐ Gestione recensioni</h3>
+        <p>Richiesta sistematica di recensioni, risposta professionale a ogni feedback. Costruiamo la reputazione del tuo annuncio.</p>
+      </div>
+      <div class="service-card">
+        <h3>📋 Burocrazia</h3>
+        <p>Alloggiati Web, tassa di soggiorno, CIR. Nessun adempimento trascurato, nessuna sanzione.</p>
+      </div>
+      <div class="service-card">
+        <h3>📊 Report mensile</h3>
+        <p>Ogni mese ricevi un report con entrate, tasso di occupazione e performance. Trasparenza totale.</p>
+      </div>
+    </div>
+
+    <div class="cta-box">
+      <h3>Vuoi un'analisi gratuita del tuo annuncio?</h3>
+      <p>Ti diciamo esattamente cosa non funziona e come possiamo migliorarlo. Gratis e senza impegno.</p>
+      <div class="btns">
+        <a class="cta-btn green" href="https://wa.me/393888005083?text=Ciao%21%20Ho%20gi%C3%A0%20un%20annuncio%20su%20Airbnb%20ma%20non%20rende%20come%20vorrei.%20Potete%20fare%20un%27analisi%20gratuita%3F" target="_blank">💬 Scrivici su WhatsApp</a>
+        <a class="cta-btn" href="mailto:info@costanzoacquisizioni.it">📧 Invia una email</a>
+      </div>
+    </div>
+
+    <h2>Come funziona il cohosting con noi</h2>
+
+    <div class="process-step">
+      <div class="num">1</div>
+      <div class="content">
+        <h3>Analisi gratuita dell'annuncio</h3>
+        <p>Analizziamo il tuo annuncio attuale: foto, titolo, descrizione, prezzi, recensioni. Ti diciamo esattamente cosa non funziona e cosa possiamo migliorare.</p>
+      </div>
+    </div>
+    <div class="process-step">
+      <div class="num">2</div>
+      <div class="content">
+        <h3>Accordo e accesso cohost</h3>
+        <p>Ti aggiungiamo come cohost sul tuo account Airbnb (o su Booking.com) con i permessi necessari. Il tuo annuncio rimane a nome tuo, i pagamenti arrivano sul tuo conto.</p>
+      </div>
+    </div>
+    <div class="process-step">
+      <div class="num">3</div>
+      <div class="content">
+        <h3>Ottimizzazione completa</h3>
+        <p>Rifacciamo le foto, riscriviamo titolo e descrizione, impostiamo il pricing dinamico, completiamo tutte le sezioni dell'annuncio. In 1-2 settimane l'annuncio è completamente ottimizzato.</p>
+      </div>
+    </div>
+    <div class="process-step">
+      <div class="num">4</div>
+      <div class="content">
+        <h3>Gestione operativa continua</h3>
+        <p>Da questo momento ci occupiamo di tutto. Tu ricevi il report mensile e non devi fare nient'altro.</p>
+      </div>
+    </div>
+
+    <h2>I nostri risultati concreti</h2>
+    <p>Non siamo un servizio generico: siamo Superhost Airbnb con anni di esperienza a Palermo. I risultati che otteniamo sono misurabili:</p>
     <ul>
-      <li>Ottimizza il profilo e le foto</li>
-      <li>Scrive descrizioni persuasive</li>
-      <li>Gestisce comunicazione e check-in</li>
-      <li>Risponde alle recensioni e ai messaggi in tempo reale</li>
-      <li>Monitora la performance e regola i prezzi</li>
+      <li><strong>Aumento medio del 25-35%</strong> dei guadagni rispetto alla gestione autonoma.</li>
+      <li><strong>Rating medio di 4,8+</strong> – il minimo per mantenere il badge Superhost.</li>
+      <li><strong>Tasso di risposta del 95%+</strong> entro 1 ora – per mantenere il ranking alto nell'algoritmo.</li>
+      <li><strong>Tasso di occupazione ottimizzato</strong> – ogni notte disponibile viene valorizzata al massimo.</li>
     </ul>
 
-    <h2>I vantaggi di lavorare con noi</h2>
-    <p>Con Costanzo Acquisizioni non hai solo un cohost, ma un vero partner. Lavoriamo con percentuali sulle entrate, quindi abbiamo il tuo stesso obiettivo: guadagnare di più e offrire esperienze migliori agli ospiti.</p>
+    <div class="testimonial">
+      "Avevo l'annuncio da un anno ma guadagnavo poco e non capivo perché. In tre settimane Costanzo Acquisizioni ha rifatto tutto: foto, descrizione, prezzi. Il mese successivo ho guadagnato il doppio."
+      <cite>— Salvatore B., proprietario monolocale centro storico Palermo</cite>
+    </div>
 
-    <h2>Come iniziare?</h2>
-    <p>È semplice: ci autorizzi come cohost sul tuo annuncio, oppure creiamo un nuovo profilo ottimizzato. Da lì gestiamo tutto per te: messaggi, prenotazioni, calendario, pulizie, accoglienza, assistenza e recensioni.</p>
+    <h2>Perché scegliere noi rispetto a un cohost qualsiasi</h2>
+    <p>Non basta trovare qualcuno disposto a rispondere ai messaggi. Un cohost professionista è un partner che conosce il mercato locale, usa strumenti avanzati e ha la stessa motivazione tua: guadagnare di più.</p>
+    <ul>
+      <li><strong>Siamo Superhost</strong> – non promettiamo risultati che non abbiamo già ottenuto su noi stessi.</li>
+      <li><strong>Lavoriamo a commissione</strong> – il nostro guadagno dipende dal tuo. I nostri obiettivi sono allineati.</li>
+      <li><strong>Conosciamo Palermo</strong> – sappiamo quali zone performano meglio, quando ci sono eventi, come comunicare con i turisti che vengono in Sicilia.</li>
+      <li><strong>Burocrazia inclusa</strong> – pochissimi cohost gestiscono alloggiati e tassa di soggiorno. Noi sì.</li>
+      <li><strong>Trasparenza</strong> – report mensile dettagliato, nessuna sorpresa.</li>
+    </ul>
 
-    <h2>Parla con noi</h2>
-    <p>Contattaci ora per una chiamata conoscitiva gratuita. Ti spieghiamo come possiamo aiutarti ad aumentare recensioni e guadagni.</p>
+    <h2>Domande frequenti sul cohosting a Palermo</h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Cosa fa esattamente un cohost su Airbnb?</summary>
+        <p>Un cohost gestisce per conto del proprietario tutte le attività operative: risposta agli ospiti, check-in/out, pulizie, pricing, recensioni e burocrazia. Il proprietario mantiene la titolarità dell'annuncio e riceve i pagamenti direttamente da Airbnb.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Come funziona il cohosting tecnicamente?</summary>
+        <p>Su Airbnb puoi aggiungere un cohost nelle impostazioni del tuo annuncio. Il cohost riceve accesso con i permessi che tu decidi. I pagamenti restano sul tuo conto; noi tratteniamo la nostra commissione sulle entrate.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Mantengo la proprietà dell'annuncio?</summary>
+        <p>Sì, assolutamente. L'annuncio rimane a nome tuo, con le tue recensioni e la tua storicità. Noi gestiamo l'operatività e tratteniamo una percentuale sulle entrate.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Il mio annuncio esiste già: potete ottimizzarlo senza ricominciare da zero?</summary>
+        <p>Sì. Lavoriamo su annunci esistenti preservando storicità e recensioni. Se il tuo annuncio ha già delle recensioni, è importante conservarle: la storicità è un valore nell'algoritmo Airbnb.</p>
+      </details>
+      <details class="faq-item">
+        <summary>In quanto tempo si vedono i miglioramenti?</summary>
+        <p>I miglioramenti dell'annuncio (foto, titolo, pricing) producono effetti nelle prime 2-4 settimane. L'algoritmo risponde positivamente alla maggiore attività: più risposte rapide, più prenotazioni, più recensioni.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Quanto costa un cohost professionista a Palermo?</summary>
+        <p>Il cohost viene compensato con una percentuale sulle entrate lorde. La percentuale varia in base ai servizi inclusi e al tipo di immobile. Contattaci per un preventivo personalizzato.</p>
+      </details>
+    </div>
 
-    <a class="cta" href="https://wa.me/393888005083?text=Ciao%21%20Ho%20gi%C3%A0%20un%20annuncio%20online%20ma%20vorrei%20migliorare%20visibilit%C3%A0%20e%20guadagni.%20Come%20funziona%20il%20servizio%20cohost%3F" target="_blank">💬 Scrivici su WhatsApp</a> href="mailto:info@costanzoacquisizioni.it">📧 Richiedi una chiamata</a>
-<!-- END WHATSAPP CTA -->
+    <div class="cta-box">
+      <h3>Pronto a guadagnare di più con il tuo annuncio Airbnb?</h3>
+      <p>Contattaci per una <strong>chiamata conoscitiva gratuita</strong>. Ti spieghiamo come possiamo aiutarti ad aumentare recensioni e guadagni.</p>
+      <div class="btns">
+        <a class="cta-btn green" href="https://wa.me/393888005083?text=Ciao%21%20Ho%20gi%C3%A0%20un%20annuncio%20online%20ma%20vorrei%20migliorare%20visibilit%C3%A0%20e%20guadagni.%20Come%20funziona%20il%20vostro%20servizio%20cohost%3F" target="_blank">💬 Scrivici su WhatsApp</a>
+        <a class="cta-btn" href="tel:+393888005083">📞 Chiamaci ora</a>
+      </div>
+    </div>
+
+    <div class="internal-links">
+      <h3>Approfondisci</h3>
+      <ul>
+        <li><a href="/gestione-bnb-palermo.html">→ Gestione B&amp;B a Palermo – servizio completo</a></li>
+        <li><a href="/gestione-case-palermo.html">→ Gestione case a Palermo per affitti brevi</a></li>
+        <li><a href="/aumentare-guadagni-airbnb-palermo.html">→ Come aumentare i guadagni su Airbnb a Palermo</a></li>
+        <li><a href="/come-affittare-un-bnb-a-palermo.html">→ Come affittare legalmente un B&amp;B a Palermo</a></li>
+      </ul>
+    </div>
   </section>
 
   <footer>
-    © 2025 Costanzo Acquisizioni · <a href="mailto:info@costanzoacquisizioni.it">info@costanzoacquisizioni.it</a> · <a href="tel:+393888005083">+39 388 8005083</a>
+    © 2025 Costanzo Acquisizioni – Property Management a Palermo<br/>
+    <a href="mailto:info@costanzoacquisizioni.it">info@costanzoacquisizioni.it</a> · <a href="tel:+393888005083">+39 388 8005083</a>
+    <nav>
+      <a href="/index.html">Home</a> |
+      <a href="/gestione-bnb-palermo.html">Gestione B&amp;B</a> |
+      <a href="/gestione-case-palermo.html">Gestione Case</a> |
+      <a href="/ristrutturazioni-bnb.html">Ristrutturazioni</a> |
+      <a href="/per-agenzie.html">Agenzie</a>
+    </nav>
   </footer>
+
+  <a class="sticky-whatsapp" href="https://wa.me/393888005083?text=Ciao%21%20Sono%20interessato%20al%20servizio%20cohost%20a%20Palermo.%20Possiamo%20parlarne%3F" target="_blank">💬 WhatsApp</a>
+
 </body>
 </html>

@@ -1,95 +1,298 @@
-
 <!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Collaborazione Agenzie Immobiliari - Costanzo Acquisizioni</title>
-  <meta name="description" content="Sei un’agenzia immobiliare a Palermo? Scopri come guadagnare sugli affitti brevi senza gestione diretta. Collabora con Costanzo Acquisizioni."/>
-  <meta name="keywords" content="Agenzie immobiliari Palermo, collaborazione affitti brevi, property management, partner affitti turistici, cohost Palermo"/>
+  <title>Collaborazione Agenzie Immobiliari Palermo – Affitti Brevi | Costanzo Acquisizioni</title>
+  <meta name="description" content="Sei un'agenzia immobiliare a Palermo? Collabora con Costanzo Acquisizioni per gli affitti brevi: commissioni su ogni immobile attivato, zero gestione operativa. Scopri come."/>
+  <meta name="keywords" content="collaborazione agenzia immobiliare palermo, partnership affitti brevi palermo, commissioni agenzia property manager palermo, affitti turistici palermo agenzie"/>
   <meta name="author" content="Costanzo Acquisizioni"/>
+  <meta property="og:title" content="Collaborazione Agenzie Immobiliari – Affitti Brevi Palermo | Costanzo Acquisizioni"/>
+  <meta property="og:description" content="Agenzie immobiliari: guadagna sugli affitti brevi senza gestire nulla. Commissioni su ogni immobile attivato, partnership trasparente. Scopri come collaborare."/>
+  <meta property="og:image" content="https://costanzoacquisizioni.it/palazzo_moncada.jpg"/>
+  <meta property="og:url" content="https://costanzoacquisizioni.it/per-agenzie.html"/>
+  <meta property="og:type" content="website"/>
+  <meta name="twitter:card" content="summary_large_image"/>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet"/>
   <style>
-    body {
-      font-family: 'Outfit', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #fff;
-      color: #222;
-      line-height: 1.6;
-    }
-    header {
-      background: linear-gradient(to right, #8b0000, #b22222);
-      color: white;
-      padding: 60px 20px;
-      text-align: center;
-    }
-    header h1 {
-      font-size: 2.5em;
-    }
-    section {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-    h2 {
-      color: #8b0000;
-      font-size: 1.8em;
-      margin-top: 40px;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    a.cta {
-      display: inline-block;
-      background: #8b0000;
-      color: white;
-      padding: 14px 28px;
-      border-radius: 10px;
-      text-decoration: none;
-      margin-top: 20px;
-    }
-    footer {
-      text-align: center;
-      padding: 40px 20px;
-      font-size: 0.9em;
-      background: #f4f4f4;
-      margin-top: 40px;
+    *, *::before, *::after { box-sizing: border-box; }
+    body { font-family: 'Outfit', sans-serif; margin: 0; padding: 0; background: #fff; color: #222; line-height: 1.7; }
+    .top-nav { background: #8b0000; padding: 12px 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+    .top-nav .logo { color: white; font-weight: 700; font-size: 1em; text-decoration: none; }
+    .top-nav .links { display: flex; gap: 4px; flex-wrap: wrap; }
+    .top-nav .links a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.85em; padding: 5px 10px; border-radius: 5px; transition: background 0.2s; }
+    .top-nav .links a:hover { background: rgba(255,255,255,0.2); color: white; }
+    .breadcrumb { max-width: 900px; margin: 14px auto 0; padding: 0 20px; font-size: 0.82em; color: #888; }
+    .breadcrumb a { color: #8b0000; text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    header { background: linear-gradient(135deg, #8b0000, #b22222); color: white; padding: 60px 20px 50px; text-align: center; }
+    header h1 { font-size: 2.2em; margin: 0 0 12px; line-height: 1.3; }
+    header p { font-size: 1.1em; opacity: 0.9; margin: 0; }
+    section { padding: 40px 20px; max-width: 900px; margin: auto; }
+    h2 { color: #8b0000; font-size: 1.55em; margin-top: 50px; margin-bottom: 12px; }
+    h3 { color: #444; font-size: 1.15em; margin-top: 24px; margin-bottom: 8px; font-weight: 600; }
+    p { margin-bottom: 14px; }
+    ul, ol { padding-left: 22px; margin-bottom: 14px; }
+    li { margin-bottom: 8px; }
+    a { color: #8b0000; }
+    a.cta-btn { display: inline-block; background: #8b0000; color: white; padding: 14px 30px; border-radius: 10px; text-decoration: none; margin-top: 16px; font-weight: 600; transition: background 0.2s, transform 0.2s; }
+    a.cta-btn:hover { background: #a52a2a; transform: translateY(-2px); }
+    a.cta-btn.green { background: #25D366; }
+    a.cta-btn.green:hover { background: #1da851; }
+    .cta-box { background: #fff5f5; border: 2px solid #8b0000; border-radius: 12px; padding: 28px; margin: 40px 0; text-align: center; }
+    .cta-box h3 { color: #8b0000; font-size: 1.25em; margin-top: 0; }
+    .cta-box .btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 12px; }
+    .benefit-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; margin: 24px 0; }
+    .benefit-card { border: 2px solid #8b0000; border-radius: 12px; padding: 22px; }
+    .benefit-card h3 { margin-top: 0; color: #8b0000; font-size: 1.05em; }
+    .benefit-card p { margin: 0; font-size: 0.95em; color: #555; }
+    .process-step { display: flex; gap: 18px; margin-bottom: 20px; align-items: flex-start; }
+    .process-step .num { background: #8b0000; color: white; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0; }
+    .process-step .content h3 { margin-top: 0; }
+    .highlight-box { background: #fff8f8; border-radius: 12px; padding: 24px; margin: 30px 0; border-left: 4px solid #8b0000; }
+    .highlight-box h3 { color: #8b0000; margin-top: 0; }
+    .faq-list { margin-top: 10px; }
+    details.faq-item { border-bottom: 1px solid #eee; padding: 18px 0; }
+    details.faq-item summary { font-weight: 600; cursor: pointer; color: #8b0000; font-size: 1.02em; list-style: none; padding-right: 20px; position: relative; }
+    details.faq-item summary::after { content: '+'; position: absolute; right: 0; top: 0; font-size: 1.2em; }
+    details.faq-item[open] summary::after { content: '−'; }
+    details.faq-item p { margin-top: 10px; color: #444; }
+    .internal-links { background: #f4f4f4; border-radius: 12px; padding: 24px; margin-top: 40px; }
+    .internal-links h3 { color: #8b0000; margin-top: 0; }
+    .internal-links ul { list-style: none; padding: 0; }
+    .internal-links ul li { margin-bottom: 10px; }
+    .internal-links ul li a { color: #8b0000; text-decoration: none; font-weight: 600; }
+    .internal-links ul li a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 40px 20px; font-size: 0.9em; background: #f4f4f4; margin-top: 40px; color: #555; }
+    footer a { color: #8b0000; text-decoration: none; }
+    footer nav { margin-top: 16px; }
+    footer nav a { margin: 0 8px; }
+    .sticky-whatsapp { background: #25D366; color: white; padding: 13px 22px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 0.95em; position: fixed; bottom: 20px; right: 20px; z-index: 999; box-shadow: 0 4px 12px rgba(0,0,0,0.25); transition: transform 0.2s; }
+    .sticky-whatsapp:hover { transform: scale(1.05); }
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.6em; }
+      .top-nav .links { display: none; }
     }
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "name": "Collaborazione con Agenzie Immobiliari – Affitti Brevi Palermo",
+        "description": "Partnership per agenzie immobiliari a Palermo: commissioni su ogni immobile attivato negli affitti brevi, zero gestione operativa.",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "Costanzo Acquisizioni",
+          "url": "https://costanzoacquisizioni.it",
+          "telephone": "+393888005083",
+          "email": "info@costanzoacquisizioni.it",
+          "address": { "@type": "PostalAddress", "addressLocality": "Palermo", "addressRegion": "Sicilia", "addressCountry": "IT" }
+        },
+        "areaServed": "Palermo",
+        "url": "https://costanzoacquisizioni.it/per-agenzie.html"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "Come guadagna un'agenzia immobiliare collaborando con voi?", "acceptedAnswer": { "@type": "Answer", "text": "L'agenzia segnala proprietari interessati agli affitti brevi. Per ogni immobile attivato grazie alla segnalazione, l'agenzia riceve una commissione concordata. Non è richiesta nessuna gestione operativa da parte dell'agenzia." } },
+          { "@type": "Question", "name": "Il proprietario rimane libero di scegliere voi come gestori?", "acceptedAnswer": { "@type": "Answer", "text": "Sì. La segnalazione è un'introduzione: il proprietario sarà libero di valutare il nostro servizio e decidere autonomamente. Non ci sono accordi di esclusiva che vincolano i clienti dell'agenzia." } },
+          { "@type": "Question", "name": "Quali immobili sono adatti agli affitti brevi a Palermo?", "acceptedAnswer": { "@type": "Answer", "text": "La maggior parte degli immobili a Palermo può essere destinata agli affitti brevi. Le zone più richieste sono il centro storico, i Quattro Canti, la zona portuale, Mondello e le aree ben collegate. Anche immobili periferici ma di qualità possono performare bene con la giusta gestione." } },
+          { "@type": "Question", "name": "Offrite materiale informativo da mostrare ai clienti dell'agenzia?", "acceptedAnswer": { "@type": "Answer", "text": "Sì. Forniamo ai partner brochure digitali, stime di guadagno per tipologia di immobile e supporto in eventuali presentazioni ai proprietari. Siamo disponibili anche per call o incontri diretti con i clienti dell'agenzia." } },
+          { "@type": "Question", "name": "C'è un contratto di partnership formale?", "acceptedAnswer": { "@type": "Answer", "text": "Sì. Definiamo i termini della collaborazione in un accordo scritto che specifica le modalità di segnalazione, le commissioni e le condizioni di pagamento. Tutto trasparente e concordato prima di iniziare." } }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
+
+  <nav class="top-nav">
+    <a href="/index.html" class="logo">Costanzo Acquisizioni</a>
+    <div class="links">
+      <a href="/gestione-bnb-palermo.html">Gestione B&amp;B</a>
+      <a href="/gestione-case-palermo.html">Gestione Case</a>
+      <a href="/cohost-palermo.html">Cohost</a>
+      <a href="/ristrutturazioni-bnb.html">Ristrutturazioni</a>
+      <a href="/come-affittare-un-bnb-a-palermo.html">Guide</a>
+    </div>
+  </nav>
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/index.html">Home</a> › <a href="/per-agenzie.html">Collaborazione per Agenzie</a>
+  </nav>
+
   <header>
     <h1>Collaborazione con Agenzie Immobiliari</h1>
-    <p>Un'opportunità per agenzie che vogliono entrare nel mercato degli affitti brevi</p>
+    <p>Entra nel mercato degli affitti brevi senza gestire nulla: guadagna commissioni su ogni immobile attivato.</p>
   </header>
 
   <section>
-    <p>Se sei un'agenzia immobiliare, sai quanto stia crescendo la richiesta di affitti turistici e brevi. Collaborando con noi, potrai offrire un servizio aggiuntivo ai tuoi clienti e guadagnare senza gestire nulla in prima persona.</p>
+    <p>Il mercato degli affitti brevi a Palermo è in costante crescita. La domanda turistica è forte tutto l'anno e molti proprietari cercano alternative alla locazione tradizionale. Come agenzia immobiliare, hai già un portafoglio di clienti proprietari. Collaborare con noi ti permette di offrire un servizio aggiuntivo di grande valore — e di guadagnare commissioni — senza dover gestire nulla di operativo.</p>
 
-    <h2>Cosa offriamo alle agenzie</h2>
+    <p>Noi di Costanzo Acquisizioni siamo Superhost Airbnb con anni di esperienza nella gestione di affitti brevi a Palermo. Siamo il partner affidabile che stavi cercando per accompagnare i tuoi clienti in questo mercato.</p>
+
+    <div class="highlight-box">
+      <h3>In sintesi: come funziona la partnership</h3>
+      <ol>
+        <li>La tua agenzia segnala un proprietario interessato agli affitti brevi.</li>
+        <li>Noi contattamo il proprietario, facciamo il sopralluogo e presentiamo il nostro servizio.</li>
+        <li>Se il proprietario firma con noi, la tua agenzia riceve una commissione concordata.</li>
+        <li>Noi gestiamo tutto l'operativo. Tu non devi fare nulla di più.</li>
+      </ol>
+    </div>
+
+    <h2>Perché gli affitti brevi sono un'opportunità per le agenzie</h2>
+    <p>Il mercato degli affitti brevi a Palermo offre rendimenti molto superiori alle locazioni tradizionali. Un immobile che rende 600 euro al mese con un affitto classico può generare 2.000-4.000 euro al mese come affitto turistico ben gestito. Questo lo sanno i proprietari più informati — e sempre più clienti delle agenzie iniziano a chiederlo.</p>
+
+    <p>Offrire questa opzione ai tuoi clienti proprietari:</p>
     <ul>
-      <li>Commissioni su ogni immobile attivato grazie alla tua segnalazione</li>
-      <li>Un partner serio e affidabile per la gestione operativa completa</li>
-      <li>Report dettagliati e trasparenti su ogni struttura</li>
-      <li>Possibilità di branding condiviso e promozione reciproca</li>
+      <li><strong>Aumenta il valore del servizio</strong> che la tua agenzia può offrire.</li>
+      <li><strong>Fidelizza il cliente</strong> che rimane nel tuo ecosistema di servizi.</li>
+      <li><strong>Genera commissioni aggiuntive</strong> senza aggravio operativo per il tuo team.</li>
+      <li><strong>Ti posiziona come punto di riferimento</strong> completo per la gestione immobiliare a Palermo.</li>
     </ul>
 
-    <h2>Come funziona</h2>
-    <p>Tu segnali il proprietario, noi pensiamo a tutto: dal sopralluogo iniziale alla pubblicazione online fino alla gestione completa. Riceverai una commissione una tantum per ogni segnalazione andata a buon fine.</p>
+    <h2>Cosa offriamo alle agenzie partner</h2>
 
-    <h2>Perché scegliere Costanzo Acquisizioni</h2>
-    <p>Siamo già partner di realtà locali di prestigio. Offriamo servizi top per immobili di fascia alta e clienti esigenti. La nostra esperienza ci rende un punto di riferimento per chi vuole guadagnare in modo smart dal settore turistico.</p>
+    <div class="benefit-grid">
+      <div class="benefit-card">
+        <h3>💰 Commissioni chiare</h3>
+        <p>Una commissione concordata per ogni immobile attivato grazie alla tua segnalazione. Pagamento puntuale e rendiconto trasparente.</p>
+      </div>
+      <div class="benefit-card">
+        <h3>🤝 Partner operativo affidabile</h3>
+        <p>Noi gestiamo tutto l'operativo del cliente. Tu non devi occuparti di check-in, ospiti o burocrazia degli affitti brevi.</p>
+      </div>
+      <div class="benefit-card">
+        <h3>📊 Report condivisi</h3>
+        <p>Per ogni immobile gestito, l'agenzia partner può ricevere report di performance periodici per restare aggiornata.</p>
+      </div>
+      <div class="benefit-card">
+        <h3>🎯 Materiale di supporto</h3>
+        <p>Forniamo brochure digitali, stime di guadagno per tipologia di immobile e supporto per eventuali presentazioni ai tuoi clienti.</p>
+      </div>
+    </div>
 
-    <h2>Contattaci per una proposta su misura</h2>
-    <p>Scrivici per una call conoscitiva e scopri come possiamo creare valore insieme.</p>
+    <div class="cta-box">
+      <h3>Parliamo di come collaborare</h3>
+      <p>Contattaci per una call conoscitiva. Ti spieghiamo nel dettaglio le condizioni della partnership e il potenziale per la tua agenzia.</p>
+      <div class="btns">
+        <a class="cta-btn green" href="https://wa.me/393888005083?text=Salve%2C%20siamo%20un%27agenzia%20immobiliare%20a%20Palermo%20e%20siamo%20interessati%20a%20collaborare%20per%20gli%20affitti%20brevi.%20Come%20funziona%20la%20partnership%3F" target="_blank">💬 Scrivici su WhatsApp</a>
+        <a class="cta-btn" href="mailto:info@costanzoacquisizioni.it">📧 Scrivici per collaborare</a>
+      </div>
+    </div>
 
-    <a class="cta" href="https://wa.me/393888005083?text=Salve%2C%20siamo%20un%E2%80%99agenzia%20interessata%20a%20collaborare%20per%20gli%20affitti%20brevi.%20Come%20funziona%20la%20partnership%3F" target="_blank">💬 Scrivici su WhatsApp</a> href="mailto:info@costanzoacquisizioni.it">📧 Scrivici per collaborare</a>
-<!-- END WHATSAPP CTA -->
+    <h2>Come funziona la collaborazione passo per passo</h2>
+
+    <div class="process-step">
+      <div class="num">1</div>
+      <div class="content">
+        <h3>Accordo di partnership</h3>
+        <p>Definiamo insieme i termini della collaborazione: modalità di segnalazione, commissioni e condizioni di pagamento. Tutto in un accordo scritto, chiaro e trasparente.</p>
+      </div>
+    </div>
+    <div class="process-step">
+      <div class="num">2</div>
+      <div class="content">
+        <h3>Segnalazione del proprietario</h3>
+        <p>Ogni volta che hai un cliente proprietario interessato agli affitti brevi, ce lo presenti. Basta un messaggio WhatsApp o un'email con i contatti.</p>
+      </div>
+    </div>
+    <div class="process-step">
+      <div class="num">3</div>
+      <div class="content">
+        <h3>Valutazione e accordo con il proprietario</h3>
+        <p>Noi contattamo il proprietario, facciamo il sopralluogo, presentiamo il servizio e chiudiamo l'accordo. Tu sei tenuto informato sull'esito.</p>
+      </div>
+    </div>
+    <div class="process-step">
+      <div class="num">4</div>
+      <div class="content">
+        <h3>Attivazione e commissione</h3>
+        <p>Una volta che l'immobile è attivo, la tua agenzia riceve la commissione concordata. Per gli accordi di lungo periodo, possiamo strutturare commissioni ricorrenti.</p>
+      </div>
+    </div>
+
+    <h2>Perché scegliere Costanzo Acquisizioni come partner</h2>
+    <p>Per la tua agenzia, il nome del partner con cui lavori fa la differenza: il cliente deve sentirsi in buone mani.</p>
+    <ul>
+      <li><strong>Siamo Superhost Airbnb</strong> – il badge più riconoscibile nel settore. I tuoi clienti si sentiranno al sicuro.</li>
+      <li><strong>Booking Guest Review Award</strong> – riconoscimento di qualità del servizio da una delle piattaforme più usate al mondo.</li>
+      <li><strong>Esperienza locale a Palermo</strong> – conosciamo ogni quartiere, sappiamo quali immobili performano meglio e perché.</li>
+      <li><strong>Trasparenza totale</strong> – report dettagliati, rendiconti chiari, nessuna sorpresa per te o per i tuoi clienti.</li>
+      <li><strong>Professionisti seri</strong> – siamo già partner di realtà locali di prestigio e gestiamo immobili di fascia alta.</li>
+    </ul>
+
+    <h2>Quali proprietari possono beneficiare degli affitti brevi</h2>
+    <p>In base alla tua esperienza, sai già che alcuni profili di clienti sono ideali per questa proposta:</p>
+    <ul>
+      <li>Proprietari di seconda casa che non usano l'immobile o lo usano poco.</li>
+      <li>Ereditieri con immobili da valorizzare che non vogliono vendere subito.</li>
+      <li>Investitori che cercano rendite più alte delle locazioni classiche.</li>
+      <li>Proprietari con affitti regolari che vogliono esplorare alternative più redditizie.</li>
+      <li>Chi ha acquistato un immobile da ristrutturare e vuole sfruttarlo subito.</li>
+    </ul>
+
+    <h2>Domande frequenti sulla partnership</h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Come guadagna un'agenzia immobiliare collaborando con voi?</summary>
+        <p>L'agenzia segnala proprietari interessati agli affitti brevi. Per ogni immobile attivato grazie alla segnalazione, l'agenzia riceve una commissione concordata. Non è richiesta nessuna gestione operativa da parte dell'agenzia.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Il proprietario rimane libero di scegliervi come gestori?</summary>
+        <p>Sì. La segnalazione è un'introduzione: il proprietario valuta autonomamente il nostro servizio. Non ci sono accordi che vincolano i clienti dell'agenzia.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Offrite materiale informativo da mostrare ai clienti dell'agenzia?</summary>
+        <p>Sì. Forniamo ai partner brochure digitali, stime di guadagno per tipologia di immobile e supporto per eventuali presentazioni ai proprietari. Siamo disponibili anche per call o incontri diretti.</p>
+      </details>
+      <details class="faq-item">
+        <summary>C'è un contratto di partnership formale?</summary>
+        <p>Sì. Definiamo i termini in un accordo scritto che specifica le modalità di segnalazione, le commissioni e le condizioni di pagamento. Tutto concordato prima di iniziare.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Quali immobili sono adatti agli affitti brevi a Palermo?</summary>
+        <p>La maggior parte degli immobili a Palermo può essere destinata agli affitti brevi. Le zone più richieste sono il centro storico, la zona portuale, Mondello e le aree ben collegate. Anche immobili periferici di qualità possono performare bene con la giusta gestione.</p>
+      </details>
+    </div>
+
+    <div class="cta-box">
+      <h3>Inizia la collaborazione oggi</h3>
+      <p>Contattaci per una <strong>proposta su misura per la tua agenzia</strong>. Scopriamo insieme come creare valore per i tuoi clienti e per la tua attività.</p>
+      <div class="btns">
+        <a class="cta-btn green" href="https://wa.me/393888005083?text=Salve%2C%20siamo%20un%27agenzia%20immobiliare%20interessata%20a%20collaborare%20per%20gli%20affitti%20brevi%20a%20Palermo.%20Come%20funziona%3F" target="_blank">💬 Scrivici su WhatsApp</a>
+        <a class="cta-btn" href="tel:+393888005083">📞 Chiamaci ora</a>
+      </div>
+    </div>
+
+    <div class="internal-links">
+      <h3>Scopri i nostri servizi</h3>
+      <ul>
+        <li><a href="/gestione-bnb-palermo.html">→ Gestione B&amp;B a Palermo</a></li>
+        <li><a href="/gestione-case-palermo.html">→ Gestione case a Palermo per affitti brevi</a></li>
+        <li><a href="/cohost-palermo.html">→ Servizio Cohost a Palermo</a></li>
+        <li><a href="/ristrutturazioni-bnb.html">→ Ristrutturazioni B&amp;B a Palermo</a></li>
+      </ul>
+    </div>
   </section>
 
   <footer>
-    © 2025 Costanzo Acquisizioni · <a href="mailto:info@costanzoacquisizioni.it">info@costanzoacquisizioni.it</a> · <a href="tel:+393888005083">+39 388 8005083</a>
+    © 2025 Costanzo Acquisizioni – Property Management a Palermo<br/>
+    <a href="mailto:info@costanzoacquisizioni.it">info@costanzoacquisizioni.it</a> · <a href="tel:+393888005083">+39 388 8005083</a>
+    <nav>
+      <a href="/index.html">Home</a> |
+      <a href="/gestione-bnb-palermo.html">Gestione B&amp;B</a> |
+      <a href="/gestione-case-palermo.html">Gestione Case</a> |
+      <a href="/cohost-palermo.html">Cohost</a> |
+      <a href="/ristrutturazioni-bnb.html">Ristrutturazioni</a>
+    </nav>
   </footer>
+
+  <a class="sticky-whatsapp" href="https://wa.me/393888005083?text=Salve%2C%20siamo%20un%27agenzia%20immobiliare%20e%20siamo%20interessati%20a%20collaborare%20con%20voi%20per%20gli%20affitti%20brevi%20a%20Palermo." target="_blank">💬 WhatsApp</a>
+
 </body>
 </html>

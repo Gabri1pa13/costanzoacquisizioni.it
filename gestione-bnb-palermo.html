@@ -1,105 +1,324 @@
-
 <!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Gestione B&B Palermo - Costanzo Acquisizioni</title>
-  <meta name="description" content="Gestione professionale B&B a Palermo: check-in, pulizie, marketing, invio alloggiati e recensioni. Scopri come migliorare il tuo B&B."/>
-  <meta name="keywords" content="Gestione B&B Palermo, affitti brevi Palermo, property manager Palermo, affitti turistici Palermo, check-in B&B, tassa soggiorno Palermo"/>
+  <title>Gestione B&B a Palermo – Servizio completo | Costanzo Acquisizioni</title>
+  <meta name="description" content="Gestione professionale B&B a Palermo: check-in, pulizie, marketing, alloggiati, tassa di soggiorno e pricing dinamico. Superhost Airbnb e Booking Award. Consulenza gratuita."/>
+  <meta name="keywords" content="gestione bnb palermo, property manager bnb palermo, cohost bnb palermo, affitti brevi palermo, gestione airbnb palermo"/>
   <meta name="author" content="Costanzo Acquisizioni"/>
+  <meta property="og:title" content="Gestione B&B a Palermo – Servizio completo | Costanzo Acquisizioni"/>
+  <meta property="og:description" content="Affida il tuo B&B a Palermo a professionisti: gestiamo tutto, dall'annuncio agli ospiti. Superhost Airbnb, Booking Award winner. Consulenza gratuita."/>
+  <meta property="og:image" content="https://costanzoacquisizioni.it/palazzo_moncada.jpg"/>
+  <meta property="og:url" content="https://costanzoacquisizioni.it/gestione-bnb-palermo.html"/>
+  <meta property="og:type" content="website"/>
+  <meta name="twitter:card" content="summary_large_image"/>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet"/>
   <style>
-    body {
-      font-family: 'Outfit', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #fff;
-      color: #222;
-      line-height: 1.6;
-    }
-    header {
-      background: linear-gradient(to right, #8b0000, #b22222);
-      color: white;
-      padding: 60px 20px;
-      text-align: center;
-    }
-    header h1 {
-      font-size: 2.5em;
-    }
-    section {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-    h2 {
-      color: #8b0000;
-      font-size: 1.8em;
-      margin-top: 40px;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    a.cta {
-      display: inline-block;
-      background: #8b0000;
-      color: white;
-      padding: 14px 28px;
-      border-radius: 10px;
-      text-decoration: none;
-      margin-top: 20px;
-    }
-    footer {
-      text-align: center;
-      padding: 40px 20px;
-      font-size: 0.9em;
-      background: #f4f4f4;
-      margin-top: 40px;
+    *, *::before, *::after { box-sizing: border-box; }
+    body { font-family: 'Outfit', sans-serif; margin: 0; padding: 0; background: #fff; color: #222; line-height: 1.7; }
+    .top-nav { background: #8b0000; padding: 12px 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+    .top-nav .logo { color: white; font-weight: 700; font-size: 1em; text-decoration: none; }
+    .top-nav .links { display: flex; gap: 4px; flex-wrap: wrap; }
+    .top-nav .links a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.85em; padding: 5px 10px; border-radius: 5px; transition: background 0.2s; }
+    .top-nav .links a:hover { background: rgba(255,255,255,0.2); color: white; }
+    .breadcrumb { max-width: 900px; margin: 14px auto 0; padding: 0 20px; font-size: 0.82em; color: #888; }
+    .breadcrumb a { color: #8b0000; text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    header { background: linear-gradient(135deg, #8b0000, #b22222); color: white; padding: 60px 20px 50px; text-align: center; }
+    header h1 { font-size: 2.2em; margin: 0 0 12px; line-height: 1.3; }
+    header p { font-size: 1.1em; opacity: 0.9; margin: 0; }
+    section { padding: 40px 20px; max-width: 900px; margin: auto; }
+    h2 { color: #8b0000; font-size: 1.55em; margin-top: 50px; margin-bottom: 12px; }
+    h3 { color: #444; font-size: 1.15em; margin-top: 24px; margin-bottom: 8px; font-weight: 600; }
+    p { margin-bottom: 14px; }
+    ul, ol { padding-left: 22px; margin-bottom: 14px; }
+    li { margin-bottom: 8px; }
+    a { color: #8b0000; }
+    a.cta-btn { display: inline-block; background: #8b0000; color: white; padding: 14px 30px; border-radius: 10px; text-decoration: none; margin-top: 16px; font-weight: 600; transition: background 0.2s, transform 0.2s; }
+    a.cta-btn:hover { background: #a52a2a; transform: translateY(-2px); }
+    a.cta-btn.green { background: #25D366; }
+    a.cta-btn.green:hover { background: #1da851; }
+    .cta-box { background: #fff5f5; border: 2px solid #8b0000; border-radius: 12px; padding: 28px; margin: 40px 0; text-align: center; }
+    .cta-box h3 { color: #8b0000; font-size: 1.25em; margin-top: 0; }
+    .cta-box .btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 12px; }
+    .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin: 24px 0; }
+    .service-card { background: #f9f9f9; border-radius: 12px; padding: 20px; border-top: 3px solid #8b0000; }
+    .service-card h3 { margin-top: 0; color: #8b0000; font-size: 1.05em; }
+    .service-card p { margin: 0; font-size: 0.95em; color: #555; }
+    .testimonial { background: #fff8f8; border-left: 4px solid #8b0000; padding: 20px 24px; margin: 24px 0; border-radius: 0 10px 10px 0; font-style: italic; }
+    .testimonial cite { display: block; margin-top: 10px; font-style: normal; font-weight: 600; color: #8b0000; font-size: 0.9em; }
+    .badge-row { display: flex; gap: 20px; flex-wrap: wrap; align-items: center; margin: 20px 0; }
+    .badge { background: #8b0000; color: white; padding: 10px 18px; border-radius: 8px; font-size: 0.9em; font-weight: 600; }
+    .process-steps { counter-reset: step; }
+    .process-step { display: flex; gap: 18px; margin-bottom: 20px; align-items: flex-start; }
+    .process-step .num { background: #8b0000; color: white; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0; font-size: 1em; }
+    .process-step .content h3 { margin-top: 0; }
+    .faq-list { margin-top: 10px; }
+    details.faq-item { border-bottom: 1px solid #eee; padding: 18px 0; }
+    details.faq-item summary { font-weight: 600; cursor: pointer; color: #8b0000; font-size: 1.02em; list-style: none; padding-right: 20px; position: relative; }
+    details.faq-item summary::after { content: '+'; position: absolute; right: 0; top: 0; font-size: 1.2em; }
+    details.faq-item[open] summary::after { content: '−'; }
+    details.faq-item p { margin-top: 10px; color: #444; }
+    .internal-links { background: #f4f4f4; border-radius: 12px; padding: 24px; margin-top: 40px; }
+    .internal-links h3 { color: #8b0000; margin-top: 0; }
+    .internal-links ul { list-style: none; padding: 0; }
+    .internal-links ul li { margin-bottom: 10px; }
+    .internal-links ul li a { color: #8b0000; text-decoration: none; font-weight: 600; }
+    .internal-links ul li a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 40px 20px; font-size: 0.9em; background: #f4f4f4; margin-top: 40px; color: #555; }
+    footer a { color: #8b0000; text-decoration: none; }
+    footer nav { margin-top: 16px; }
+    footer nav a { margin: 0 8px; }
+    .sticky-whatsapp { background: #25D366; color: white; padding: 13px 22px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 0.95em; position: fixed; bottom: 20px; right: 20px; z-index: 999; box-shadow: 0 4px 12px rgba(0,0,0,0.25); transition: transform 0.2s; }
+    .sticky-whatsapp:hover { transform: scale(1.05); }
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.6em; }
+      .top-nav .links { display: none; }
     }
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "name": "Gestione B&B a Palermo",
+        "description": "Servizio completo di property management per B&B a Palermo: check-in, pulizie, marketing su Airbnb e Booking, alloggiati, tassa di soggiorno e pricing dinamico.",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "Costanzo Acquisizioni",
+          "url": "https://costanzoacquisizioni.it",
+          "telephone": "+393888005083",
+          "email": "info@costanzoacquisizioni.it",
+          "address": { "@type": "PostalAddress", "addressLocality": "Palermo", "addressRegion": "Sicilia", "addressCountry": "IT" }
+        },
+        "areaServed": "Palermo",
+        "url": "https://costanzoacquisizioni.it/gestione-bnb-palermo.html"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "Quanto costa il servizio di gestione B&B a Palermo?", "acceptedAnswer": { "@type": "Answer", "text": "Il nostro compenso si basa su una percentuale delle entrate generate dall'immobile. Non ci sono costi fissi mensili: guadagniamo solo quando guadagni tu. Contattaci per un preventivo personalizzato in base alle caratteristiche del tuo immobile." } },
+          { "@type": "Question", "name": "Devo essere a Palermo per affidarvi la gestione?", "acceptedAnswer": { "@type": "Answer", "text": "No. Molti dei nostri clienti vivono fuori Palermo o all'estero. Ci occupiamo di tutto: dall'apertura al check-out, dalle pulizie alla burocrazia. Ti aggiorniamo con un report mensile dettagliato." } },
+          { "@type": "Question", "name": "Quanto tempo ci vuole per attivare il servizio?", "acceptedAnswer": { "@type": "Answer", "text": "Di solito in 1-2 settimane dall'accordo siamo operativi: facciamo il sopralluogo, ottimizziamo l'annuncio (o ne creiamo uno nuovo), prepariamo l'immobile e iniziamo a ricevere prenotazioni." } },
+          { "@type": "Question", "name": "Gestite anche la burocrazia (CIR, alloggiati, tassa di soggiorno)?", "acceptedAnswer": { "@type": "Answer", "text": "Sì. Gestiamo integralmente tutti gli adempimenti burocratici: registrazione e invio dati al portale Alloggiati Web della Questura, gestione e versamento della tassa di soggiorno al Comune di Palermo, supporto per il CIR." } },
+          { "@type": "Question", "name": "Posso smettere quando voglio?", "acceptedAnswer": { "@type": "Answer", "text": "Sì. Non ci sono contratti con penali rigide. Lavoriamo con preavviso come concordato all'inizio del rapporto. La nostra priorità è che tu sia soddisfatto del servizio." } },
+          { "@type": "Question", "name": "Operate solo a Palermo centro o anche in provincia?", "acceptedAnswer": { "@type": "Answer", "text": "Siamo attivi principalmente a Palermo città e nelle zone limitrofe (Mondello, Carini, Terrasini). Contattaci per verificare se la tua zona rientra nella nostra area operativa." } }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
+
+  <nav class="top-nav">
+    <a href="/index.html" class="logo">Costanzo Acquisizioni</a>
+    <div class="links">
+      <a href="/gestione-case-palermo.html">Gestione Case</a>
+      <a href="/cohost-palermo.html">Cohost</a>
+      <a href="/ristrutturazioni-bnb.html">Ristrutturazioni</a>
+      <a href="/per-agenzie.html">Agenzie</a>
+      <a href="/come-affittare-un-bnb-a-palermo.html">Guide</a>
+    </div>
+  </nav>
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/index.html">Home</a> › <a href="/gestione-bnb-palermo.html">Gestione B&amp;B a Palermo</a>
+  </nav>
+
   <header>
-    <h1>Gestione B&B a Palermo</h1>
-    <p>Affida il tuo B&B a professionisti e migliora visibilità, recensioni e guadagni</p>
+    <h1>Gestione B&amp;B a Palermo</h1>
+    <p>Affida il tuo B&amp;B a professionisti e migliora visibilità, recensioni e guadagni — senza pensieri.</p>
   </header>
 
   <section>
-    <p>Gestire un B&B richiede tempo, precisione e competenze specifiche. Noi di Costanzo Acquisizioni siamo specializzati nella gestione completa di Bed and Breakfast a Palermo: dalla pubblicazione online fino alla gestione degli ospiti e alla burocrazia.</p>
+    <p>Gestire un B&amp;B a Palermo richiede tempo, reperibilità e competenze molto diverse tra loro: marketing, comunicazione con gli ospiti in più lingue, burocrazia, pulizie, gestione delle recensioni. Molti proprietari ci contattano dopo mesi di gestione autonoma, esausti e con guadagni al di sotto delle aspettative. Con Costanzo Acquisizioni, trasformi il tuo immobile in una rendita ben gestita, senza occupartene in prima persona.</p>
 
-    <h2>Cosa facciamo per te</h2>
+    <div class="badge-row">
+      <span class="badge">⭐ Superhost Airbnb</span>
+      <span class="badge">🏅 Booking Guest Review Award</span>
+      <span class="badge">📍 Attivi a Palermo</span>
+    </div>
+
+    <h2>Cosa include il nostro servizio di gestione B&amp;B</h2>
+    <p>Il nostro servizio è completo: non devi preoccuparti di niente. Dalla pubblicazione dell'annuncio alla burocrazia, dalla comunicazione con gli ospiti alla gestione delle recensioni.</p>
+
+    <div class="service-grid">
+      <div class="service-card">
+        <h3>📸 Annuncio ottimizzato</h3>
+        <p>Foto professionali, titolo e descrizione studiati per convertire, keyword per il ranking Airbnb e Booking.</p>
+      </div>
+      <div class="service-card">
+        <h3>💬 Comunicazione h24</h3>
+        <p>Risposta immediata a tutte le richieste degli ospiti in italiano, inglese e altre lingue, 7 giorni su 7.</p>
+      </div>
+      <div class="service-card">
+        <h3>🔑 Check-in e check-out</h3>
+        <p>Gestione in presenza o smart (keybox/serratura digitale). Accoglienza personalizzata per gli ospiti.</p>
+      </div>
+      <div class="service-card">
+        <h3>🧹 Pulizie professionali</h3>
+        <p>Pulizie impeccabili tra un ospite e l'altro, con cambio biancheria e rifornimento cortesia.</p>
+      </div>
+      <div class="service-card">
+        <h3>💰 Pricing dinamico</h3>
+        <p>Tariffe aggiornate ogni giorno in base a domanda, eventi locali e competitor, per massimizzare ogni notte.</p>
+      </div>
+      <div class="service-card">
+        <h3>📋 Burocrazia completa</h3>
+        <p>Invio dati al portale Alloggiati, gestione tassa di soggiorno, supporto CIR e documentazione fiscale.</p>
+      </div>
+      <div class="service-card">
+        <h3>⭐ Gestione recensioni</h3>
+        <p>Monitoriamo e rispondiamo a tutte le recensioni, costruiamo la reputazione online del tuo immobile.</p>
+      </div>
+      <div class="service-card">
+        <h3>📊 Report mensile</h3>
+        <p>Ricevi ogni mese un report dettagliato con entrate, tasso di occupazione, notti vendute e performance.</p>
+      </div>
+    </div>
+
+    <div class="cta-box">
+      <h3>Richiedi una consulenza gratuita</h3>
+      <p>Analizziamo il tuo B&amp;B e ti diciamo esattamente quanto potrebbe rendere con la nostra gestione. Senza impegno.</p>
+      <div class="btns">
+        <a class="cta-btn green" href="https://wa.me/393888005083?text=Ciao%21%20Ho%20un%20B%26B%20a%20Palermo%20e%20vorrei%20affidarne%20la%20gestione.%20Possiamo%20parlarne%3F" target="_blank">💬 Scrivici su WhatsApp</a>
+        <a class="cta-btn" href="mailto:info@costanzoacquisizioni.it">📧 Invia una email</a>
+      </div>
+    </div>
+
+    <h2>Come funziona il processo di onboarding</h2>
+    <p>Iniziare con noi è semplice e veloce. Di solito in 1-2 settimane dall'accordo siamo già operativi.</p>
+
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="num">1</div>
+        <div class="content">
+          <h3>Chiamata conoscitiva gratuita</h3>
+          <p>Ci racconti il tuo immobile, la situazione attuale e i tuoi obiettivi. Noi ti spieghiamo come lavoriamo e rispondiamo a tutte le tue domande.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="num">2</div>
+        <div class="content">
+          <h3>Sopralluogo e valutazione</h3>
+          <p>Veniamo a vedere l'immobile di persona (o in videochiamata se sei fuori Palermo). Valutiamo le potenzialità, identifichiamo eventuali migliorie e prepariamo una stima dei guadagni.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="num">3</div>
+        <div class="content">
+          <h3>Preparazione e lancio</h3>
+          <p>Facciamo le foto professionali, ottimizziamo o creiamo l'annuncio su tutte le piattaforme, impostiamo il pricing dinamico e allestiamo l'immobile. Poi lanciamo.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="num">4</div>
+        <div class="content">
+          <h3>Gestione operativa continua</h3>
+          <p>Da questo momento ci occupiamo di tutto. Tu ricevi ogni mese il tuo report con i guadagni e non devi fare altro.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2>I nostri risultati a Palermo</h2>
+    <p>Non siamo una startup che promette e non mantiene. Siamo property manager attivi a Palermo da anni, con un track record misurabile:</p>
     <ul>
-      <li>Check-in e check-out professionali (in presenza o smart)</li>
-      <li>Gestione tassa di soggiorno e invio automatico portale Alloggiati</li>
-      <li>Gestione pulizie e fornitura biancheria</li>
-      <li>Comunicazione multilingua tramite intelligenza artificiale</li>
-      <li>Promozione su Airbnb, Booking e Vrbo</li>
-      <li>Gestione recensioni e reputazione</li>
-      <li>Report mensili su guadagni e occupazione</li>
+      <li>Siamo <strong>Superhost Airbnb</strong> – il badge assegnato agli host con le migliori performance (rating 4,8+, risposta entro 1h, minimo 10 soggiorni l'anno, cancellazioni quasi zero).</li>
+      <li>Abbiamo ricevuto il <strong>Booking Guest Review Award</strong> – riconoscimento per le strutture con le recensioni più alte sulla piattaforma.</li>
+      <li>Gli immobili che gestiamo ottengono mediamente un <strong>aumento del 25-35% dei guadagni</strong> rispetto alla gestione autonoma del proprietario.</li>
     </ul>
 
-    <h2>Valore aggiunto</h2>
-    <p>Rispetto ai classici cohost, il nostro servizio è pensato per garantire ai proprietari il massimo controllo e la minima preoccupazione. Usiamo strumenti avanzati per l'automazione e il monitoraggio delle performance.</p>
+    <div class="testimonial">
+      "Grazie a Costanzo Acquisizioni, il mio B&amp;B ha finalmente iniziato a rendere davvero. Non devo preoccuparmi di niente: ricevo il report mensile e il pagamento. Professionalità e trasparenza totale."
+      <cite>— Marco R., proprietario B&amp;B nel centro storico di Palermo</cite>
+    </div>
 
-    <h2>Guida utile: cosa sapere per affittare legalmente</h2>
-    <p>Per affittare il tuo B&B serve:</p>
+    <h2>Perché scegliere Costanzo Acquisizioni rispetto ad altri cohost</h2>
+    <p>Non siamo semplici cohost: siamo partner nella crescita del tuo immobile. Ecco cosa ci distingue:</p>
     <ul>
-      <li>C.I.R. (Codice Identificativo Regionale)</li>
-      <li>Registrazione al portale Alloggiati Web</li>
-      <li>Regolamento sulla tassa di soggiorno</li>
-      <li>Assicurazione e norme di sicurezza</li>
+      <li><strong>Commissione sulle entrate</strong> – non paghiamo fisso. Guadagniamo solo quando guadagni tu: questo allinea i nostri interessi.</li>
+      <li><strong>Burocrazia inclusa</strong> – alloggiati, tassa di soggiorno, CIR: molti cohost non la gestiscono. Noi sì.</li>
+      <li><strong>Pricing professionale</strong> – non usiamo le tariffe suggerite da Airbnb (spesso troppo basse): usiamo software di revenue management.</li>
+      <li><strong>Comunicazione AI-assisted</strong> – rispondiamo agli ospiti in pochi minuti, 24/7, in più lingue.</li>
+      <li><strong>Trasparenza totale</strong> – report mensile dettagliato, accesso al calendario, nessuna sorpresa.</li>
     </ul>
-    <p>Noi ci occupiamo anche di queste pratiche per te.</p>
 
-    <h2>Contattaci per una consulenza gratuita</h2>
-    <p>Parlaci del tuo B&B e ti forniremo un'analisi gratuita delle potenzialità, senza impegno.</p>
+    <h2>Tutto quello che devi sapere per affittare legalmente</h2>
+    <p>Per affittare il tuo B&amp;B a Palermo devi essere in regola con:</p>
+    <ul>
+      <li>CIR (Codice Identificativo Regionale) – obbligatorio per pubblicare annunci.</li>
+      <li>Registrazione al portale Alloggiati Web della Questura.</li>
+      <li>Gestione e versamento della tassa di soggiorno al Comune di Palermo.</li>
+      <li>Requisiti di sicurezza (estintori, rilevatori CO e gas, etc.).</li>
+      <li>Regime fiscale (cedolare secca o altro).</li>
+    </ul>
+    <p>Ci occupiamo di tutta la parte burocratica per i proprietari che ci affidano la gestione. Leggi la nostra <a href="/come-affittare-un-bnb-a-palermo.html">guida completa su come affittare legalmente un B&amp;B a Palermo</a>.</p>
 
-    <a class="cta" href="https://wa.me/393888005083?text=Ciao%21%20Ho%20un%20B%26B%20a%20Palermo%20e%20vorrei%20affidarne%20la%20gestione%20a%20dei%20professionisti.%20Mi%20raccontate%20come%20funziona%3F" target="_blank">💬 Scrivici su WhatsApp</a> href="mailto:info@costanzoacquisizioni.it">📧 Richiedi consulenza</a>
-<!-- END WHATSAPP CTA -->
+    <h2>Domande frequenti sulla gestione B&amp;B a Palermo</h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Quanto costa il servizio di gestione B&amp;B?</summary>
+        <p>Il nostro compenso si basa su una percentuale delle entrate generate. Non ci sono costi fissi mensili: guadagniamo solo quando guadagni tu. Contattaci per un preventivo personalizzato.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Devo essere a Palermo per affidarvi la gestione?</summary>
+        <p>No. Molti dei nostri clienti vivono fuori Palermo o all'estero. Ci occupiamo di tutto e ti aggiorniamo con un report mensile dettagliato.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Quanto tempo ci vuole per attivare il servizio?</summary>
+        <p>Di solito in 1-2 settimane dall'accordo siamo operativi: sopralluogo, ottimizzazione dell'annuncio, preparazione dell'immobile e lancio.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Gestite anche la burocrazia (alloggiati, tassa di soggiorno)?</summary>
+        <p>Sì. Gestiamo integralmente tutti gli adempimenti: registrazione al portale Alloggiati Web, gestione e versamento della tassa di soggiorno, supporto per il CIR.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Posso smettere quando voglio?</summary>
+        <p>Sì. Non ci sono contratti con penali rigide. Lavoriamo con preavviso come concordato inizialmente. La nostra priorità è che tu sia soddisfatto.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Operate solo a Palermo centro o anche in provincia?</summary>
+        <p>Siamo attivi principalmente a Palermo città e nelle zone limitrofe (Mondello, Carini, Terrasini). Contattaci per verificare la tua zona.</p>
+      </details>
+    </div>
+
+    <div class="cta-box">
+      <h3>Pronto a guadagnare di più con il tuo B&amp;B a Palermo?</h3>
+      <p>Contattaci oggi per una <strong>consulenza gratuita e senza impegno</strong>. Ti facciamo una stima realistica dei guadagni potenziali.</p>
+      <div class="btns">
+        <a class="cta-btn green" href="https://wa.me/393888005083?text=Ciao%21%20Ho%20un%20B%26B%20a%20Palermo%20e%20vorrei%20affidarne%20la%20gestione%20a%20professionisti.%20Possiamo%20parlarne%3F" target="_blank">💬 Scrivici su WhatsApp</a>
+        <a class="cta-btn" href="tel:+393888005083">📞 Chiamaci ora</a>
+      </div>
+    </div>
+
+    <div class="internal-links">
+      <h3>Approfondisci</h3>
+      <ul>
+        <li><a href="/gestione-case-palermo.html">→ Gestione case a Palermo per affitti brevi</a></li>
+        <li><a href="/cohost-palermo.html">→ Servizio Cohost a Palermo</a></li>
+        <li><a href="/come-affittare-un-bnb-a-palermo.html">→ Come affittare legalmente un B&amp;B a Palermo</a></li>
+        <li><a href="/aumentare-guadagni-airbnb-palermo.html">→ Come aumentare i guadagni su Airbnb a Palermo</a></li>
+        <li><a href="/ristrutturazioni-bnb.html">→ Ristrutturazioni B&amp;B a Palermo</a></li>
+      </ul>
+    </div>
   </section>
 
   <footer>
-    © 2025 Costanzo Acquisizioni · <a href="mailto:info@costanzoacquisizioni.it">info@costanzoacquisizioni.it</a> · <a href="tel:+393888005083">+39 388 8005083</a>
+    © 2025 Costanzo Acquisizioni – Property Management a Palermo<br/>
+    <a href="mailto:info@costanzoacquisizioni.it">info@costanzoacquisizioni.it</a> · <a href="tel:+393888005083">+39 388 8005083</a>
+    <nav>
+      <a href="/index.html">Home</a> |
+      <a href="/gestione-case-palermo.html">Gestione Case</a> |
+      <a href="/cohost-palermo.html">Cohost</a> |
+      <a href="/ristrutturazioni-bnb.html">Ristrutturazioni</a> |
+      <a href="/per-agenzie.html">Agenzie</a>
+    </nav>
   </footer>
+
+  <a class="sticky-whatsapp" href="https://wa.me/393888005083?text=Ciao%21%20Ho%20un%20B%26B%20a%20Palermo%20e%20vorrei%20sapere%20come%20funziona%20il%20vostro%20servizio%20di%20gestione." target="_blank">💬 WhatsApp</a>
+
 </body>
 </html>
