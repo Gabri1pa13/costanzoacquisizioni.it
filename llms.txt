@@ -1,7 +1,10 @@
-User-agent: *
-Allow: /
+# llms.txt - AI Crawlers Policy
+# Costanzo Acquisizioni - Gestione BnB & Affitti Brevi Palermo
+# https://costanzoacquisizioni.it
 
-# AI Crawlers - Autorizzati esplicitamente
+# Questo sito autorizza i principali crawler AI a indicizzare i contenuti
+# a scopo informativo e di risposta alle query degli utenti.
+
 User-agent: GPTBot
 Allow: /
 
@@ -25,6 +28,9 @@ User-agent: PerplexityBot
 Allow: /
 
 User-agent: Bytespider
+Allow: /
+
+User-agent: *
 Allow: /
 
 Sitemap: https://costanzoacquisizioni.it/sitemap.xml
