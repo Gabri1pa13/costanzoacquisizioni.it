@@ -757,23 +757,30 @@
             });
         });
     </script>
-
     <script>
-      function gtag_report_conversion() {
-        gtag('event', 'conversion', {
-          'send_to': 'AW-18203147858/8TLNCPvmlrccENL89-dD',
-          'value': 1.0,
-          'currency': 'EUR'
-        });
-        return true;
-      }
-      document.addEventListener('DOMContentLoaded', function() {
-        document.querySelectorAll('a[href*="wa.me"]').forEach(function(el) {
-          el.addEventListener('click', function() {
-            gtag_report_conversion();
-          });
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+        'send_to': 'AW-18203147858/8TLNCPvmlrccENL89-dD',
+        'value': 1.0,
+        'currency': 'EUR',
+        'transaction_id': '',
+        'event_callback': callback
+      });
+      return false;
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('a[href*="wa.me"]').forEach(function(el) {
+        el.addEventListener('click', function(e) {
+          e.preventDefault();
+          gtag_report_conversion(this.href);
         });
       });
+    });
     </script>
 </body>
 </html>

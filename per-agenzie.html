@@ -302,23 +302,30 @@
   </footer>
 
   <a class="sticky-whatsapp" href="https://wa.me/393888005083?text=Salve%2C%20siamo%20un%27agenzia%20immobiliare%20e%20siamo%20interessati%20a%20collaborare%20con%20voi%20per%20gli%20affitti%20brevi%20a%20Palermo." target="_blank">💬 WhatsApp</a>
-
     <script>
-      function gtag_report_conversion() {
-        gtag('event', 'conversion', {
-          'send_to': 'AW-18203147858/8TLNCPvmlrccENL89-dD',
-          'value': 1.0,
-          'currency': 'EUR'
-        });
-        return true;
-      }
-      document.addEventListener('DOMContentLoaded', function() {
-        document.querySelectorAll('a[href*="wa.me"]').forEach(function(el) {
-          el.addEventListener('click', function() {
-            gtag_report_conversion();
-          });
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+        'send_to': 'AW-18203147858/8TLNCPvmlrccENL89-dD',
+        'value': 1.0,
+        'currency': 'EUR',
+        'transaction_id': '',
+        'event_callback': callback
+      });
+      return false;
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('a[href*="wa.me"]').forEach(function(el) {
+        el.addEventListener('click', function(e) {
+          e.preventDefault();
+          gtag_report_conversion(this.href);
         });
       });
+    });
     </script>
 </body>
 </html>
