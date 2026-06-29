@@ -334,5 +334,22 @@
 
   <a class="sticky-whatsapp" href="https://wa.me/393888005083?text=Ciao%21%20Sono%20interessato%20al%20servizio%20cohost%20a%20Palermo.%20Possiamo%20parlarne%3F" target="_blank">💬 WhatsApp</a>
 
+    <script>
+      function gtag_report_conversion() {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18203147858/8TLNCPvmlrccENL89-dD',
+          'value': 1.0,
+          'currency': 'EUR'
+        });
+        return true;
+      }
+      document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('a[href*="wa.me"]').forEach(function(el) {
+          el.addEventListener('click', function() {
+            gtag_report_conversion();
+          });
+        });
+      });
+    </script>
 </body>
 </html>

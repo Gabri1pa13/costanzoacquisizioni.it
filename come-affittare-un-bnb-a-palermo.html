@@ -339,5 +339,22 @@
 
   <a class="sticky-whatsapp" href="https://wa.me/393888005083?text=Ciao%21%20Ho%20letto%20la%20guida%20su%20come%20affittare%20un%20B%26B%20a%20Palermo%20e%20vorrei%20saperne%20di%20pi%C3%B9." target="_blank">💬 WhatsApp</a>
 
+    <script>
+      function gtag_report_conversion() {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18203147858/8TLNCPvmlrccENL89-dD',
+          'value': 1.0,
+          'currency': 'EUR'
+        });
+        return true;
+      }
+      document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('a[href*="wa.me"]').forEach(function(el) {
+          el.addEventListener('click', function() {
+            gtag_report_conversion();
+          });
+        });
+      });
+    </script>
 </body>
 </html>
