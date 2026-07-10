@@ -88,7 +88,6 @@
     .form-grid input, .form-grid textarea { width: 100%; padding: 11px; border: 1px solid #ccc; border-radius: 8px; font-family: inherit; font-size: 1em; }
     .consent-row { display: flex; align-items: flex-start; gap: 8px; margin-top: 16px; font-size: 0.85em; color: #555; }
     .consent-row input { margin-top: 4px; }
-    .honeypot { position: absolute; left: -9999px; opacity: 0; height: 0; width: 0; }
     .form-submit-row { text-align: center; margin-top: 18px; }
     .form-status { margin-top: 14px; text-align: center; font-weight: 600; }
     .form-status.ok { color: #1da851; }
@@ -101,7 +100,6 @@
       .simulator-box { padding: 20px; }
       .sticky-whatsapp { padding: 10px 16px; font-size: 0.85em; bottom: 14px; right: 14px; }
     }
-    button.cta-btn:disabled { opacity: 0.65; cursor: not-allowed; transform: none; }
   </style>
   <script type="application/ld+json">
   {
@@ -241,14 +239,10 @@
           </div>
         </div>
 
-        <form class="lead-form" id="lead-form" method="POST" action="https://formsubmit.co/lesicilienhouses@gmail.com">
+        <form class="lead-form" id="lead-form">
           <h4>Oppure richiedi qui la valutazione gratuita</h4>
-          <p style="margin:0; font-size:0.9em; color:#666;">Lasciaci i tuoi dati: ti ricontattiamo per fissare il sopralluogo gratuito.</p>
+          <p style="margin:0; font-size:0.9em; color:#666;">Lasciaci i tuoi dati: si aprirà la tua app di posta con la richiesta già compilata, pronta da inviare.</p>
 
-          <input type="hidden" name="_subject" value="Nuova richiesta dal Simulatore di Redditività"/>
-          <input type="hidden" name="_template" value="table"/>
-          <input type="hidden" name="_captcha" value="false"/>
-          <input type="text" name="_honey" class="honeypot" tabindex="-1" autocomplete="off"/>
           <input type="hidden" name="Zona" id="hid-zona"/>
           <input type="hidden" name="Metratura (mq)" id="hid-mq"/>
           <input type="hidden" name="Posti letto" id="hid-posti"/>
@@ -458,55 +452,27 @@
 
     document.getElementById('sim-calcola').addEventListener('click', calcolaStima);
 
-    // Invio del form via AJAX (FormSubmit) per restare sulla pagina
+    // Invio del form via mailto: apre il client di posta del proprietario con la richiesta già compilata
     document.getElementById('lead-form').addEventListener('submit', function(e) {
       e.preventDefault();
       var form = e.target;
       var statusEl = document.getElementById('form-status');
-      var submitBtn = form.querySelector('button[type="submit"]');
       var formData = new FormData(form);
 
-      submitBtn.disabled = true;
-      submitBtn.textContent = 'Invio in corso...';
-      statusEl.textContent = '';
-      statusEl.className = 'form-status';
-
       var fields = {};
-      formData.forEach(function(value, key) { if (key.indexOf('_') !== 0) fields[key] = value; });
+      formData.forEach(function(value, key) { fields[key] = value; });
       var mailBody = Object.keys(fields).map(function(k) { return k + ': ' + fields[k]; }).join('\n');
+      var nome = fields['Nome'] || '';
       var mailtoHref = 'mailto:lesicilienhouses@gmail.com?subject=' +
-        encodeURIComponent('Richiesta dal Simulatore di Redditività') +
+        encodeURIComponent('Richiesta dal Simulatore di Redditività' + (nome ? ' – ' + nome : '')) +
         '&body=' + encodeURIComponent(mailBody);
 
-      fetch('https://formsubmit.co/ajax/lesicilienhouses@gmail.com', {
-        method: 'POST',
-        headers: { 'Accept': 'application/json' },
-        body: formData
-      })
-      .then(function(res) { return res.json().then(function(data) { return { ok: res.ok, data: data }; }); })
-      .then(function(result) {
-        if (result.ok) {
-          statusEl.innerHTML = 'Richiesta inviata! Ti ricontattiamo al più presto per fissare il sopralluogo gratuito.';
-          statusEl.className = 'form-status ok';
-          form.reset();
-          calcolaStima();
-          gtag_report_conversion();
-        } else {
-          console.error('FormSubmit error response:', result.data);
-          throw new Error('Invio non riuscito');
-        }
-      })
-      .catch(function(err) {
-        console.error('Invio richiesta fallito:', err);
-        statusEl.innerHTML = 'Non siamo riusciti a inviare il modulo automaticamente. ' +
-          '<a href="' + mailtoHref + '">📧 Invia via email</a> oppure scrivici su ' +
-          '<a href="https://wa.me/393888005083" target="_blank">WhatsApp</a> o chiamaci al 388 800 5083.';
-        statusEl.className = 'form-status err';
-      })
-      .finally(function() {
-        submitBtn.disabled = false;
-        submitBtn.textContent = 'Invia richiesta di valutazione gratuita';
-      });
+      window.location.href = mailtoHref;
+
+      statusEl.innerHTML = 'Abbiamo aperto la tua app di posta con la richiesta già compilata: premi "Invia" per completarla. ' +
+        'Se non si apre nulla, scrivici su <a href="https://wa.me/393888005083" target="_blank">WhatsApp</a> o chiamaci al 388 800 5083.';
+      statusEl.className = 'form-status ok';
+      gtag_report_conversion();
     });
   </script>
 </body>
