@@ -69,6 +69,12 @@
     .sim-field input, .sim-field select { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 8px; font-family: inherit; font-size: 1em; background: white; }
     .sim-field input:focus, .sim-field select:focus { outline: 2px solid #8b0000; }
     .sim-hint { font-size: 0.78em; color: #888; margin-top: 4px; }
+    .sim-extras { margin-top: 20px; }
+    .sim-extras > label { display: block; font-weight: 600; font-size: 0.9em; color: #8b0000; margin-bottom: 8px; }
+    .extras-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+    .extra-checkbox { display: flex; align-items: center; gap: 8px; background: white; border: 1px solid #ccc; border-radius: 8px; padding: 10px 14px; font-size: 0.92em; cursor: pointer; user-select: none; transition: border-color 0.15s, background 0.15s; }
+    .extra-checkbox input { width: 16px; height: 16px; cursor: pointer; }
+    .extra-checkbox.is-checked { border-color: #8b0000; background: #fff5f5; }
     .sim-actions { text-align: center; margin-top: 24px; }
 
     .result-box { display: none; background: white; border: 2px solid #8b0000; border-radius: 16px; padding: 30px; margin-top: 26px; }
@@ -206,6 +212,19 @@
           <div class="sim-hint">Influisce sulla tariffa media a notte che puoi ottenere.</div>
         </div>
       </div>
+
+      <div class="sim-extras">
+        <label>Dotazioni extra (facoltative)</label>
+        <div class="extras-grid">
+          <label class="extra-checkbox"><input type="checkbox" id="sim-piscina"/> 🏊 Piscina privata</label>
+          <label class="extra-checkbox"><input type="checkbox" id="sim-vista-mare"/> 🌊 Vista mare</label>
+          <label class="extra-checkbox"><input type="checkbox" id="sim-posto-auto"/> 🚗 Posto auto privato</label>
+          <label class="extra-checkbox"><input type="checkbox" id="sim-terrazza"/> 🌿 Terrazza o giardino</label>
+          <label class="extra-checkbox"><input type="checkbox" id="sim-ascensore"/> 🛗 Ascensore</label>
+        </div>
+        <div class="sim-hint">Ogni dotazione selezionata aumenta la tariffa media stimata.</div>
+      </div>
+
       <div class="sim-actions">
         <button type="button" class="cta-btn" id="sim-calcola">Calcola la mia redditività stimata</button>
       </div>
@@ -227,7 +246,7 @@
           </div>
         </div>
         <div class="disclaimer">
-          <strong>Attenzione:</strong> questa è una stima indicativa basata su dati medi di mercato per zona e caratteristiche dell'immobile, calcolata con un'occupazione media annua ipotizzata tra il 45% e il 65%. Non tiene conto di rifiniture, vista, dotazioni, qualità dell'annuncio e altri fattori che si valutano solo dal vivo. <strong>L'immobile va sempre visionato</strong> per una stima realistica e definitiva.
+          <strong>Attenzione:</strong> questa è una stima indicativa basata su dati medi di mercato per zona e caratteristiche dell'immobile, calcolata con un'occupazione media annua ipotizzata tra il 45% e il 65%. Non tiene conto di rifiniture, arredamento, qualità delle foto e dell'annuncio e altri fattori che si valutano solo dal vivo. <strong>L'immobile va sempre visionato</strong> per una stima realistica e definitiva.
 
         </div>
 
@@ -248,6 +267,7 @@
           <input type="hidden" name="Posti letto" id="hid-posti"/>
           <input type="hidden" name="Bagni" id="hid-bagni"/>
           <input type="hidden" name="Condizione" id="hid-condizione"/>
+          <input type="hidden" name="Dotazioni extra" id="hid-extras"/>
           <input type="hidden" name="Stima redditività" id="hid-stima"/>
 
           <div class="form-grid">
@@ -290,6 +310,7 @@
       <li><strong>Numero di bagni</strong> – più bagni riducono i tempi morti tra gli ospiti e permettono di ospitare gruppi più numerosi, aumentando il valore percepito.</li>
       <li><strong>Metratura</strong> – incide sulla capienza e sul comfort percepito, in relazione alla zona.</li>
       <li><strong>Condizione dell'immobile</strong> – un immobile ristrutturato o curato nel design ottiene tariffe più alte e recensioni migliori rispetto a uno da ristrutturare.</li>
+      <li><strong>Dotazioni extra</strong> – piscina privata, vista mare, posto auto, terrazza o giardino e ascensore sono tra gli elementi più ricercati dagli ospiti e possono aumentare sensibilmente la tariffa a notte applicabile.</li>
     </ul>
     <p>Il risultato è calcolato ipotizzando un tasso di occupazione medio annuo tra il 45% e il 65%, coerente con una gestione professionale e pricing dinamico applicati a un immobile in una destinazione turistica siciliana. <strong>Si tratta comunque di una simulazione</strong>: non sostituisce una valutazione professionale sul posto.</p>
 
@@ -410,7 +431,18 @@
       var bathFactor = bagni >= 3 ? 1.15 : (bagni === 2 ? 1.08 : 1.0);
       var sqmFactor = clamp(1 + (mq - 70) * 0.003, 0.85, 1.35);
 
-      var nightlyMid = base * guestsFactor * bathFactor * sqmFactor * condFactor;
+      var EXTRAS = [
+        { id: 'sim-piscina', label: 'Piscina privata', bonus: 0.20 },
+        { id: 'sim-vista-mare', label: 'Vista mare', bonus: 0.12 },
+        { id: 'sim-posto-auto', label: 'Posto auto privato', bonus: 0.08 },
+        { id: 'sim-terrazza', label: 'Terrazza o giardino', bonus: 0.08 },
+        { id: 'sim-ascensore', label: 'Ascensore', bonus: 0.04 }
+      ];
+      var selectedExtras = EXTRAS.filter(function(ex) { return document.getElementById(ex.id).checked; });
+      var extrasBonus = selectedExtras.reduce(function(sum, ex) { return sum + ex.bonus; }, 0);
+      var extrasFactor = 1 + clamp(extrasBonus, 0, 0.45);
+
+      var nightlyMid = base * guestsFactor * bathFactor * sqmFactor * condFactor * extrasFactor;
       var nightlyLow = roundTo(nightlyMid * 0.85, 5);
       var nightlyHigh = roundTo(nightlyMid * 1.15, 5);
 
@@ -433,17 +465,21 @@
       var zonaLabel = ZONE_LABELS[zonaSelect.value] || zonaSelect.options[zonaSelect.selectedIndex].text;
       var condLabel = CONDITION_LABELS[condizioneSelect.value] || condizioneSelect.options[condizioneSelect.selectedIndex].text;
 
+      var extrasLabel = selectedExtras.length ? selectedExtras.map(function(ex) { return ex.label; }).join(', ') : 'Nessuna';
+
       // Aggiorna i campi nascosti del form di contatto con i dati calcolati
       document.getElementById('hid-zona').value = zonaLabel;
       document.getElementById('hid-mq').value = mq + ' mq';
       document.getElementById('hid-posti').value = posti;
       document.getElementById('hid-bagni').value = bagni;
       document.getElementById('hid-condizione').value = condLabel;
+      document.getElementById('hid-extras').value = extrasLabel;
       document.getElementById('hid-stima').value = 'Tariffa media: ' + nightlyText + '/notte — Mensile: ' + monthlyText + ' — Annuo: ' + annualText;
 
       // Aggiorna il messaggio precompilato del pulsante WhatsApp
+      var extrasMsg = selectedExtras.length ? ', con ' + selectedExtras.map(function(ex) { return ex.label.toLowerCase(); }).join(', ') : '';
       var waMessage = 'Ciao! Ho usato il simulatore di redditività per il mio immobile a ' + zonaLabel +
-        ' (' + mq + ' mq, ' + posti + ' posti letto, ' + bagni + ' bagni, ' + condLabel.toLowerCase() + '). ' +
+        ' (' + mq + ' mq, ' + posti + ' posti letto, ' + bagni + ' bagni, ' + condLabel.toLowerCase() + extrasMsg + '). ' +
         'Stima ottenuta: ' + annualText + ' euro/anno. Vorrei una valutazione gratuita con sopralluogo.';
       document.getElementById('wa-cta').href = 'https://wa.me/393888005083?text=' + encodeURIComponent(waMessage);
 
@@ -451,6 +487,12 @@
     }
 
     document.getElementById('sim-calcola').addEventListener('click', calcolaStima);
+
+    document.querySelectorAll('.extra-checkbox input[type="checkbox"]').forEach(function(cb) {
+      cb.addEventListener('change', function() {
+        cb.closest('.extra-checkbox').classList.toggle('is-checked', cb.checked);
+      });
+    });
 
     // Invio del form via mailto: apre il client di posta del proprietario con la richiesta già compilata
     document.getElementById('lead-form').addEventListener('submit', function(e) {
