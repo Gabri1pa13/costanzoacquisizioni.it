@@ -93,6 +93,7 @@
     .form-status { margin-top: 14px; text-align: center; font-weight: 600; }
     .form-status.ok { color: #1da851; }
     .form-status.err { color: #b22222; }
+    .form-status a { color: #8b0000; text-decoration: underline; }
 
     @media (max-width: 600px) {
       header h1 { font-size: 1.6em; }
@@ -470,6 +471,13 @@
       statusEl.textContent = '';
       statusEl.className = 'form-status';
 
+      var fields = {};
+      formData.forEach(function(value, key) { if (key.indexOf('_') !== 0) fields[key] = value; });
+      var mailBody = Object.keys(fields).map(function(k) { return k + ': ' + fields[k]; }).join('\n');
+      var mailtoHref = 'mailto:lesicilienhouses@gmail.com?subject=' +
+        encodeURIComponent('Richiesta dal Simulatore di Redditività') +
+        '&body=' + encodeURIComponent(mailBody);
+
       fetch('https://formsubmit.co/ajax/lesicilienhouses@gmail.com', {
         method: 'POST',
         headers: { 'Accept': 'application/json' },
@@ -478,17 +486,21 @@
       .then(function(res) { return res.json().then(function(data) { return { ok: res.ok, data: data }; }); })
       .then(function(result) {
         if (result.ok) {
-          statusEl.textContent = 'Richiesta inviata! Ti ricontattiamo al più presto per fissare il sopralluogo gratuito.';
+          statusEl.innerHTML = 'Richiesta inviata! Ti ricontattiamo al più presto per fissare il sopralluogo gratuito.';
           statusEl.className = 'form-status ok';
           form.reset();
           calcolaStima();
           gtag_report_conversion();
         } else {
+          console.error('FormSubmit error response:', result.data);
           throw new Error('Invio non riuscito');
         }
       })
-      .catch(function() {
-        statusEl.textContent = 'Non siamo riusciti a inviare la richiesta. Scrivici su WhatsApp o chiamaci al 388 800 5083.';
+      .catch(function(err) {
+        console.error('Invio richiesta fallito:', err);
+        statusEl.innerHTML = 'Non siamo riusciti a inviare il modulo automaticamente. ' +
+          '<a href="' + mailtoHref + '">📧 Invia via email</a> oppure scrivici su ' +
+          '<a href="https://wa.me/393888005083" target="_blank">WhatsApp</a> o chiamaci al 388 800 5083.';
         statusEl.className = 'form-status err';
       })
       .finally(function() {
