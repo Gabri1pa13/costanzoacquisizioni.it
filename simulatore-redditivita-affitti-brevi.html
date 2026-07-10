@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simulatore Redditività Casa Vacanza – Quanto Guadagni con gli Affitti Brevi | Costanzo Acquisizioni</title>
+  <meta name="description" content="Scopri in 30 secondi quanto può rendere la tua casa vacanza a Palermo e in Sicilia con gli affitti brevi. Simulatore gratuito di redditività + valutazione personalizzata con sopralluogo."/>
+  <meta name="keywords" content="simulatore redditività affitti brevi, quanto guadagna una casa vacanza, calcolatore rendita airbnb palermo, stima guadagni affitti brevi sicilia, redditività casa vacanza"/>
+  <meta name="author" content="Costanzo Acquisizioni"/>
+  <meta property="og:title" content="Simulatore Redditività Casa Vacanza – Quanto Guadagni con gli Affitti Brevi"/>
+  <meta property="og:description" content="Inserisci metratura, zona, posti letto e condizioni del tuo immobile: ottieni subito una stima di quanto può rendere con gli affitti brevi in Sicilia."/>
+  <meta property="og:image" content="https://costanzoacquisizioni.it/villa_harmony.jpg"/>
+  <meta property="og:url" content="https://costanzoacquisizioni.it/simulatore-redditivita-affitti-brevi.html"/>
+  <meta property="og:type" content="website"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <link rel="canonical" href="https://costanzoacquisizioni.it/simulatore-redditivita-affitti-brevi.html"/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body { font-family: 'Outfit', sans-serif; margin: 0; padding: 0; background: #fff; color: #222; line-height: 1.7; }
+    .top-nav { background: #8b0000; padding: 12px 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+    .top-nav .logo { color: white; font-weight: 700; font-size: 1em; text-decoration: none; }
+    .top-nav .links { display: flex; gap: 4px; flex-wrap: wrap; }
+    .top-nav .links a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.85em; padding: 5px 10px; border-radius: 5px; transition: background 0.2s; }
+    .top-nav .links a:hover { background: rgba(255,255,255,0.2); color: white; }
+    .breadcrumb { max-width: 900px; margin: 14px auto 0; padding: 0 20px; font-size: 0.82em; color: #888; }
+    .breadcrumb a { color: #8b0000; text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    header { background: linear-gradient(135deg, #8b0000, #b22222); color: white; padding: 60px 20px 50px; text-align: center; }
+    header h1 { font-size: 2.2em; margin: 0 0 12px; line-height: 1.3; }
+    header p { font-size: 1.1em; opacity: 0.9; margin: 0; }
+    section { padding: 40px 20px; max-width: 900px; margin: auto; }
+    h2 { color: #8b0000; font-size: 1.55em; margin-top: 50px; margin-bottom: 12px; }
+    h3 { color: #444; font-size: 1.15em; margin-top: 24px; margin-bottom: 8px; font-weight: 600; }
+    p { margin-bottom: 14px; }
+    ul, ol { padding-left: 22px; margin-bottom: 14px; }
+    li { margin-bottom: 8px; }
+    a { color: #8b0000; }
+    a.cta-btn { display: inline-block; background: #8b0000; color: white; padding: 14px 30px; border-radius: 10px; text-decoration: none; margin-top: 16px; font-weight: 600; transition: background 0.2s, transform 0.2s; border: none; cursor: pointer; font-family: inherit; font-size: 1em; }
+    a.cta-btn:hover, button.cta-btn:hover { background: #a52a2a; transform: translateY(-2px); }
+    a.cta-btn.green, button.cta-btn.green { background: #25D366; }
+    a.cta-btn.green:hover, button.cta-btn.green:hover { background: #1da851; }
+    .cta-box { background: #fff5f5; border: 2px solid #8b0000; border-radius: 12px; padding: 28px; margin: 40px 0; text-align: center; }
+    .cta-box h3 { color: #8b0000; font-size: 1.25em; margin-top: 0; }
+    .cta-box .btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 12px; }
+    .faq-list { margin-top: 10px; }
+    details.faq-item { border-bottom: 1px solid #eee; padding: 18px 0; }
+    details.faq-item summary { font-weight: 600; cursor: pointer; color: #8b0000; font-size: 1.02em; list-style: none; padding-right: 20px; position: relative; }
+    details.faq-item summary::after { content: '+'; position: absolute; right: 0; top: 0; font-size: 1.2em; }
+    details.faq-item[open] summary::after { content: '−'; }
+    details.faq-item p { margin-top: 10px; color: #444; }
+    .internal-links { background: #f4f4f4; border-radius: 12px; padding: 24px; margin-top: 40px; }
+    .internal-links h3 { color: #8b0000; margin-top: 0; }
+    .internal-links ul { list-style: none; padding: 0; }
+    .internal-links ul li { margin-bottom: 10px; }
+    .internal-links ul li a { color: #8b0000; text-decoration: none; font-weight: 600; }
+    .internal-links ul li a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 40px 20px; font-size: 0.9em; background: #f4f4f4; margin-top: 40px; color: #555; }
+    footer a { color: #8b0000; text-decoration: none; }
+    footer nav { margin-top: 16px; }
+    footer nav a { margin: 0 8px; }
+    .sticky-whatsapp { background: #25D366; color: white; padding: 13px 22px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 0.95em; position: fixed; bottom: 20px; right: 20px; z-index: 999; box-shadow: 0 4px 12px rgba(0,0,0,0.25); transition: transform 0.2s; }
+    .sticky-whatsapp:hover { transform: scale(1.05); }
+
+    /* Simulator */
+    .simulator-box { background: #f9f9f9; border: 1px solid #eee; border-radius: 16px; padding: 30px; margin: 30px 0; }
+    .sim-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; margin-top: 10px; }
+    .sim-field label { display: block; font-weight: 600; font-size: 0.9em; color: #8b0000; margin-bottom: 6px; }
+    .sim-field input, .sim-field select { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 8px; font-family: inherit; font-size: 1em; background: white; }
+    .sim-field input:focus, .sim-field select:focus { outline: 2px solid #8b0000; }
+    .sim-hint { font-size: 0.78em; color: #888; margin-top: 4px; }
+    .sim-actions { text-align: center; margin-top: 24px; }
+
+    .result-box { display: none; background: white; border: 2px solid #8b0000; border-radius: 16px; padding: 30px; margin-top: 26px; }
+    .result-box.visible { display: block; }
+    .result-box h3 { color: #8b0000; margin-top: 0; text-align: center; font-size: 1.3em; }
+    .result-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin: 20px 0; }
+    .stat-card { background: #fff5f5; border-radius: 12px; padding: 18px; text-align: center; }
+    .stat-card .stat-label { font-size: 0.82em; color: #888; margin-bottom: 6px; }
+    .stat-card .stat-value { font-size: 1.35em; font-weight: 700; color: #8b0000; }
+    .disclaimer { background: #fffbe6; border: 1px solid #f0d878; border-radius: 10px; padding: 16px 18px; font-size: 0.88em; color: #6b5c00; margin-top: 16px; }
+    .disclaimer strong { color: #55490a; }
+
+    .lead-form { margin-top: 26px; border-top: 1px dashed #ddd; padding-top: 22px; }
+    .lead-form h4 { color: #8b0000; margin: 0 0 6px; font-size: 1.1em; }
+    .form-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-top: 14px; }
+    .form-grid label { display: block; font-weight: 600; font-size: 0.85em; color: #444; margin-bottom: 6px; }
+    .form-grid input, .form-grid textarea { width: 100%; padding: 11px; border: 1px solid #ccc; border-radius: 8px; font-family: inherit; font-size: 1em; }
+    .consent-row { display: flex; align-items: flex-start; gap: 8px; margin-top: 16px; font-size: 0.85em; color: #555; }
+    .consent-row input { margin-top: 4px; }
+    .honeypot { position: absolute; left: -9999px; opacity: 0; height: 0; width: 0; }
+    .form-submit-row { text-align: center; margin-top: 18px; }
+    .form-status { margin-top: 14px; text-align: center; font-weight: 600; }
+    .form-status.ok { color: #1da851; }
+    .form-status.err { color: #b22222; }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.6em; }
+      .top-nav .links { display: none; }
+      .simulator-box { padding: 20px; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "name": "Simulatore di Redditività per Case Vacanza",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "description": "Strumento gratuito che stima il potenziale guadagno di un immobile destinato agli affitti brevi in Sicilia in base a metratura, zona, posti letto, bagni e condizioni.",
+        "url": "https://costanzoacquisizioni.it/simulatore-redditivita-affitti-brevi.html",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "Costanzo Acquisizioni",
+          "url": "https://costanzoacquisizioni.it",
+          "telephone": "+393888005083",
+          "email": "info@costanzoacquisizioni.it",
+          "address": { "@type": "PostalAddress", "addressLocality": "Palermo", "addressRegion": "Sicilia", "addressCountry": "IT" }
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "Quanto è affidabile la stima del simulatore?", "acceptedAnswer": { "@type": "Answer", "text": "Il simulatore fornisce una stima indicativa basata su dati di mercato medi per zona, dimensione, posti letto, bagni e condizioni dell'immobile. È un ottimo punto di partenza, ma il valore reale dipende da fattori che si valutano solo con un sopralluogo: rifiniture, luminosità, vista, dotazioni, prossimità a mare e centro, e qualità della gestione." } },
+          { "@type": "Question", "name": "Perché il guadagno reale può essere diverso dalla stima?", "acceptedAnswer": { "@type": "Answer", "text": "Il simulatore non può vedere l'immobile: rifiniture, luce naturale, vista, arredamento, servizi extra (piscina, terrazza, aria condizionata) e la qualità di foto e annuncio incidono molto sul prezzo per notte e sul tasso di occupazione reale. Per questo consigliamo sempre un sopralluogo gratuito prima di fissare una tariffa definitiva." } },
+          { "@type": "Question", "name": "Cosa include la valutazione gratuita con sopralluogo?", "acceptedAnswer": { "@type": "Answer", "text": "Un nostro consulente visita l'immobile, valuta punti di forza e margini di miglioramento, e ti fornisce una stima di redditività personalizzata e realistica, oltre a un piano su come massimizzare i guadagni con gestione professionale e pricing dinamico." } },
+          { "@type": "Question", "name": "Devo ristrutturare l'immobile prima di iniziare?", "acceptedAnswer": { "@type": "Answer", "text": "Non sempre. Molti immobili possono partire così come sono. Durante il sopralluogo ti diciamo onestamente se servono interventi e quali, anche minimi, per aumentare il valore percepito dagli ospiti." } },
+          { "@type": "Question", "name": "In quanto tempo posso iniziare a guadagnare con la mia casa vacanza?", "acceptedAnswer": { "@type": "Answer", "text": "Se l'immobile è già pronto, si può pubblicare l'annuncio e ricevere le prime prenotazioni entro pochi giorni. I tempi si allungano leggermente se servono foto professionali, piccoli lavori o l'ottenimento del CIR regionale." } }
+        ]
+      }
+    ]
+  }
+  </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18203147858"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-18203147858');
+    </script>
+</head>
+<body>
+
+  <nav class="top-nav">
+    <a href="/index.html" class="logo">Costanzo Acquisizioni</a>
+    <div class="links">
+      <a href="/gestione-case-palermo.html">Gestione Case</a>
+      <a href="/gestione-bnb-palermo.html">Gestione B&amp;B</a>
+      <a href="/cohost-palermo.html">Cohost</a>
+      <a href="/ristrutturazioni-bnb.html">Ristrutturazioni</a>
+      <a href="/come-affittare-un-bnb-a-palermo.html">Guide</a>
+    </div>
+  </nav>
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/index.html">Home</a> › Simulatore di Redditività
+  </nav>
+
+  <header>
+    <h1>Simulatore di Redditività per Case Vacanza</h1>
+    <p>Scopri in 30 secondi quanto potrebbe guadagnare il tuo immobile in Sicilia con gli affitti brevi.</p>
+  </header>
+
+  <section>
+    <p>Hai una casa a Palermo, a Mondello o in un'altra zona della Sicilia e ti stai chiedendo quanto potrebbe rendere trasformandola in una casa vacanza? Compila i campi qui sotto: il nostro simulatore calcola in tempo reale una <strong>stima della redditività potenziale</strong> in base a metratura, zona, posti letto, numero di bagni e condizioni dell'immobile.</p>
+    <p>È una stima automatica basata su dati di mercato medi: utile per farsi un'idea, ma <strong>ogni immobile è unico</strong>. Il valore reale va sempre confermato con un sopralluogo gratuito da parte di un nostro consulente.</p>
+
+    <div class="simulator-box">
+      <h2 style="margin-top:0;">📊 Calcola la redditività stimata</h2>
+      <div class="sim-grid">
+        <div class="sim-field">
+          <label for="sim-zona">Zona dell'immobile</label>
+          <select id="sim-zona">
+            <option value="95">Centro Storico di Palermo</option>
+            <option value="120">Mondello</option>
+            <option value="70" selected>Palermo (altre zone)</option>
+            <option value="65">Provincia di Palermo (Carini, Terrasini, Bagheria...)</option>
+            <option value="105">Cefalù e Costa Tirrenica</option>
+            <option value="60">Altre zone della Sicilia</option>
+          </select>
+        </div>
+        <div class="sim-field">
+          <label for="sim-mq">Metratura (mq)</label>
+          <input type="number" id="sim-mq" min="15" max="500" step="5" value="70"/>
+        </div>
+        <div class="sim-field">
+          <label for="sim-posti">Posti letto</label>
+          <input type="number" id="sim-posti" min="1" max="16" step="1" value="4"/>
+        </div>
+        <div class="sim-field">
+          <label for="sim-bagni">Numero di bagni</label>
+          <input type="number" id="sim-bagni" min="1" max="6" step="1" value="1"/>
+        </div>
+        <div class="sim-field">
+          <label for="sim-condizione">Condizione dell'immobile</label>
+          <select id="sim-condizione">
+            <option value="0.7">Da ristrutturare</option>
+            <option value="1" selected>Buono stato, abitabile</option>
+            <option value="1.15">Ristrutturato di recente</option>
+            <option value="1.3">Lusso / interior design curato</option>
+          </select>
+          <div class="sim-hint">Influisce sulla tariffa media a notte che puoi ottenere.</div>
+        </div>
+      </div>
+      <div class="sim-actions">
+        <button type="button" class="cta-btn" id="sim-calcola">Calcola la mia redditività stimata</button>
+      </div>
+
+      <div class="result-box" id="sim-result">
+        <h3>La tua stima di redditività</h3>
+        <div class="result-grid">
+          <div class="stat-card">
+            <div class="stat-label">Tariffa media a notte</div>
+            <div class="stat-value" id="res-nightly">–</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Ricavo lordo mensile medio</div>
+            <div class="stat-value" id="res-monthly">–</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Ricavo lordo annuo stimato</div>
+            <div class="stat-value" id="res-annual">–</div>
+          </div>
+        </div>
+        <div class="disclaimer">
+          <strong>Attenzione:</strong> questa è una stima indicativa basata su dati medi di mercato per zona e caratteristiche dell'immobile, calcolata con un'occupazione media annua ipotizzata tra il 45% e il 65%. Non tiene conto di rifiniture, vista, dotazioni, qualità dell'annuncio e altri fattori che si valutano solo dal vivo. <strong>L'immobile va sempre visionato</strong> per una stima realistica e definitiva.
+
+        </div>
+
+        <div class="cta-box" style="margin:22px 0 0;">
+          <h3>Vuoi una stima precisa con sopralluogo gratuito?</h3>
+          <p>Un nostro consulente valuta il tuo immobile dal vivo e ti fornisce un piano di redditività reale, senza impegno.</p>
+          <div class="btns">
+            <a class="cta-btn green" id="wa-cta" href="https://wa.me/393888005083?text=Ciao%21%20Ho%20usato%20il%20simulatore%20di%20redditivit%C3%A0%20e%20vorrei%20una%20valutazione%20gratuita%20della%20mia%20casa%20vacanza." target="_blank">💬 Scrivici su WhatsApp</a>
+          </div>
+        </div>
+
+        <form class="lead-form" id="lead-form" method="POST" action="https://formsubmit.co/lesicilienhouses@gmail.com">
+          <h4>Oppure richiedi qui la valutazione gratuita</h4>
+          <p style="margin:0; font-size:0.9em; color:#666;">Lasciaci i tuoi dati: ti ricontattiamo per fissare il sopralluogo gratuito.</p>
+
+          <input type="hidden" name="_subject" value="Nuova richiesta dal Simulatore di Redditività"/>
+          <input type="hidden" name="_template" value="table"/>
+          <input type="hidden" name="_captcha" value="false"/>
+          <input type="text" name="_honey" class="honeypot" tabindex="-1" autocomplete="off"/>
+          <input type="hidden" name="Zona" id="hid-zona"/>
+          <input type="hidden" name="Metratura (mq)" id="hid-mq"/>
+          <input type="hidden" name="Posti letto" id="hid-posti"/>
+          <input type="hidden" name="Bagni" id="hid-bagni"/>
+          <input type="hidden" name="Condizione" id="hid-condizione"/>
+          <input type="hidden" name="Stima redditività" id="hid-stima"/>
+
+          <div class="form-grid">
+            <div>
+              <label for="f-nome">Nome e cognome *</label>
+              <input type="text" id="f-nome" name="Nome" required/>
+            </div>
+            <div>
+              <label for="f-telefono">Numero di telefono *</label>
+              <input type="tel" id="f-telefono" name="Telefono" required/>
+            </div>
+            <div>
+              <label for="f-email">Email *</label>
+              <input type="email" id="f-email" name="Email" required/>
+            </div>
+          </div>
+          <div style="margin-top:16px;">
+            <label for="f-messaggio">Messaggio (facoltativo)</label>
+            <textarea id="f-messaggio" name="Messaggio" rows="3"></textarea>
+          </div>
+
+          <label class="consent-row">
+            <input type="checkbox" required/>
+            <span>Acconsento all'utilizzo dei miei dati da parte di Costanzo Acquisizioni per essere ricontattato in merito a questa richiesta.</span>
+          </label>
+
+          <div class="form-submit-row">
+            <button type="submit" class="cta-btn">Invia richiesta di valutazione gratuita</button>
+          </div>
+          <div class="form-status" id="form-status" role="status"></div>
+        </form>
+      </div>
+    </div>
+
+    <h2>Come calcoliamo la stima</h2>
+    <p>Il simulatore combina alcuni dei fattori che influenzano maggiormente il rendimento di una casa vacanza in Sicilia:</p>
+    <ul>
+      <li><strong>Zona</strong> – Mondello e il centro storico di Palermo hanno tariffe medie più alte rispetto alla periferia o alla provincia, grazie alla domanda turistica costante.</li>
+      <li><strong>Posti letto</strong> – più ospiti può ospitare l'immobile, più alta è la tariffa a notte applicabile.</li>
+      <li><strong>Numero di bagni</strong> – più bagni riducono i tempi morti tra gli ospiti e permettono di ospitare gruppi più numerosi, aumentando il valore percepito.</li>
+      <li><strong>Metratura</strong> – incide sulla capienza e sul comfort percepito, in relazione alla zona.</li>
+      <li><strong>Condizione dell'immobile</strong> – un immobile ristrutturato o curato nel design ottiene tariffe più alte e recensioni migliori rispetto a uno da ristrutturare.</li>
+    </ul>
+    <p>Il risultato è calcolato ipotizzando un tasso di occupazione medio annuo tra il 45% e il 65%, coerente con una gestione professionale e pricing dinamico applicati a un immobile in una destinazione turistica siciliana. <strong>Si tratta comunque di una simulazione</strong>: non sostituisce una valutazione professionale sul posto.</p>
+
+    <h2>Domande frequenti sul simulatore di redditività</h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Quanto è affidabile la stima del simulatore?</summary>
+        <p>Fornisce una stima indicativa basata su dati medi di mercato per zona, dimensione, posti letto, bagni e condizioni. È un ottimo punto di partenza, ma il valore reale dipende da fattori valutabili solo con un sopralluogo: rifiniture, luminosità, vista, dotazioni e qualità della gestione.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Perché il guadagno reale può essere diverso dalla stima?</summary>
+        <p>Il simulatore non può vedere l'immobile: rifiniture, luce naturale, vista, arredamento, servizi extra (piscina, terrazza, aria condizionata) e la qualità di foto e annuncio incidono molto sul prezzo per notte e sull'occupazione reale. Per questo consigliamo sempre un sopralluogo gratuito prima di fissare una tariffa definitiva.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Cosa include la valutazione gratuita con sopralluogo?</summary>
+        <p>Un nostro consulente visita l'immobile, valuta punti di forza e margini di miglioramento, e ti fornisce una stima di redditività personalizzata e realistica, oltre a un piano su come massimizzare i guadagni con gestione professionale e pricing dinamico.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Devo ristrutturare l'immobile prima di iniziare?</summary>
+        <p>Non sempre. Molti immobili possono partire così come sono. Durante il sopralluogo ti diciamo onestamente se servono interventi e quali, anche minimi, per aumentare il valore percepito dagli ospiti.</p>
+      </details>
+      <details class="faq-item">
+        <summary>In quanto tempo posso iniziare a guadagnare con la mia casa vacanza?</summary>
+        <p>Se l'immobile è già pronto, si può pubblicare l'annuncio e ricevere le prime prenotazioni entro pochi giorni. I tempi si allungano leggermente se servono foto professionali, piccoli lavori o l'ottenimento del CIR regionale.</p>
+      </details>
+    </div>
+
+    <div class="cta-box">
+      <h3>Pronto a scoprire il potenziale reale della tua casa?</h3>
+      <p><strong>Sopralluogo e consulenza gratuiti, senza impegno.</strong></p>
+      <div class="btns">
+        <a class="cta-btn green" href="https://wa.me/393888005083?text=Ciao%21%20Vorrei%20una%20valutazione%20gratuita%20della%20mia%20casa%20vacanza%20in%20Sicilia." target="_blank">💬 Scrivici su WhatsApp</a>
+        <a class="cta-btn" href="tel:+393888005083">📞 Chiamaci ora</a>
+      </div>
+    </div>
+
+    <div class="internal-links">
+      <h3>Approfondisci</h3>
+      <ul>
+        <li><a href="/gestione-case-palermo.html">→ Gestione Case a Palermo</a></li>
+        <li><a href="/gestione-bnb-palermo.html">→ Gestione B&amp;B a Palermo</a></li>
+        <li><a href="/aumentare-guadagni-airbnb-palermo.html">→ Come aumentare i guadagni su Airbnb a Palermo</a></li>
+        <li><a href="/come-affittare-un-bnb-a-palermo.html">→ Come affittare legalmente un B&amp;B a Palermo</a></li>
+        <li><a href="/ristrutturazioni-bnb.html">→ Ristrutturazioni B&amp;B a Palermo</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Costanzo Acquisizioni – Property Management a Palermo<br/>
+    <a href="mailto:info@costanzoacquisizioni.it">info@costanzoacquisizioni.it</a> · <a href="tel:+393888005083">+39 388 8005083</a>
+    <nav>
+      <a href="/index.html">Home</a> |
+      <a href="/gestione-case-palermo.html">Gestione Case</a> |
+      <a href="/gestione-bnb-palermo.html">Gestione B&amp;B</a> |
+      <a href="/cohost-palermo.html">Cohost</a> |
+      <a href="/per-agenzie.html">Agenzie</a>
+    </nav>
+  </footer>
+
+  <a class="sticky-whatsapp" href="https://wa.me/393888005083?text=Ciao%21%20Ho%20visto%20il%20simulatore%20di%20redditivit%C3%A0%20e%20vorrei%20saperne%20di%20pi%C3%B9." target="_blank">💬 WhatsApp</a>
+
+  <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+        'send_to': 'AW-18203147858/8TLNCPvmlrccENL89-dD',
+        'value': 1.0,
+        'currency': 'EUR',
+        'transaction_id': '',
+        'event_callback': callback
+      });
+      return false;
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('a[href*="wa.me"]').forEach(function(el) {
+        el.addEventListener('click', function(e) {
+          e.preventDefault();
+          gtag_report_conversion(this.href);
+        });
+      });
+    });
+
+    // --- Simulatore di redditività ---
+    var ZONE_LABELS = {
+      "95": "Centro Storico di Palermo",
+      "120": "Mondello",
+      "70": "Palermo (altre zone)",
+      "65": "Provincia di Palermo (Carini, Terrasini, Bagheria...)",
+      "105": "Cefalù e Costa Tirrenica",
+      "60": "Altre zone della Sicilia"
+    };
+    var CONDITION_LABELS = {
+      "0.7": "Da ristrutturare",
+      "1": "Buono stato, abitabile",
+      "1.15": "Ristrutturato di recente",
+      "1.3": "Lusso / interior design curato"
+    };
+
+    function clamp(v, min, max) { return Math.max(min, Math.min(max, v)); }
+    function roundTo(v, step) { return Math.round(v / step) * step; }
+    function formatEuro(v) { return '€' + Math.round(v).toLocaleString('it-IT'); }
+
+    function calcolaStima() {
+      var zonaSelect = document.getElementById('sim-zona');
+      var condizioneSelect = document.getElementById('sim-condizione');
+      var base = parseFloat(zonaSelect.value);
+      var mq = clamp(parseFloat(document.getElementById('sim-mq').value) || 70, 15, 500);
+      var posti = clamp(parseInt(document.getElementById('sim-posti').value, 10) || 4, 1, 16);
+      var bagni = clamp(parseInt(document.getElementById('sim-bagni').value, 10) || 1, 1, 6);
+      var condFactor = parseFloat(condizioneSelect.value);
+
+      var guestsFactor = clamp(0.55 + 0.11 * posti, 0.6, 1.9);
+      var bathFactor = bagni >= 3 ? 1.15 : (bagni === 2 ? 1.08 : 1.0);
+      var sqmFactor = clamp(1 + (mq - 70) * 0.003, 0.85, 1.35);
+
+      var nightlyMid = base * guestsFactor * bathFactor * sqmFactor * condFactor;
+      var nightlyLow = roundTo(nightlyMid * 0.85, 5);
+      var nightlyHigh = roundTo(nightlyMid * 1.15, 5);
+
+      var annualLow = nightlyLow * 365 * 0.45;
+      var annualHigh = nightlyHigh * 365 * 0.65;
+      var monthlyLow = annualLow / 12;
+      var monthlyHigh = annualHigh / 12;
+
+      var nightlyText = formatEuro(nightlyLow) + ' – ' + formatEuro(nightlyHigh);
+      var monthlyText = formatEuro(monthlyLow) + ' – ' + formatEuro(monthlyHigh);
+      var annualText = formatEuro(annualLow) + ' – ' + formatEuro(annualHigh);
+
+      document.getElementById('res-nightly').textContent = nightlyText;
+      document.getElementById('res-monthly').textContent = monthlyText;
+      document.getElementById('res-annual').textContent = annualText;
+
+      var resultBox = document.getElementById('sim-result');
+      resultBox.classList.add('visible');
+
+      var zonaLabel = ZONE_LABELS[zonaSelect.value] || zonaSelect.options[zonaSelect.selectedIndex].text;
+      var condLabel = CONDITION_LABELS[condizioneSelect.value] || condizioneSelect.options[condizioneSelect.selectedIndex].text;
+
+      // Aggiorna i campi nascosti del form di contatto con i dati calcolati
+      document.getElementById('hid-zona').value = zonaLabel;
+      document.getElementById('hid-mq').value = mq + ' mq';
+      document.getElementById('hid-posti').value = posti;
+      document.getElementById('hid-bagni').value = bagni;
+      document.getElementById('hid-condizione').value = condLabel;
+      document.getElementById('hid-stima').value = 'Tariffa media: ' + nightlyText + '/notte — Mensile: ' + monthlyText + ' — Annuo: ' + annualText;
+
+      // Aggiorna il messaggio precompilato del pulsante WhatsApp
+      var waMessage = 'Ciao! Ho usato il simulatore di redditività per il mio immobile a ' + zonaLabel +
+        ' (' + mq + ' mq, ' + posti + ' posti letto, ' + bagni + ' bagni, ' + condLabel.toLowerCase() + '). ' +
+        'Stima ottenuta: ' + annualText + ' euro/anno. Vorrei una valutazione gratuita con sopralluogo.';
+      document.getElementById('wa-cta').href = 'https://wa.me/393888005083?text=' + encodeURIComponent(waMessage);
+
+      resultBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    document.getElementById('sim-calcola').addEventListener('click', calcolaStima);
+
+    // Invio del form via AJAX (FormSubmit) per restare sulla pagina
+    document.getElementById('lead-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var form = e.target;
+      var statusEl = document.getElementById('form-status');
+      var submitBtn = form.querySelector('button[type="submit"]');
+      var formData = new FormData(form);
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Invio in corso...';
+      statusEl.textContent = '';
+      statusEl.className = 'form-status';
+
+      fetch('https://formsubmit.co/ajax/lesicilienhouses@gmail.com', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: formData
+      })
+      .then(function(res) { return res.json().then(function(data) { return { ok: res.ok, data: data }; }); })
+      .then(function(result) {
+        if (result.ok) {
+          statusEl.textContent = 'Richiesta inviata! Ti ricontattiamo al più presto per fissare il sopralluogo gratuito.';
+          statusEl.className = 'form-status ok';
+          form.reset();
+          calcolaStima();
+          gtag_report_conversion();
+        } else {
+          throw new Error('Invio non riuscito');
+        }
+      })
+      .catch(function() {
+        statusEl.textContent = 'Non siamo riusciti a inviare la richiesta. Scrivici su WhatsApp o chiamaci al 388 800 5083.';
+        statusEl.className = 'form-status err';
+      })
+      .finally(function() {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Invia richiesta di valutazione gratuita';
+      });
+    });
+  </script>
+</body>
+</html>
