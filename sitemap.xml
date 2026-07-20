@@ -1,10 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
 	<loc>https://costanzoacquisizioni.it/</loc>
 	<lastmod>2026-07-20</lastmod>
 	<changefreq>monthly</changefreq>
 	<priority>1.0</priority>
+	<image:image>
+	  <image:loc>https://costanzoacquisizioni.it/palazzo-moncada.jpg</image:loc>
+	  <image:title>Palazzo Moncada – Palermo Centro</image:title>
+	  <image:caption>Facciata storica del Palazzo Moncada in centro a Palermo</image:caption>
+	</image:image>
+	<image:image>
+	  <image:loc>https://costanzoacquisizioni.it/fior-di-sicilia.jpg</image:loc>
+	  <image:title>Fior di Sicilia – Appartamento con Terrazza</image:title>
+	  <image:caption>Terrazza soleggiata di Fior di Sicilia con tavolo esterno e vista sui tetti di Palermo</image:caption>
+	</image:image>
+	<image:image>
+	  <image:loc>https://costanzoacquisizioni.it/tilde-sunset-bay.jpg</image:loc>
+	  <image:title>Tilde Sunset Bay Villa</image:title>
+	  <image:caption>Giardino con vista baia e sdraio della Tilde Sunset Bay Villa in Sicilia</image:caption>
+	</image:image>
+	<image:image>
+	  <image:loc>https://costanzoacquisizioni.it/davinci-resort.jpg</image:loc>
+	  <image:title>Da Vinci Resort – Vista Mare</image:title>
+	  <image:caption>Piscina panoramica del Da Vinci Resort con vista mare</image:caption>
+	</image:image>
+	<image:image>
+	  <image:loc>https://costanzoacquisizioni.it/villa-harmony.jpg</image:loc>
+	  <image:title>Villa Harmony – Relax a Mondello</image:title>
+	  <image:caption>Giardino esterno di Villa Harmony, relax e privacy a Mondello</image:caption>
+	</image:image>
+	<image:image>
+	  <image:loc>https://costanzoacquisizioni.it/eleonora-daragona.jpg</image:loc>
+	  <image:title>Eleonora d'Aragona Home Suites</image:title>
+	  <image:caption>Eleonora d'Aragona Home Suites – suite eleganti nel centro storico di Palermo</image:caption>
+	</image:image>
   </url>
   <url>
 	<loc>https://costanzoacquisizioni.it/gestione-case-palermo.html</loc>
@@ -44,6 +75,18 @@
   </url>
   <url>
 	<loc>https://costanzoacquisizioni.it/aumentare-guadagni-airbnb-palermo.html</loc>
+	<lastmod>2026-07-20</lastmod>
+	<changefreq>monthly</changefreq>
+	<priority>0.8</priority>
+  </url>
+  <url>
+	<loc>https://costanzoacquisizioni.it/quanto-guadagna-un-bnb-a-palermo.html</loc>
+	<lastmod>2026-07-20</lastmod>
+	<changefreq>monthly</changefreq>
+	<priority>0.8</priority>
+  </url>
+  <url>
+	<loc>https://costanzoacquisizioni.it/normativa-affitti-brevi-sicilia-2026.html</loc>
 	<lastmod>2026-07-20</lastmod>
 	<changefreq>monthly</changefreq>
 	<priority>0.8</priority>
