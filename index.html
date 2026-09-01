@@ -14,6 +14,10 @@
     <meta content="it_IT" property="og:locale"/>
     <meta content="summary_large_image" name="twitter:card"/>
     <link rel="canonical" href="https://costanzoacquisizioni.it/"/>
+    <link rel="icon" href="/favicon.ico" sizes="any"/>
+    <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32"/>
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
+    <link rel="manifest" href="/manifest.json"/>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -513,14 +517,7 @@
             }
         }
     </style>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18203147858"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'AW-18203147858');
-    </script>
+    <script src="/cookie-consent.js" defer></script>
 </head>
 <body>
 
@@ -885,31 +882,6 @@
                 });
             });
         });
-    </script>
-    <script>
-    function gtag_report_conversion(url) {
-      var callback = function () {
-        if (typeof(url) != 'undefined') {
-          window.location = url;
-        }
-      };
-      gtag('event', 'conversion', {
-        'send_to': 'AW-18203147858/8TLNCPvmlrccENL89-dD',
-        'value': 1.0,
-        'currency': 'EUR',
-        'transaction_id': '',
-        'event_callback': callback
-      });
-      return false;
-    }
-    document.addEventListener('DOMContentLoaded', function() {
-      document.querySelectorAll('a[href*="wa.me"]').forEach(function(el) {
-        el.addEventListener('click', function(e) {
-          e.preventDefault();
-          gtag_report_conversion(this.href);
-        });
-      });
-    });
     </script>
 </body>
 </html>
