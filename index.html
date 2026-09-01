@@ -89,6 +89,44 @@
             background-color: #fffdfd;
         }
 
+        /* Stili Nav Desktop (stessa struttura usata nelle pagine interne) */
+        .top-nav {
+            background: #8b0000;
+            padding: 12px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .top-nav .logo {
+            color: white;
+            font-weight: 700;
+            font-size: 1em;
+            text-decoration: none;
+        }
+
+        .top-nav .links {
+            display: flex;
+            gap: 4px;
+            flex-wrap: wrap;
+        }
+
+        .top-nav .links a {
+            color: rgba(255,255,255,0.85);
+            text-decoration: none;
+            font-size: 0.85em;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background 0.2s;
+        }
+
+        .top-nav .links a:hover {
+            background: rgba(255,255,255,0.2);
+            color: white;
+        }
+
         /* Stili Header - Reingegnerizzato con Flexbox e Animazione */
         header {
             background: linear-gradient(to right, #8b0000, #b22222);
@@ -238,6 +276,32 @@
             transform: translateY(-3px); /* Piccolo effetto "lift" */
         }
 
+        /* Stili bottoni sezione Contatti */
+        .cta-button, .contact-button {
+            display: inline-block;
+            background: #8b0000;
+            color: white;
+            padding: 14px 28px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 6px;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .cta-button:hover, .contact-button:hover {
+            background: #a52a2a;
+            transform: translateY(-3px);
+        }
+
+        .contact-button.whatsapp {
+            background: #25D366;
+        }
+
+        .contact-button.whatsapp:hover {
+            background: #1da851;
+        }
+
         /* Stili Footer */
         footer {
             text-align: center;
@@ -307,9 +371,13 @@
 
         /* Media Queries per responsività */
         @media (max-width: 768px) {
-            /* Attiva menu mobile */
+            /* Attiva menu mobile e disattiva la nav desktop */
             .mobile-nav {
                 display: block;
+            }
+
+            .top-nav {
+                display: none;
             }
 
             .menu-icon {
@@ -455,6 +523,19 @@
     </script>
 </head>
 <body>
+
+    <nav class="top-nav">
+        <a href="/" class="logo">Costanzo Acquisizioni</a>
+        <div class="links">
+            <a href="/simulatore-redditivita-affitti-brevi.html">Simulatore</a>
+            <a href="/gestione-bnb-palermo.html">Gestione B&amp;B</a>
+            <a href="/gestione-case-palermo.html">Gestione Case</a>
+            <a href="/cohost-palermo.html">Cohost</a>
+            <a href="/ristrutturazioni-bnb.html">Ristrutturazioni</a>
+            <a href="/per-agenzie.html">Agenzie</a>
+            <a href="/come-affittare-un-bnb-a-palermo.html">Guide</a>
+        </div>
+    </nav>
 
     <nav class="mobile-nav">
         <input id="menu-toggle" type="checkbox"/>
